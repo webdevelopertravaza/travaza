@@ -1,0 +1,1680 @@
+---
+const destinations = [
+  {
+    eyebrow: "CANADA",
+    title: "Toronto",
+    description:
+      "Private city experiences, corporate transportation, airport transfers, coach charters and curated escapes from Canada's largest city.",
+    image: "/images/travaza/travaza-toronto.png",
+    link: "#inquire"
+  },
+  {
+    eyebrow: "CANADA + USA",
+    title: "Niagara Falls",
+    description:
+      "Experience both sides of Niagara Falls with local experts, private touring, group transportation, step-on guides and cross-border itineraries.",
+    image: "/images/travaza/travaza-niagara.png",
+    link: "#inquire"
+  },
+  {
+    eyebrow: "SOUTH AMERICA",
+    title: "Guyana",
+    description:
+      "Curated cultural, nature and heritage experiences designed for travellers looking beyond the ordinary.",
+    image: "/images/travaza/travaza-guyana.png",
+    link: "#inquire"
+  },
+  {
+    eyebrow: "USA",
+    title: "Miami",
+    description:
+      "Private transportation, luxury experiences, yacht charters, airport movements and custom itineraries in Miami and South Florida.",
+    image: "/images/travaza/travaza-miami.png",
+    link: "#inquire"
+  },
+  {
+    eyebrow: "CANADA",
+    title: "Quebec City",
+    description:
+      "Private touring, group movements and thoughtfully curated experiences through one of North America's most historic destinations.",
+    image: "",
+    link: "#inquire"
+  },
+  {
+    eyebrow: "CANADA",
+    title: "Vancouver",
+    description:
+      "Private transportation, sightseeing, cruise movements and custom West Coast itineraries for individuals and groups.",
+    image: "",
+    link: "#inquire"
+  }
+];
+
+const luxury = [
+  {
+    title: "Private Aviation",
+    description:
+      "Private jet charter sourcing for executives, families, artists, sports organizations and discerning travellers.",
+    icon: "✈"
+  },
+  {
+    title: "Private Yachts",
+    description:
+      "Curated yacht experiences in Miami, Croatia and the Amalfi Coast, from private celebrations to unforgettable days at sea.",
+    icon: "◇"
+  },
+  {
+    title: "Luxury Transportation",
+    description:
+      "Executive vehicles, Sprinters, minibuses and motorcoaches coordinated around your itinerary rather than the other way around.",
+    icon: "◆"
+  },
+  {
+    title: "Curated Experiences",
+    description:
+      "Private guides, dining, attractions, wine experiences and local access assembled into one seamless itinerary.",
+    icon: "✦"
+  }
+];
+
+const groupServices = [
+  "Worldwide coach bus charters",
+  "Airport and hotel transfers",
+  "Corporate shuttles",
+  "Convention transportation",
+  "Sports team transportation",
+  "Musician and touring artist transportation",
+  "Large group movements",
+  "Wedding and event transportation",
+  "Cruise transfers",
+  "School and educational groups",
+  "Step-on guides",
+  "Audio-guided experiences",
+  "Multi-day touring",
+  "Cross-border transportation",
+  "Custom transportation programs"
+];
+
+const experiences = [
+  "Toronto to Niagara Falls",
+  "Niagara Falls Canada",
+  "Niagara Falls USA",
+  "Cross-border Niagara",
+  "Explore Guyana",
+  "Quebec City",
+  "Vancouver",
+  "Miami",
+  "Niagara wine country",
+  "Private yacht experiences",
+  "Custom multi-city itineraries"
+];
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>
+    Travaza | Luxury Travel, Global Transportation & Curated Experiences
+  </title>
+
+  <meta
+    name="description"
+    content="Travaza delivers premium tours, worldwide coach charters, private aviation, yacht experiences, group transportation and custom travel experiences across Toronto, Niagara Falls, Miami, Guyana, Vancouver, Quebec City and beyond."
+  />
+
+  <meta
+    name="keywords"
+    content="luxury travel, coach bus charter, group transportation, Toronto tours, Niagara Falls tours, Miami yacht charter, private jet charter, Guyana tours, corporate transportation, sports team transportation, global coach charter"
+  />
+
+  <meta property="og:title" content="Travaza | The World, Curated." />
+  <meta
+    property="og:description"
+    content="Global transportation. Curated experiences. Private aviation. Yachts. Groups. Events."
+  />
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Travaza",
+    "url": "https://travaza.com",
+    "email": "reservations@travaza.com",
+    "description": "Luxury travel, global transportation and curated travel experiences."
+  })}></script>
+
+  <style>
+    :root {
+      --black: #060908;
+      --ink: #111412;
+      --gold: #d5a03a;
+      --gold-light: #f1cc7a;
+      --cream: #f8f5ee;
+      --white: #ffffff;
+      --muted: #6c706d;
+      --line: rgba(255,255,255,.14);
+      --dark-line: rgba(17,20,18,.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--black);
+      color: var(--white);
+      font-family:
+        Inter,
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    /* HEADER */
+
+    .header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      width: 190px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 29px;
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      opacity: .82;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+    }
+
+    .nav-cta {
+      border: 1px solid var(--gold);
+      padding: 13px 19px;
+      color: var(--gold-light);
+    }
+
+    /* HERO */
+
+    .hero {
+      position: relative;
+      min-height: 810px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 80% 30%, rgba(213,160,58,.12), transparent 32%),
+        linear-gradient(120deg, #050706, #0d100e 65%, #13120c);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -280px;
+      top: 130px;
+      width: 650px;
+      height: 650px;
+      border: 1px solid rgba(213,160,58,.18);
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding-top: 110px;
+      max-width: 900px;
+    }
+
+    .hero h1 {
+      margin: 22px 0 24px;
+      font-weight: 400;
+      font-size: clamp(54px, 8.5vw, 118px);
+      line-height: .92;
+      letter-spacing: -.055em;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero-copy {
+      max-width: 690px;
+      color: rgba(255,255,255,.75);
+      font-size: clamp(18px, 2vw, 23px);
+      line-height: 1.55;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 38px;
+    }
+
+    .button {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 24px;
+      border: 0;
+      cursor: pointer;
+      transition: .2s ease;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .button-gold {
+      background: var(--gold);
+      color: #080b09;
+    }
+
+    .button-gold:hover {
+      background: var(--gold-light);
+    }
+
+    .button-outline {
+      border: 1px solid rgba(255,255,255,.32);
+      color: white;
+    }
+
+    .button-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
+    }
+
+    .hero-trust {
+      display: flex;
+      gap: 34px;
+      flex-wrap: wrap;
+      margin-top: 70px;
+      padding-top: 26px;
+      border-top: 1px solid var(--line);
+    }
+
+    .trust-item strong {
+      display: block;
+      color: var(--gold-light);
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    .trust-item span {
+      color: rgba(255,255,255,.58);
+      font-size: 13px;
+    }
+
+    /* INTRO */
+
+    .intro {
+      background: var(--cream);
+      color: var(--ink);
+      padding: 105px 0;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 90px;
+      align-items: start;
+    }
+
+    .intro h2 {
+      font-size: clamp(40px, 5vw, 68px);
+      font-weight: 400;
+      letter-spacing: -.04em;
+      line-height: 1.02;
+      margin: 12px 0 0;
+    }
+
+    .intro-copy {
+      color: #424744;
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    .intro-copy strong {
+      color: var(--ink);
+    }
+
+    /* SERVICE STRIP */
+
+    .service-strip {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .service-strip-inner {
+      min-height: 110px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .service-mini {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-right: 1px solid var(--line);
+      padding: 25px 15px;
+      color: rgba(255,255,255,.8);
+      font-size: 12px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .service-mini:last-child {
+      border-right: 0;
+    }
+
+    /* DESTINATIONS */
+
+    .destinations {
+      padding: 110px 0;
+    }
+
+    .section-header {
+      max-width: 750px;
+      margin-bottom: 50px;
+    }
+
+    .section-header h2 {
+      margin: 12px 0 16px;
+      font-size: clamp(42px, 5vw, 67px);
+      line-height: 1.02;
+      font-weight: 400;
+      letter-spacing: -.04em;
+    }
+
+    .section-header p {
+      color: rgba(255,255,255,.62);
+      line-height: 1.65;
+      font-size: 17px;
+    }
+
+    .destination-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+    .destination {
+      min-height: 360px;
+      padding: 35px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.035),
+          rgba(255,255,255,.005)
+        );
+    }
+
+    .destination-logo {
+      height: 70px;
+      max-width: 215px;
+      object-fit: contain;
+      object-position: left center;
+      margin-bottom: auto;
+    }
+
+    .destination-spacer {
+      flex: 1;
+    }
+
+    .destination h3 {
+      font-size: 29px;
+      font-weight: 400;
+      margin: 23px 0 10px;
+    }
+
+    .destination p {
+      color: rgba(255,255,255,.6);
+      line-height: 1.55;
+      font-size: 14px;
+    }
+
+    .text-link {
+      margin-top: 19px;
+      display: inline-flex;
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    /* LUXURY */
+
+    .luxury-section {
+      background: var(--cream);
+      color: var(--ink);
+      padding: 110px 0;
+    }
+
+    .dark-text-header p {
+      color: var(--muted);
+    }
+
+    .luxury-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid var(--dark-line);
+      border-left: 1px solid var(--dark-line);
+    }
+
+    .luxury-card {
+      min-height: 300px;
+      padding: 42px;
+      border-right: 1px solid var(--dark-line);
+      border-bottom: 1px solid var(--dark-line);
+    }
+
+    .luxury-icon {
+      color: var(--gold);
+      font-size: 28px;
+    }
+
+    .luxury-card h3 {
+      font-weight: 400;
+      font-size: 29px;
+      margin: 42px 0 12px;
+    }
+
+    .luxury-card p {
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* GROUP MOVEMENTS */
+
+    .groups {
+      padding: 110px 0;
+    }
+
+    .groups-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 90px;
+    }
+
+    .groups h2 {
+      font-size: clamp(43px, 5vw, 66px);
+      line-height: 1.03;
+      letter-spacing: -.04em;
+      font-weight: 400;
+      margin: 13px 0 25px;
+    }
+
+    .groups-copy {
+      color: rgba(255,255,255,.64);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid var(--line);
+    }
+
+    .service-list-item {
+      padding: 18px 5px;
+      border-bottom: 1px solid var(--line);
+      color: rgba(255,255,255,.82);
+      font-size: 14px;
+    }
+
+    .service-list-item::before {
+      content: "—";
+      color: var(--gold);
+      margin-right: 12px;
+    }
+
+    /* EXPERIENCES */
+
+    .experiences {
+      padding: 105px 0;
+      background: #101310;
+    }
+
+    .experience-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .experience-tag {
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,.78);
+      font-size: 13px;
+    }
+
+    /* FORM */
+
+    .inquiry {
+      padding: 110px 0;
+      background: var(--cream);
+      color: var(--ink);
+    }
+
+    .inquiry-grid {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 80px;
+    }
+
+    .inquiry h2 {
+      margin: 12px 0 20px;
+      font-size: clamp(42px, 5vw, 64px);
+      font-weight: 400;
+      line-height: 1.03;
+      letter-spacing: -.04em;
+    }
+
+    .inquiry-copy {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .contact-direct {
+      margin-top: 30px;
+      padding-top: 25px;
+      border-top: 1px solid var(--dark-line);
+      color: #414643;
+      line-height: 1.8;
+    }
+
+    .contact-direct a {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .quote-form {
+      background: white;
+      padding: 38px;
+      border: 1px solid var(--dark-line);
+    }
+
+    .form-title {
+      margin: 0 0 26px;
+      font-size: 26px;
+      font-weight: 400;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .field-full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #555a56;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid #d7dad6;
+      background: #fbfbf8;
+      min-height: 49px;
+      padding: 12px 13px;
+      color: var(--ink);
+      border-radius: 0;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--gold);
+    }
+
+    .form-note {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+      margin-top: 15px;
+    }
+
+    .submit-button {
+      margin-top: 20px;
+      width: 100%;
+      min-height: 58px;
+      border: 0;
+      background: var(--black);
+      color: white;
+      cursor: pointer;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .submit-button:hover {
+      background: #1a1d1a;
+      color: var(--gold-light);
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 65px 0 38px;
+      background: #050706;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr .75fr;
+      gap: 60px;
+    }
+
+    .footer-logo {
+      width: 205px;
+      margin-bottom: 20px;
+    }
+
+    .footer-brand p {
+      max-width: 410px;
+      color: rgba(255,255,255,.53);
+      line-height: 1.65;
+      font-size: 14px;
+    }
+
+    .footer-title {
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      margin-bottom: 17px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      color: rgba(255,255,255,.66);
+      font-size: 14px;
+    }
+
+    .copyright {
+      margin-top: 55px;
+      padding-top: 25px;
+      border-top: 1px solid var(--line);
+      color: rgba(255,255,255,.4);
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+      .nav-links a:not(.nav-cta) {
+        display: none;
+      }
+
+      .destination-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .intro-grid,
+      .groups-grid,
+      .inquiry-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .header {
+        position: absolute;
+      }
+
+      .nav {
+        min-height: 76px;
+      }
+
+      .brand {
+        width: 150px;
+      }
+
+      .nav-cta {
+        padding: 10px 12px;
+        font-size: 11px;
+      }
+
+      .hero {
+        min-height: 720px;
+      }
+
+      .hero-content {
+        padding-top: 95px;
+      }
+
+      .hero-trust {
+        gap: 20px;
+      }
+
+      .service-strip-inner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .destination-grid,
+      .luxury-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .destination {
+        min-height: 315px;
+      }
+
+      .service-list {
+        grid-template-columns: 1fr;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field-full {
+        grid-column: auto;
+      }
+
+      .quote-form {
+        padding: 25px 18px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-brand {
+        grid-column: auto;
+      }
+
+      .intro,
+      .destinations,
+      .luxury-section,
+      .groups,
+      .experiences,
+      .inquiry {
+        padding: 75px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container nav">
+
+    <a href="/" aria-label="Travaza Home">
+      <img
+        class="brand"
+        src="/images/travaza/travaza-gold.png"
+        alt="Travaza"
+      />
+    </a>
+
+    <nav class="nav-links" aria-label="Main Navigation">
+      <a href="#destinations">Destinations</a>
+      <a href="#luxury">Luxury</a>
+      <a href="#groups">Groups</a>
+      <a href="#experiences">Experiences</a>
+      <a href="#inquire" class="nav-cta">Request a Quote</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="container hero-content">
+
+    <div class="eyebrow">
+      GLOBAL TRAVEL • TRANSPORTATION • EXPERIENCES
+    </div>
+
+    <h1>
+      The world,
+      <span>curated.</span>
+    </h1>
+
+    <p class="hero-copy">
+      From private aviation and luxury yachts to worldwide coach charters,
+      iconic tours and complex group movements, Travaza brings every detail
+      together through one trusted travel partner.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#inquire" class="button button-gold">
+        Start Planning
+      </a>
+
+      <a href="#destinations" class="button button-outline">
+        Explore Travaza
+      </a>
+    </div>
+
+    <div class="hero-trust">
+      <div class="trust-item">
+        <strong>Global Reach</strong>
+        <span>Transportation & experiences worldwide</span>
+      </div>
+
+      <div class="trust-item">
+        <strong>One Point of Contact</strong>
+        <span>From itinerary to execution</span>
+      </div>
+
+      <div class="trust-item">
+        <strong>Built for Groups</strong>
+        <span>Individuals to major movements</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+  <div class="container intro-grid">
+
+    <div>
+      <div class="eyebrow">
+        MORE THAN A BOOKING
+      </div>
+
+      <h2>
+        Travel should feel effortless.
+      </h2>
+    </div>
+
+    <div class="intro-copy">
+
+      <p>
+        Travaza is a modern global travel and transportation company
+        connecting travellers, corporations, tour operators, sports teams,
+        artists and groups with exceptional experiences and reliable movement.
+      </p>
+
+      <p>
+        <strong>
+          We manage the details others leave to you.
+        </strong>
+      </p>
+
+      <p>
+        Transportation. Touring. Guides. Attractions. Aviation. Yachts.
+        Shuttles. Logistics. Custom itineraries.
+        One relationship from the first conversation to the final drop-off.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SERVICE STRIP -->
+
+<section class="service-strip">
+  <div class="container service-strip-inner">
+
+    <div class="service-mini">
+      Custom Experiences
+    </div>
+
+    <div class="service-mini">
+      Worldwide Transportation
+    </div>
+
+    <div class="service-mini">
+      Private Aviation
+    </div>
+
+    <div class="service-mini">
+      Luxury & Events
+    </div>
+
+  </div>
+</section>
+
+
+<!-- DESTINATIONS -->
+
+<section
+  id="destinations"
+  class="destinations"
+>
+  <div class="container">
+
+    <div class="section-header">
+
+      <div class="eyebrow">
+        TRAVAZA DESTINATIONS
+      </div>
+
+      <h2>
+        Go somewhere worth remembering.
+      </h2>
+
+      <p>
+        Signature destinations supported by local knowledge,
+        experienced partners and a travel team focused on
+        making every movement feel intentional.
+      </p>
+
+    </div>
+
+
+    <div class="destination-grid">
+
+      {
+        destinations.map((destination) => (
+
+          <article class="destination">
+
+            <div class="eyebrow">
+              {destination.eyebrow}
+            </div>
+
+            {
+              destination.image ? (
+
+                <img
+                  class="destination-logo"
+                  src={destination.image}
+                  alt={`Travaza ${destination.title}`}
+                />
+
+              ) : (
+
+                <div class="destination-spacer"></div>
+
+              )
+            }
+
+            <h3>
+              {destination.title}
+            </h3>
+
+            <p>
+              {destination.description}
+            </p>
+
+            <a
+              href={destination.link}
+              class="text-link"
+            >
+              Plan This Experience →
+            </a>
+
+          </article>
+
+        ))
+      }
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- LUXURY -->
+
+<section
+  id="luxury"
+  class="luxury-section"
+>
+  <div class="container">
+
+    <div class="section-header dark-text-header">
+
+      <div class="eyebrow">
+        TRAVAZA LUXURY
+      </div>
+
+      <h2>
+        Exceptional travel without the friction.
+      </h2>
+
+      <p>
+        Designed for travellers who value their time,
+        privacy and the confidence that every detail
+        is already being handled.
+      </p>
+
+    </div>
+
+
+    <div class="luxury-grid">
+
+      {
+        luxury.map((item) => (
+
+          <article class="luxury-card">
+
+            <div class="luxury-icon">
+              {item.icon}
+            </div>
+
+            <h3>
+              {item.title}
+            </h3>
+
+            <p>
+              {item.description}
+            </p>
+
+          </article>
+
+        ))
+      }
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- GROUPS -->
+
+<section
+  id="groups"
+  class="groups"
+>
+  <div class="container groups-grid">
+
+    <div>
+
+      <div class="eyebrow">
+        TRAVAZA GROUPS
+      </div>
+
+      <h2>
+        Moving people is easy. Moving them well is different.
+      </h2>
+
+      <p class="groups-copy">
+        Travaza coordinates transportation for groups that cannot
+        afford confusion, missed movements or fragmented suppliers.
+        From one motorcoach to complex multi-vehicle programs,
+        our team builds the movement around your schedule.
+      </p>
+
+      <a
+        href="#inquire"
+        class="button button-gold"
+      >
+        Request Group Transportation
+      </a>
+
+    </div>
+
+
+    <div class="service-list">
+
+      {
+        groupServices.map((service) => (
+
+          <div class="service-list-item">
+            {service}
+          </div>
+
+        ))
+      }
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- EXPERIENCES -->
+
+<section
+  id="experiences"
+  class="experiences"
+>
+  <div class="container">
+
+    <div class="section-header">
+
+      <div class="eyebrow">
+        TRAVAZA EXPERIENCES
+      </div>
+
+      <h2>
+        Your itinerary. Not someone else's.
+      </h2>
+
+      <p>
+        Start with one of our signature destinations or let us build
+        something completely around you.
+      </p>
+
+    </div>
+
+
+    <div class="experience-tags">
+
+      {
+        experiences.map((experience) => (
+
+          <a
+            href="#inquire"
+            class="experience-tag"
+          >
+            {experience}
+          </a>
+
+        ))
+      }
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- INQUIRY -->
+
+<section
+  id="inquire"
+  class="inquiry"
+>
+  <div class="container inquiry-grid">
+
+    <div>
+
+      <div class="eyebrow">
+        LET'S MOVE
+      </div>
+
+      <h2>
+        Tell us where you're going.
+      </h2>
+
+      <p class="inquiry-copy">
+        Whether you're moving 6 guests or 600,
+        planning a private escape or coordinating a multi-city program,
+        send us the details and our reservations team will take it from there.
+      </p>
+
+      <div class="contact-direct">
+
+        Reservations<br />
+
+        <a href="mailto:reservations@travaza.com">
+          reservations@travaza.com
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!--
+      NETLIFY FORM
+
+      After your site deploys in Netlify:
+      Forms -> Form notifications ->
+      Add email notification ->
+      reservations@travaza.com
+    -->
+
+    <form
+      class="quote-form"
+      name="travaza-charter-request"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      action="/thank-you"
+    >
+
+      <input
+        type="hidden"
+        name="form-name"
+        value="travaza-charter-request"
+      />
+
+      <p style="display:none;">
+        <label>
+          Don't fill this out:
+          <input name="bot-field" />
+        </label>
+      </p>
+
+      <h3 class="form-title">
+        Request Transportation or a Curated Experience
+      </h3>
+
+
+      <div class="form-grid">
+
+        <div class="field">
+          <label for="name">
+            Name *
+          </label>
+
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+          />
+        </div>
+
+
+        <div class="field">
+          <label for="company">
+            Company / Organization
+          </label>
+
+          <input
+            id="company"
+            name="company"
+            type="text"
+          />
+        </div>
+
+
+        <div class="field">
+          <label for="email">
+            Email *
+          </label>
+
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+          />
+        </div>
+
+
+        <div class="field">
+          <label for="phone">
+            Phone
+          </label>
+
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+          />
+        </div>
+
+
+        <div class="field field-full">
+          <label for="service">
+            What can we arrange? *
+          </label>
+
+          <select
+            id="service"
+            name="service"
+            required
+          >
+            <option value="">
+              Select a service
+            </option>
+
+            <option>
+              Coach Bus Charter
+            </option>
+
+            <option>
+              Group Transportation
+            </option>
+
+            <option>
+              Corporate Shuttle
+            </option>
+
+            <option>
+              Sports Team Transportation
+            </option>
+
+            <option>
+              Musician / Touring Artist Transportation
+            </option>
+
+            <option>
+              Private Tour
+            </option>
+
+            <option>
+              Custom Travel Package
+            </option>
+
+            <option>
+              Airport Transfer
+            </option>
+
+            <option>
+              Private Aviation
+            </option>
+
+            <option>
+              Private Yacht
+            </option>
+
+            <option>
+              Step-On Guide
+            </option>
+
+            <option>
+              Event Transportation
+            </option>
+
+            <option>
+              Other
+            </option>
+          </select>
+        </div>
+
+
+        <div class="field">
+          <label for="date">
+            Service Date *
+          </label>
+
+          <input
+            id="date"
+            name="service_date"
+            type="date"
+            required
+          />
+        </div>
+
+
+        <div class="field">
+          <label for="passengers">
+            Number of Guests *
+          </label>
+
+          <input
+            id="passengers"
+            name="passengers"
+            type="number"
+            min="1"
+            required
+          />
+        </div>
+
+
+        <div class="field">
+          <label for="pickup">
+            Pickup Location *
+          </label>
+
+          <input
+            id="pickup"
+            name="pickup_location"
+            type="text"
+            placeholder="Hotel, airport, city or address"
+            required
+          />
+        </div>
+
+
+        <div class="field">
+          <label for="destination">
+            Destination *
+          </label>
+
+          <input
+            id="destination"
+            name="destination"
+            type="text"
+            required
+          />
+        </div>
+
+
+        <div class="field">
+          <label for="return-date">
+            Return Date
+          </label>
+
+          <input
+            id="return-date"
+            name="return_date"
+            type="date"
+          />
+        </div>
+
+
+        <div class="field">
+          <label for="luggage">
+            Luggage
+          </label>
+
+          <input
+            id="luggage"
+            name="luggage"
+            type="text"
+            placeholder="Example: 30 large + 30 carry-ons"
+          />
+        </div>
+
+
+        <div class="field field-full">
+          <label for="details">
+            Tell Us About Your Plans
+          </label>
+
+          <textarea
+            id="details"
+            name="details"
+            placeholder="Times, stops, flight numbers, hotels, vehicle requirements, accessibility needs, itinerary ideas or anything else we should know."
+          ></textarea>
+        </div>
+
+      </div>
+
+
+      <button
+        class="submit-button"
+        type="submit"
+      >
+        Submit Request to Travaza
+      </button>
+
+
+      <p class="form-note">
+        Your request will be reviewed by the Travaza reservations team.
+        Submission does not confirm availability until you receive a formal confirmation.
+      </p>
+
+    </form>
+
+  </div>
+</section>
+
+</main>
+
+
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+
+        <img
+          class="footer-logo"
+          src="/images/travaza/travaza-gold.png"
+          alt="Travaza"
+        />
+
+        <p>
+          Global travel, transportation and curated experiences
+          designed around where you're going, who you're moving
+          and how you want to experience the world.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <div class="footer-title">
+          Explore
+        </div>
+
+        <div class="footer-links">
+          <a href="#destinations">Destinations</a>
+          <a href="#luxury">Luxury</a>
+          <a href="#groups">Groups</a>
+          <a href="#experiences">Experiences</a>
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <div class="footer-title">
+          Start Planning
+        </div>
+
+        <div class="footer-links">
+          <a href="#inquire">Request a Quote</a>
+
+          <a href="mailto:reservations@travaza.com">
+            reservations@travaza.com
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+      © {new Date().getFullYear()} Travaza.
+      Transportation, tours, private aviation,
+      luxury experiences and group travel services
+      are subject to destination availability,
+      supplier terms and applicable operating requirements.
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
