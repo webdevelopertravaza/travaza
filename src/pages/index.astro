@@ -1,272 +1,91 @@
 ---
-const divisions = [
+const services = [
   {
-    name: "Corporate",
-    label: "TRAVAZA CORPORATE",
-    image: "/images/travaza/travaza-corporate.png",
+    title: "Corporate",
+    subtitle: "TRAVAZA CORPORATE",
+    logo: "/images/travaza/travaza-corporate.png",
     description:
-      "Executive mobility, corporate travel programs, leadership retreats, incentive travel, conferences and complex multi-vehicle transportation for organizations that expect flawless execution.",
-    services: [
-      "Executive transportation",
-      "Leadership retreats",
-      "Airport movements",
-      "Corporate travel programs",
-      "Conference transportation",
-      "VIP client programs"
-    ]
+      "Executive transportation, leadership retreats, client entertainment, incentive programs, conferences and high-touch corporate travel.",
+    link: "#consultation"
   },
-
   {
-    name: "Events",
-    label: "TRAVAZA EVENTS",
-    image: "/images/travaza/travaza-events.png",
+    title: "Events",
+    subtitle: "TRAVAZA EVENTS",
+    logo: "/images/travaza/travaza-events.png",
     description:
-      "High-touch event planning, guest transportation and logistics for product launches, premieres, brand activations, executive dinners, sporting events, private celebrations and major productions.",
-    services: [
-      "VIP event logistics",
-      "Brand activations",
-      "Executive dinners",
-      "Product launches",
-      "Premieres & productions",
-      "Guest transportation"
-    ]
+      "VIP event movements, launches, premieres, sporting events, productions, executive dinners and complex guest logistics.",
+    link: "#consultation"
   },
-
   {
-    name: "Luxury",
-    label: "TRAVAZA LUXURY",
-    image: "/images/travaza/travaza-luxury.png",
+    title: "Private Travel",
+    subtitle: "TRAVAZA LUXURY",
+    logo: "/images/travaza/travaza-luxury.png",
     description:
-      "Highly personalized travel for clients who value privacy, access and time. We curate the transportation, accommodations, experiences and destination logistics around the traveller.",
-    services: [
-      "Bespoke itineraries",
-      "Private guides",
-      "Luxury transfers",
-      "Yacht experiences",
-      "Destination planning",
-      "High-touch concierge"
-    ]
+      "Bespoke journeys designed around privacy, access, time and the way you actually want to experience a destination.",
+    link: "#consultation"
   },
-
   {
-    name: "Aviation",
-    label: "TRAVAZA AVIATION",
-    image: "/images/travaza/travaza-aviation.png",
+    title: "Private Aviation",
+    subtitle: "TRAVAZA AVIATION",
+    logo: "/images/travaza/travaza-aviation.png",
     description:
-      "Private aviation sourcing paired with executive ground transportation and destination coordination for individuals, leadership teams, professional athletes, artists and private groups.",
-    services: [
-      "Private jet charter",
-      "Executive aviation",
-      "Airport coordination",
-      "Ground transportation",
-      "Group aviation support",
-      "Door-to-door planning"
-    ]
+      "Private aircraft sourcing paired with executive ground transportation and complete destination coordination.",
+    link: "#consultation"
   }
 ];
 
-
-const destinations = [
-
-  {
-    name: "Toronto",
-    region: "CANADA",
-    image: "/images/travaza/travaza-toronto.png",
-    headline:
-      "Canada's global business, culture and entertainment capital.",
-    description:
-      "Executive transportation, private city experiences, corporate programs, airport movements, sporting events, concerts, conventions and curated escapes throughout Toronto and Southern Ontario."
-  },
-
-  {
-    name: "Niagara Falls",
-    region: "CANADA + USA",
-    image: "/images/travaza/travaza-niagara.png",
-    headline:
-      "Two countries. One extraordinary destination.",
-    description:
-      "Private touring, wine country, cross-border experiences, luxury transportation, licensed local guides, major attractions and fully coordinated Niagara Falls programs on both the Canadian and American sides."
-  },
-
-  {
-    name: "Guyana",
-    region: "DESTINATION OF THE YEAR 2026",
-    image: "/images/travaza/travaza-guyana.png",
-    headline:
-      "One of the world's most exciting emerging destinations.",
-    description:
-      "Travaza's Destination of the Year for 2026. Discover a rapidly evolving country through curated experiences, cultural touring, nature, private transportation, airport transfers, group shuttles and hotel packages designed around a destination entering a remarkable new chapter."
-  },
-
-  {
-    name: "Miami",
-    region: "USA",
-    image: "/images/travaza/travaza-miami.png",
-    headline:
-      "Business, nightlife, luxury and the water.",
-    description:
-      "Executive transportation, private yacht experiences, aviation connections, major events, airport transfers and high-touch South Florida itineraries."
-  },
-
-  {
-    name: "New York",
-    region: "USA",
-    image: "",
-    headline:
-      "The world's stage for business, culture and entertainment.",
-    description:
-      "Executive transportation, corporate programs, private touring, event movements, entertainment logistics and tailored New York experiences for clients who value efficiency and access."
-  },
-
-  {
-    name: "Los Angeles",
-    region: "USA",
-    image: "",
-    headline:
-      "Entertainment, sport and global influence.",
-    description:
-      "Transportation and experience planning for entertainment, professional sports, executives, private clients, productions and high-profile movements throughout Greater Los Angeles."
-  },
-
-  {
-    name: "London",
-    region: "UNITED KINGDOM",
-    image: "",
-    headline:
-      "Global business meets timeless tradition.",
-    description:
-      "Private transportation, executive movements, curated city experiences and tailored programs throughout London and the surrounding region."
-  },
-
-  {
-    name: "Paris",
-    region: "FRANCE",
-    image: "",
-    headline:
-      "Culture, fashion and extraordinary private experiences.",
-    description:
-      "Bespoke Paris itineraries, executive transportation, private touring, culinary experiences and luxury travel coordinated around your time and preferences."
-  }
-
+const audiences = [
+  "Private Clients",
+  "Family Offices",
+  "Professional Sports",
+  "Fortune & Forbes Companies",
+  "Musicians & Entertainment",
+  "Luxury FIT Travel",
+  "Executive Leadership",
+  "Tour Operators",
+  "Major Events"
 ];
 
-
-const clientTypes = [
-
-  {
-    title: "Private Clients",
-    description:
-      "Discreet, highly personalized travel for individuals and families who value their time and want one trusted team to plan and execute the details."
-  },
-
-  {
-    title: "Professional Sports",
-    description:
-      "Transportation and logistics for professional teams, ownership groups, athletes, executives, sponsors and VIP guests."
-  },
-
-  {
-    title: "Fortune & Forbes Companies",
-    description:
-      "Executive movements, conferences, client entertainment, incentive programs, leadership retreats and major corporate transportation."
-  },
-
-  {
-    title: "Entertainment",
-    description:
-      "Artists, musicians, touring productions, talent, management teams and high-profile guest transportation."
-  },
-
-  {
-    title: "Luxury & FIT Travel",
-    description:
-      "Custom individual travel built around private transportation, destination access, hotels, guides and experiences."
-  },
-
-  {
-    title: "Family Offices & Advisors",
-    description:
-      "A trusted execution partner for advisors arranging sophisticated travel, transportation and destination programs on behalf of private clients."
-  }
-
-];
-
-
-const signatureExperiences = [
-
-  {
-    eyebrow: "GUYANA",
-    title: "Destination of the Year 2026",
-    description:
-      "Curated Guyana travel combining private transfers, hotels, cultural experiences, nature, guides, airport services and custom multi-day programs."
-  },
-
-  {
-    eyebrow: "PRIVATE AVIATION",
-    title: "Fly on Your Schedule",
-    description:
-      "Private aircraft sourcing integrated with airport coordination, executive vehicles and destination transportation."
-  },
-
-  {
-    eyebrow: "MIAMI",
-    title: "Private Yacht Experiences",
-    description:
-      "Private yacht days, entertaining, celebrations and tailored experiences on the water throughout Miami and South Florida."
-  },
-
-  {
-    eyebrow: "MEDITERRANEAN",
-    title: "Amalfi Coast & Croatia",
-    description:
-      "Luxury yacht experiences and curated coastal itineraries throughout some of the Mediterranean's most spectacular destinations."
-  },
-
-  {
-    eyebrow: "NIAGARA FALLS",
-    title: "Niagara, Privately",
-    description:
-      "Private touring across Canada and the USA featuring Niagara Falls, wine country, iconic attractions and local destination expertise."
-  },
-
-  {
-    eyebrow: "GLOBAL GROUP MOVEMENT",
-    title: "Move 10. Or 1,000.",
-    description:
-      "Executive vehicles, Sprinters, minibuses, motorcoaches and coordinated fleet programs for complex group transportation."
-  }
-
-];
-
-
-const movementServices = [
+const mobilityServices = [
   "Worldwide motorcoach charters",
   "Executive Sprinter transportation",
-  "Private chauffeur services",
-  "Corporate shuttle programs",
+  "Private chauffeur service",
   "Airport transfers",
+  "Corporate shuttle programs",
   "Professional sports teams",
   "Athletes & ownership groups",
-  "Musicians & touring artists",
-  "Concert & production logistics",
+  "Touring musicians",
+  "Entertainment productions",
   "Conference transportation",
   "Executive retreats",
-  "Client entertainment programs",
+  "Client entertainment",
   "Large group movements",
-  "Multi-day touring",
   "Cross-border transportation",
-  "Step-on destination guides",
+  "Multi-day touring",
+  "Step-on guides",
   "Audio-guided experiences",
-  "Private guides",
+  "Private destination guides",
   "FIT transportation",
   "Custom multi-city logistics"
 ];
 
+const guyanaServices = [
+  "Curated multi-day experiences",
+  "Private tours",
+  "Airport transfers",
+  "Private transportation",
+  "Group shuttles",
+  "Hotel packages",
+  "Nature & wildlife experiences",
+  "Cultural experiences",
+  "Corporate movements",
+  "Private guides",
+  "Custom itineraries",
+  "Group travel programs"
+];
 ---
 
-
 <html lang="en">
-
 
 <head>
 
@@ -277,2099 +96,1522 @@ const movementServices = [
   content="width=device-width, initial-scale=1.0"
 />
 
-
 <title>
-Travaza | Luxury Travel, Executive Transportation & Curated Experiences
+Travaza | Private Travel, Global Mobility & Curated Experiences
 </title>
-
 
 <meta
   name="description"
-  content="Travaza plans and executes luxury travel, private aviation, yacht experiences, executive transportation, corporate programs, sports team movements and curated destination experiences worldwide."
+  content="Travaza creates and executes private travel, executive transportation, corporate programs, luxury experiences, private aviation, yacht charters, sports team movements and curated journeys worldwide."
 />
-
 
 <meta
   name="keywords"
-  content="luxury travel, high net worth travel, executive transportation, private jet charter, yacht charter, corporate travel, sports team transportation, Niagara Falls private tours, Toronto executive transportation, Miami yacht charter, Guyana luxury travel"
+  content="luxury travel, high net worth travel, private jet charter, yacht charter, executive transportation, worldwide coach charter, corporate travel, sports team transportation, Niagara Falls private tours, Toronto transportation, Guyana luxury travel, Miami yacht charter"
 />
 
+<link
+  rel="preconnect"
+  href="https://fonts.googleapis.com"
+/>
+
+<link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin
+/>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap"
+  rel="stylesheet"
+/>
 
 <style>
 
-
 :root {
-
-  --black: #040605;
-  --black-soft: #0a0d0b;
-  --black-card: #101310;
-
-  --cream: #f5f1e7;
-  --cream-soft: #e8e1d4;
-
-  --gold: #cf9b35;
-  --gold-light: #edc675;
-  --gold-dark: #956a20;
-
+  --black: #050605;
+  --soft-black: #101210;
   --white: #ffffff;
+  --soft-white: #fafafa;
 
-  --light-text: rgba(255,255,255,.82);
-  --muted-light: rgba(255,255,255,.56);
+  --gold: #c89a3d;
+  --gold-light: #e6c57d;
+  --gold-dark: #92702d;
 
-  --dark-text: #151815;
-  --muted-dark: #676b67;
+  --text: #171917;
+  --muted: #686d69;
 
-  --light-line: rgba(255,255,255,.12);
-  --dark-line: rgba(20,24,21,.13);
-
+  --line: #e7e7e4;
+  --dark-line: rgba(255,255,255,.14);
 }
-
 
 * {
   box-sizing: border-box;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
 
-
 body {
-
   margin: 0;
-
-  background: var(--black);
-
-  color: white;
+  background: var(--white);
+  color: var(--text);
 
   font-family:
-    "Helvetica Neue",
-    Helvetica,
+    "Manrope",
     Arial,
     sans-serif;
 
   -webkit-font-smoothing: antialiased;
-
 }
 
+h1,
+h2,
+h3,
+h4,
+blockquote {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+}
 
 img {
-
   display: block;
-
   max-width: 100%;
-
 }
-
 
 a {
-
-  color: inherit;
-
   text-decoration: none;
-
+  color: inherit;
 }
-
 
 input,
-textarea,
 select,
+textarea,
 button {
-
   font: inherit;
-
 }
-
 
 .container {
-
-  width:
-    min(
-      1220px,
-      calc(100% - 44px)
-    );
-
+  width: min(1240px, calc(100% - 46px));
   margin: auto;
-
 }
-
 
 .eyebrow {
-
-  color: var(--gold);
-
-  font-size: 11px;
-
-  font-weight: 700;
-
-  letter-spacing: .2em;
-
+  color: var(--gold-dark);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .22em;
   text-transform: uppercase;
-
 }
 
+.eyebrow-light {
+  color: var(--gold-light);
+}
 
-.display-heading {
-
-  margin:
-    14px
-    0
-    20px;
+.section-title {
+  margin: 14px 0 20px;
 
   font-size:
     clamp(
-      44px,
-      6vw,
-      80px
+      50px,
+      6.4vw,
+      88px
     );
 
-  line-height: .99;
-
-  font-weight: 300;
-
-  letter-spacing: -.045em;
-
+  line-height: .94;
+  font-weight: 400;
+  letter-spacing: -.035em;
 }
-
 
 .section-copy {
+  max-width: 690px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
 
-  max-width: 720px;
+.button {
+  min-height: 55px;
+  padding: 0 26px;
 
-  color: var(--muted-light);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-  font-size: 17px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .17em;
+  text-transform: uppercase;
 
-  line-height: 1.7;
+  transition: .2s ease;
+}
 
+.button-gold {
+  background: var(--gold);
+  color: #080908;
+}
+
+.button-gold:hover {
+  background: var(--gold-light);
+}
+
+.button-dark {
+  background: var(--black);
+  color: white;
+}
+
+.button-outline {
+  border: 1px solid rgba(255,255,255,.35);
+  color: white;
 }
 
 
-
-/* =========================================
+/* ========================================
 HEADER
-========================================= */
-
+======================================== */
 
 header {
-
   position: absolute;
-
   width: 100%;
-
-  z-index: 20;
+  z-index: 30;
 
   border-bottom:
     1px solid
-    var(--light-line);
-
+    rgba(255,255,255,.17);
 }
 
-
 .nav {
-
-  min-height: 92px;
+  min-height: 94px;
 
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
 
   gap: 30px;
-
 }
 
-
-.logo {
-
-  width: 195px;
-
+.main-logo {
+  width: 190px;
 }
-
 
 .nav-links {
-
   display: flex;
-
   align-items: center;
-
   gap: 27px;
-
 }
-
 
 .nav-links a {
+  color: rgba(255,255,255,.82);
 
-  color: rgba(255,255,255,.72);
-
-  font-size: 11px;
-
-  letter-spacing: .12em;
-
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .16em;
   text-transform: uppercase;
-
 }
-
 
 .nav-links a:hover {
-
   color: var(--gold-light);
+}
 
+.nav-cta {
+  border: 1px solid rgba(230,197,125,.72);
+  padding: 13px 17px;
 }
 
 
-.nav-button {
-
-  border:
-    1px solid
-    var(--gold);
-
-  padding:
-    13px
-    18px;
-
-  color:
-    var(--gold-light)
-    !important;
-
-}
-
-
-
-/* =========================================
+/* ========================================
 HERO
-========================================= */
-
+======================================== */
 
 .hero {
-
-  min-height: 920px;
-
-  position: relative;
+  min-height: 940px;
 
   display: flex;
-
   align-items: center;
 
+  position: relative;
   overflow: hidden;
 
+  color: white;
+
   background:
-
     radial-gradient(
-      circle at 80% 36%,
-      rgba(207,155,53,.15),
-      transparent 28%
+      circle at 83% 34%,
+      rgba(200,154,61,.17),
+      transparent 29%
     ),
-
     linear-gradient(
       120deg,
-      #020403,
-      #090c09 64%,
-      #121008
+      #020302,
+      #080b08 65%,
+      #16130b
     );
-
 }
 
-
-.hero:after {
-
+.hero:before {
   content: "";
 
   position: absolute;
 
-  width: 660px;
+  width: 670px;
+  height: 670px;
 
-  height: 660px;
+  right: -240px;
+  top: 150px;
 
   border-radius: 50%;
 
-  right: -250px;
-
-  top: 145px;
-
   border:
     1px solid
-    rgba(207,155,53,.15);
-
+    rgba(200,154,61,.18);
 }
 
-
 .hero-inner {
-
   position: relative;
-
   z-index: 2;
 
   padding-top: 110px;
 
-  max-width: 1050px;
-
+  max-width: 1070px;
 }
-
 
 .hero h1 {
-
-  margin:
-    26px
-    0
-    30px;
+  margin: 28px 0 37px;
 
   font-size:
     clamp(
-      63px,
-      9.5vw,
-      132px
+      76px,
+      10vw,
+      148px
     );
 
-  line-height: .86;
-
-  font-weight: 200;
-
-  letter-spacing: -.07em;
-
+  line-height: .78;
+  letter-spacing: -.055em;
+  font-weight: 300;
 }
 
-
-.hero .gold {
-
-  color: var(--gold);
-
+.hero h1 span {
+  color: var(--gold-light);
+  font-style: italic;
 }
 
+.hero-copy {
+  max-width: 780px;
 
-.hero-description {
+  color: rgba(255,255,255,.73);
 
-  max-width: 820px;
-
-  color: rgba(255,255,255,.69);
-
-  font-size:
-    clamp(
-      18px,
-      2vw,
-      23px
-    );
-
-  line-height: 1.65;
-
+  font-size: 19px;
+  line-height: 1.75;
 }
-
 
 .hero-actions {
-
   display: flex;
-
   flex-wrap: wrap;
-
-  gap: 13px;
+  gap: 12px;
 
   margin-top: 39px;
+}
 
+.hero-micro {
+  margin-top: 80px;
+  padding-top: 26px;
+
+  border-top: 1px solid var(--dark-line);
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.hero-micro strong {
+  display: block;
+  color: var(--gold-light);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 22px;
+  font-weight: 400;
+
+  margin-bottom: 5px;
+}
+
+.hero-micro span {
+  color: rgba(255,255,255,.48);
+  font-size: 11px;
+  line-height: 1.5;
 }
 
 
-.btn {
+/* ========================================
+INTRO
+======================================== */
 
-  min-height: 55px;
+.intro {
+  background: white;
+  padding: 135px 0;
+}
 
-  padding:
-    0
-    26px;
+.intro-grid {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 105px;
+}
 
-  display: inline-flex;
+.intro-copy {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.9;
+}
 
-  align-items: center;
+.intro-copy strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.intro-statement {
+  margin-top: 33px;
+  padding-top: 30px;
+
+  border-top: 1px solid var(--line);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 33px;
+  line-height: 1.22;
+}
+
+
+/* ========================================
+AUDIENCE
+======================================== */
+
+.audience {
+  padding: 32px 0;
+
+  background: var(--soft-white);
+
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.audience-list {
+  display: flex;
+  flex-wrap: wrap;
 
   justify-content: center;
 
-  font-size: 11px;
+  gap: 16px 39px;
+}
 
-  font-weight: 700;
-
-  letter-spacing: .14em;
-
+.audience-list span {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .13em;
   text-transform: uppercase;
-
+  color: #585c58;
 }
 
 
-.btn-gold {
+/* ========================================
+SERVICES
+======================================== */
 
-  background: var(--gold);
-
-  color: #050705;
-
+.services {
+  padding: 125px 0;
+  background: white;
 }
 
-
-.btn-gold:hover {
-
-  background: var(--gold-light);
-
-}
-
-
-.btn-outline {
-
-  border:
-    1px solid
-    rgba(255,255,255,.28);
-
-}
-
-
-.btn-outline:hover {
-
-  border-color: var(--gold);
-
-  color: var(--gold-light);
-
-}
-
-
-.hero-bottom {
-
-  margin-top: 76px;
-
-  padding-top: 27px;
-
-  border-top:
-    1px solid
-    var(--light-line);
-
+.services-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(
-      4,
-      1fr
-    );
-
-  gap: 28px;
-
-}
-
-
-.hero-stat strong {
-
-  display: block;
-
-  color: var(--gold-light);
-
-  font-size: 15px;
-
-  font-weight: 400;
-
-  margin-bottom: 7px;
-
-}
-
-
-.hero-stat span {
-
-  color: rgba(255,255,255,.48);
-
-  font-size: 12px;
-
-  line-height: 1.5;
-
-}
-
-
-
-/* =========================================
-WHO WE ARE
-========================================= */
-
-
-.who {
-
-  padding:
-    125px
-    0;
-
-  background: var(--cream);
-
-  color: var(--dark-text);
-
-}
-
-
-.who-grid {
-
-  display: grid;
-
-  grid-template-columns:
-    .72fr
-    1.28fr;
-
-  gap: 105px;
-
-}
-
-
-.who-copy {
-
-  color: #545954;
-
-  font-size: 18px;
-
-  line-height: 1.82;
-
-}
-
-
-.who-copy strong {
-
-  color: var(--dark-text);
-
-}
-
-
-.promise {
-
-  margin-top: 32px;
-
-  padding-top: 27px;
-
-  border-top:
-    1px solid
-    var(--dark-line);
-
-  font-size: 25px;
-
-  line-height: 1.4;
-
-  font-weight: 300;
-
-}
-
-
-
-/* =========================================
-IDEAL CLIENTS
-========================================= */
-
-
-.clients {
-
-  padding:
-    120px
-    0;
-
-}
-
-
-.clients-grid {
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(
-      3,
-      1fr
-    );
-
-  margin-top: 50px;
-
-  border-top:
-    1px solid
-    var(--light-line);
-
-  border-left:
-    1px solid
-    var(--light-line);
-
-}
-
-
-.client-card {
-
-  min-height: 260px;
-
-  padding: 33px;
-
-  border-right:
-    1px solid
-    var(--light-line);
-
-  border-bottom:
-    1px solid
-    var(--light-line);
-
-}
-
-
-.client-number {
-
-  color: var(--gold);
-
-  font-size: 11px;
-
-  letter-spacing: .15em;
-
-}
-
-
-.client-card h3 {
-
-  margin:
-    60px
-    0
-    11px;
-
-  font-size: 26px;
-
-  font-weight: 300;
-
-}
-
-
-.client-card p {
-
-  color: var(--muted-light);
-
-  font-size: 14px;
-
-  line-height: 1.6;
-
-}
-
-
-
-/* =========================================
-WHAT WE DO
-========================================= */
-
-
-.what {
-
-  padding:
-    120px
-    0;
-
-  background: #0b0e0c;
-
-}
-
-
-.division-grid {
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(
-      2,
-      1fr
-    );
+  grid-template-columns: repeat(2, 1fr);
 
   margin-top: 55px;
 
-  border-top:
-    1px solid
-    var(--light-line);
-
-  border-left:
-    1px solid
-    var(--light-line);
-
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
 }
 
-
-.division {
-
-  min-height: 510px;
+.service-card {
+  min-height: 430px;
 
   padding: 42px;
 
-  border-right:
-    1px solid
-    var(--light-line);
-
-  border-bottom:
-    1px solid
-    var(--light-line);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 
   display: flex;
-
   flex-direction: column;
 
+  background: white;
 }
 
-
-.division img {
-
-  width: 225px;
-
-  height: 80px;
+.service-logo {
+  width: 220px;
+  height: 82px;
 
   object-fit: contain;
-
   object-position: left center;
+}
 
+.service-card h3 {
+  margin: auto 0 12px;
+
+  font-size: 44px;
+  font-weight: 400;
+}
+
+.service-card p {
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 23px;
+}
+
+.card-link {
+  color: var(--gold-dark);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .15em;
+  text-transform: uppercase;
 }
 
 
-.division h3 {
+/* ========================================
+MIAMI FEATURE
+======================================== */
 
-  margin:
-    auto
-    0
-    13px;
+.photo-feature {
+  min-height: 760px;
 
-  font-size: 37px;
-
-  font-weight: 300;
-
-}
-
-
-.division > p {
-
-  color: var(--muted-light);
-
-  line-height: 1.65;
-
-  max-width: 520px;
-
-}
-
-
-.mini-services {
+  position: relative;
 
   display: flex;
+  align-items: flex-end;
 
+  overflow: hidden;
+
+  color: white;
+}
+
+.photo-feature > img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.photo-feature:after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      0deg,
+      rgba(0,0,0,.85),
+      rgba(0,0,0,.05) 68%
+    );
+}
+
+.photo-feature-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 780px;
+
+  padding-bottom: 75px;
+}
+
+.photo-feature h2 {
+  margin: 12px 0 14px;
+
+  font-size:
+    clamp(
+      52px,
+      6.8vw,
+      90px
+    );
+
+  line-height: .92;
+  font-weight: 400;
+}
+
+.photo-feature p {
+  max-width: 630px;
+
+  color: rgba(255,255,255,.8);
+
+  line-height: 1.75;
+}
+
+
+/* ========================================
+DESTINATION INTRO
+======================================== */
+
+.destination-intro {
+  padding: 120px 0 65px;
+  background: var(--black);
+  color: white;
+}
+
+.destination-intro .section-copy {
+  color: rgba(255,255,255,.6);
+}
+
+
+/* ========================================
+NEW YORK
+======================================== */
+
+.destination-feature {
+  position: relative;
+
+  min-height: 700px;
+
+  display: flex;
+  align-items: flex-end;
+
+  overflow: hidden;
+
+  color: white;
+}
+
+.destination-feature img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.destination-feature:after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      0deg,
+      rgba(0,0,0,.9),
+      rgba(0,0,0,.06) 70%
+    );
+}
+
+.destination-feature-content {
+  position: relative;
+  z-index: 2;
+
+  padding-bottom: 68px;
+
+  max-width: 720px;
+}
+
+.destination-feature h2 {
+  margin: 11px 0 10px;
+
+  font-size:
+    clamp(
+      53px,
+      7vw,
+      92px
+    );
+
+  font-weight: 400;
+  line-height: .91;
+}
+
+.destination-feature p {
+  max-width: 630px;
+
+  color: rgba(255,255,255,.76);
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+LONDON + PARIS
+======================================== */
+
+.city-pair {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  background: black;
+}
+
+.city-card {
+  min-height: 650px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.city-card img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.city-card:after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      0deg,
+      rgba(0,0,0,.85),
+      rgba(0,0,0,.04) 70%
+    );
+}
+
+.city-content {
+  position: absolute;
+  z-index: 2;
+
+  bottom: 45px;
+  left: 42px;
+  right: 42px;
+
+  color: white;
+}
+
+.city-content h3 {
+  margin: 8px 0 8px;
+
+  font-size: 59px;
+  font-weight: 400;
+}
+
+.city-content p {
+  max-width: 480px;
+
+  margin: 0;
+
+  color: rgba(255,255,255,.7);
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+
+/* ========================================
+TORONTO
+======================================== */
+
+.toronto {
+  padding: 130px 0;
+  background: white;
+}
+
+.toronto-grid {
+  display: grid;
+  grid-template-columns: .65fr 1.35fr;
+
+  gap: 90px;
+
+  align-items: center;
+}
+
+.destination-brand {
+  max-width: 330px;
+}
+
+.destination-copy-large {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.micro-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  margin-top: 30px;
+
+  border-top: 1px solid var(--line);
+}
+
+.micro-item {
+  padding: 17px 3px;
+
+  border-bottom: 1px solid var(--line);
+
+  color: #555a56;
+
+  font-size: 13px;
+}
+
+.micro-item:before {
+  content: "—";
+  color: var(--gold);
+  margin-right: 10px;
+}
+
+
+/* ========================================
+NIAGARA PHOTO SPLIT
+======================================== */
+
+.niagara {
+  background: var(--black);
+  color: white;
+  padding: 125px 0;
+}
+
+.niagara-heading {
+  max-width: 750px;
+  margin-bottom: 55px;
+}
+
+.niagara-heading .section-copy {
+  color: rgba(255,255,255,.6);
+}
+
+.niagara-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 18px;
+}
+
+.niagara-card {
+  min-height: 620px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.niagara-card img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.niagara-card:after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      0deg,
+      rgba(0,0,0,.88),
+      rgba(0,0,0,.05) 68%
+    );
+}
+
+.niagara-content {
+  position: absolute;
+  z-index: 2;
+
+  bottom: 36px;
+  left: 34px;
+  right: 34px;
+}
+
+.niagara-content h3 {
+  margin: 8px 0 7px;
+
+  font-size: 44px;
+  font-weight: 400;
+}
+
+.niagara-content p {
+  max-width: 530px;
+
+  margin: 0;
+
+  color: rgba(255,255,255,.7);
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+
+/* ========================================
+GUYANA FULL IMAGE
+======================================== */
+
+.guyana {
+  min-height: 820px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  color: white;
+}
+
+.guyana-bg {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.guyana:after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.9),
+      rgba(0,0,0,.35) 62%,
+      rgba(0,0,0,.18)
+    );
+}
+
+.guyana-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 720px;
+
+  padding: 85px 0;
+}
+
+.guyana-logo {
+  max-width: 290px;
+  margin-bottom: 26px;
+}
+
+.year {
+  display: inline-block;
+
+  color: var(--gold-light);
+
+  border: 1px solid rgba(230,197,125,.65);
+
+  padding: 10px 14px;
+
+  font-size: 9px;
+  letter-spacing: .17em;
+}
+
+.guyana h2 {
+  margin: 20px 0 20px;
+
+  font-size:
+    clamp(
+      58px,
+      7.3vw,
+      100px
+    );
+
+  line-height: .89;
+  font-weight: 400;
+}
+
+.guyana-lead {
+  max-width: 650px;
+
+  color: rgba(255,255,255,.82);
+
+  font-size: 19px;
+  line-height: 1.75;
+}
+
+.guyana-services {
+  display: flex;
   flex-wrap: wrap;
 
   gap: 8px;
 
-  margin-top: 22px;
-
+  margin-top: 30px;
 }
 
+.guyana-service {
+  border: 1px solid rgba(255,255,255,.28);
 
-.mini-service {
-
-  padding:
-    9px
-    11px;
-
-  border:
-    1px solid
-    var(--light-line);
-
-  color:
-    rgba(
-      255,
-      255,
-      255,
-      .62
-    );
-
-  font-size: 11px;
-
-}
-
-
-
-/* =========================================
-DESTINATIONS
-BLACK BY DESIGN
-========================================= */
-
-
-.where {
-
-  padding:
-    125px
-    0;
-
-  background: var(--black);
-
-  color: white;
-
-}
-
-
-.where .display-heading {
-
-  color: white;
-
-}
-
-
-.where .section-copy {
-
-  color: var(--muted-light);
-
-}
-
-
-.destination-list {
-
-  margin-top: 58px;
-
-  border-top:
-    1px solid
-    var(--light-line);
-
-}
-
-
-.destination-row {
-
-  min-height: 205px;
-
-  display: grid;
-
-  grid-template-columns:
-    185px
-    .8fr
-    1.25fr;
-
-  gap: 48px;
-
-  align-items: center;
-
-  padding:
-    42px
-    0;
-
-  border-bottom:
-    1px solid
-    var(--light-line);
-
-}
-
-
-.destination-row img {
-
-  max-width: 160px;
-
-  max-height: 72px;
-
-  object-fit: contain;
-
-  object-position: left center;
-
-}
-
-
-.destination-logo-fallback {
-
-  width: 160px;
-
-  height: 2px;
-
-  background: var(--gold);
-
-}
-
-
-.destination-region {
-
-  color: var(--gold);
+  padding: 9px 11px;
 
   font-size: 10px;
-
-  letter-spacing: .17em;
-
-  font-weight: 700;
-
+  color: rgba(255,255,255,.76);
 }
 
 
-.destination-row h3 {
+/* ========================================
+SECOND NEW YORK IMAGE / EDITORIAL
+======================================== */
 
-  margin:
-    8px
-    0
-    0;
+.editorial-image {
+  min-height: 680px;
 
-  color: white;
+  position: relative;
 
-  font-size: 32px;
+  display: flex;
+  align-items: center;
 
-  font-weight: 300;
-
+  overflow: hidden;
 }
 
+.editorial-image img {
+  position: absolute;
+  inset: 0;
 
-.destination-row .headline {
+  width: 100%;
+  height: 100%;
 
-  color: white;
-
-  font-size: 18px;
-
-  margin-bottom: 8px;
-
+  object-fit: cover;
 }
 
+.editorial-image:after {
+  content: "";
 
-.destination-row p {
-
-  margin: 0;
-
-  color: var(--muted-light);
-
-  font-size: 14px;
-
-  line-height: 1.65;
-
-}
-
-
-
-/* =========================================
-GUYANA FEATURE
-========================================= */
-
-
-.guyana-feature {
-
-  padding:
-    125px
-    0;
+  position: absolute;
+  inset: 0;
 
   background:
     linear-gradient(
-      125deg,
-      #0a0d0b,
-      #17160c
+      90deg,
+      rgba(0,0,0,.82),
+      rgba(0,0,0,.12)
     );
-
 }
 
+.editorial-content {
+  position: relative;
+  z-index: 2;
 
-.guyana-grid {
+  max-width: 690px;
 
-  display: grid;
-
-  grid-template-columns:
-    .8fr
-    1.2fr;
-
-  gap: 95px;
-
-  align-items: center;
-
+  color: white;
 }
 
-
-.guyana-brand {
-
-  max-width: 325px;
-
-  margin-bottom: 38px;
-
-}
-
-
-.year-badge {
-
-  display: inline-block;
-
-  border:
-    1px solid
-    var(--gold);
-
-  color: var(--gold-light);
-
-  padding:
-    10px
-    14px;
-
-  font-size: 10px;
-
-  letter-spacing: .17em;
-
-  margin-bottom: 25px;
-
-}
-
-
-.guyana-feature h2 {
+.editorial-content h2 {
+  margin: 13px 0 16px;
 
   font-size:
     clamp(
-      46px,
+      52px,
       6vw,
-      78px
+      82px
     );
 
-  line-height: .98;
+  font-weight: 400;
+  line-height: .94;
+}
 
-  letter-spacing: -.045em;
-
-  font-weight: 300;
-
-  margin:
-    0
-    0
-    25px;
-
+.editorial-content p {
+  color: rgba(255,255,255,.76);
+  line-height: 1.75;
 }
 
 
-.guyana-lead {
+/* ========================================
+GLOBAL MOBILITY
+======================================== */
 
-  font-size: 20px;
-
-  line-height: 1.65;
-
-  color: rgba(255,255,255,.72);
-
+.mobility {
+  padding: 130px 0;
+  background: white;
 }
 
-
-.guyana-services {
-
+.mobility-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(
-      2,
-      1fr
-    );
-
-  margin-top: 34px;
-
-  border-top:
-    1px solid
-    var(--light-line);
-
-}
-
-
-.guyana-service {
-
-  padding:
-    17px
-    5px;
-
-  border-bottom:
-    1px solid
-    var(--light-line);
-
-  color: rgba(255,255,255,.72);
-
-  font-size: 13px;
-
-}
-
-
-.guyana-service:before {
-
-  content: "—";
-
-  color: var(--gold);
-
-  margin-right: 10px;
-
-}
-
-
-
-/* =========================================
-SIGNATURE EXPERIENCES
-========================================= */
-
-
-.signature {
-
-  padding:
-    120px
-    0;
-
-  background: var(--cream);
-
-  color: var(--dark-text);
-
-}
-
-
-.signature .section-copy {
-
-  color: var(--muted-dark);
-
-}
-
-
-.signature-grid {
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(
-      3,
-      1fr
-    );
-
-  margin-top: 50px;
-
-  border-top:
-    1px solid
-    var(--dark-line);
-
-  border-left:
-    1px solid
-    var(--dark-line);
-
-}
-
-
-.signature-card {
-
-  min-height: 330px;
-
-  padding: 33px;
-
-  border-right:
-    1px solid
-    var(--dark-line);
-
-  border-bottom:
-    1px solid
-    var(--dark-line);
-
-  display: flex;
-
-  flex-direction: column;
-
-}
-
-
-.signature-card h3 {
-
-  margin:
-    auto
-    0
-    13px;
-
-  font-size: 28px;
-
-  font-weight: 300;
-
-}
-
-
-.signature-card p {
-
-  color: var(--muted-dark);
-
-  line-height: 1.65;
-
-  font-size: 14px;
-
-}
-
-
-
-/* =========================================
-MOVEMENT
-========================================= */
-
-
-.movement {
-
-  padding:
-    125px
-    0;
-
-}
-
-
-.movement-grid {
-
-  display: grid;
-
-  grid-template-columns:
-    .8fr
-    1.2fr;
+  grid-template-columns: .75fr 1.25fr;
 
   gap: 95px;
-
 }
 
-
-.movement h2 {
-
-  margin:
-    13px
-    0
-    25px;
-
-  font-size:
-    clamp(
-      43px,
-      5vw,
-      68px
-    );
-
-  line-height: 1.02;
-
-  letter-spacing: -.04em;
-
-  font-weight: 300;
-
-}
-
-
-.movement-copy {
-
-  color: var(--muted-light);
-
-  font-size: 17px;
-
-  line-height: 1.75;
-
-}
-
-
-.movement-services {
-
+.mobility-list {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
 
-  grid-template-columns:
-    repeat(
-      2,
-      1fr
-    );
-
-  border-top:
-    1px solid
-    var(--light-line);
-
+  border-top: 1px solid var(--line);
 }
 
+.mobility-item {
+  padding: 17px 4px;
 
-.movement-item {
+  border-bottom: 1px solid var(--line);
 
-  padding:
-    17px
-    5px;
-
-  border-bottom:
-    1px solid
-    var(--light-line);
-
-  color:
-    rgba(
-      255,
-      255,
-      255,
-      .75
-    );
-
-  font-size: 14px;
-
+  color: #565b57;
+  font-size: 13px;
 }
 
-
-.movement-item:before {
-
+.mobility-item:before {
   content: "—";
-
   color: var(--gold);
-
   margin-right: 11px;
-
 }
 
 
+/* ========================================
+LUXURY STATEMENT
+======================================== */
 
-/* =========================================
-STATEMENT
-========================================= */
+.luxury-statement {
+  background: var(--black);
+  color: white;
 
-
-.statement {
-
-  padding:
-    140px
-    0;
-
-  background: var(--cream);
-
-  color: var(--dark-text);
+  padding: 145px 0;
 
   text-align: center;
-
 }
 
+.luxury-statement blockquote {
+  max-width: 1000px;
 
-.statement-inner {
-
-  max-width: 970px;
-
-  margin: auto;
-
-}
-
-
-.statement blockquote {
-
-  margin:
-    22px
-    0
-    0;
+  margin: 20px auto 0;
 
   font-size:
     clamp(
-      39px,
-      5vw,
-      68px
+      49px,
+      6.4vw,
+      86px
     );
 
-  line-height: 1.08;
-
-  letter-spacing: -.04em;
-
-  font-weight: 300;
-
+  line-height: 1;
+  font-weight: 400;
 }
 
-
-.statement blockquote span {
-
-  color: var(--gold-dark);
-
-}
-
-
-
-/* =========================================
-CONTACT
-========================================= */
-
-
-.contact {
-
-  padding:
-    125px
-    0;
-
-}
-
-
-.contact-grid {
-
-  display: grid;
-
-  grid-template-columns:
-    .75fr
-    1.25fr;
-
-  gap: 90px;
-
-}
-
-
-.contact h2 {
-
-  margin:
-    14px
-    0
-    22px;
-
-  font-size:
-    clamp(
-      44px,
-      5vw,
-      69px
-    );
-
-  font-weight: 300;
-
-  line-height: 1.02;
-
-  letter-spacing: -.04em;
-
-}
-
-
-.contact-copy {
-
-  color: var(--muted-light);
-
-  line-height: 1.7;
-
-  font-size: 17px;
-
-}
-
-
-.direct-contact {
-
-  margin-top: 35px;
-
-  padding-top: 25px;
-
-  border-top:
-    1px solid
-    var(--light-line);
-
-  color:
-    rgba(
-      255,
-      255,
-      255,
-      .55
-    );
-
-  line-height: 1.8;
-
-}
-
-
-.direct-contact a {
-
+.luxury-statement blockquote span {
   color: var(--gold-light);
-
+  font-style: italic;
 }
 
 
-.quote-form {
+/* ========================================
+CONSULTATION
+======================================== */
 
-  padding: 42px;
-
+.consultation {
   background: white;
 
-  color: var(--dark-text);
-
+  padding: 130px 0;
 }
 
+.consultation-grid {
+  display: grid;
+  grid-template-columns: .72fr 1.28fr;
 
-.quote-form h3 {
-
-  margin:
-    0
-    0
-    27px;
-
-  font-size: 28px;
-
-  font-weight: 300;
-
+  gap: 95px;
 }
 
+.consultation-copy {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.direct {
+  margin-top: 30px;
+  padding-top: 25px;
+
+  border-top: 1px solid var(--line);
+}
+
+.direct a {
+  font-weight: 600;
+}
+
+.form {
+  background: white;
+
+  border: 1px solid var(--line);
+
+  padding: 40px;
+}
+
+.form h3 {
+  margin: 0 0 27px;
+
+  font-size: 40px;
+  font-weight: 400;
+}
 
 .form-grid {
-
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
 
-  grid-template-columns:
-    repeat(
-      2,
-      1fr
-    );
-
-  gap: 18px;
-
+  gap: 17px;
 }
-
 
 .field {
-
   display: flex;
-
   flex-direction: column;
 
-  gap: 8px;
-
+  gap: 7px;
 }
 
-
-.field-full {
-
-  grid-column:
-    1 / -1;
-
+.full {
+  grid-column: 1 / -1;
 }
-
 
 label {
+  color: #626762;
 
-  color: #626662;
-
-  font-size: 10px;
-
-  font-weight: 700;
-
-  letter-spacing: .12em;
-
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .15em;
   text-transform: uppercase;
-
 }
-
 
 input,
 select,
 textarea {
-
   width: 100%;
 
   min-height: 51px;
 
-  padding:
-    12px
-    13px;
+  padding: 12px 13px;
 
-  border:
-    1px solid
-    #d9dbd8;
+  border: 1px solid #d9dcd9;
 
-  background: #faf9f6;
-
-  outline: none;
-
-  color: var(--dark-text);
+  background: #fafafa;
 
   border-radius: 0;
-
+  outline: none;
 }
-
 
 textarea {
-
-  min-height: 140px;
-
+  min-height: 145px;
   resize: vertical;
-
 }
-
 
 input:focus,
 select:focus,
 textarea:focus {
-
   border-color: var(--gold);
-
 }
 
-
 .submit {
-
   width: 100%;
 
   min-height: 59px;
 
-  margin-top: 20px;
+  margin-top: 19px;
 
   border: none;
 
   background: var(--black);
-
   color: white;
 
   cursor: pointer;
 
-  font-size: 11px;
-
-  font-weight: 700;
-
-  letter-spacing: .14em;
-
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .16em;
   text-transform: uppercase;
-
 }
-
-
-.submit:hover {
-
-  color: var(--gold-light);
-
-}
-
 
 .form-note {
-
-  margin-top: 14px;
+  margin-top: 13px;
 
   color: #777b77;
 
-  font-size: 11px;
-
+  font-size: 10px;
   line-height: 1.5;
-
 }
 
 
-
-/* =========================================
+/* ========================================
 FOOTER
-========================================= */
-
+======================================== */
 
 footer {
+  padding: 68px 0 35px;
 
-  padding:
-    68px
-    0
-    35px;
-
-  background: #020302;
-
-  border-top:
-    1px solid
-    var(--light-line);
-
+  background: var(--black);
+  color: white;
 }
-
 
 .footer-grid {
-
   display: grid;
-
-  grid-template-columns:
-    1.35fr
-    .7fr
-    .7fr;
+  grid-template-columns: 1.4fr .7fr .7fr;
 
   gap: 60px;
-
 }
-
 
 .footer-logo {
-
-  width: 210px;
-
-  margin-bottom: 20px;
-
+  width: 205px;
 }
-
 
 .footer-copy {
+  max-width: 460px;
 
-  max-width: 450px;
+  margin-top: 20px;
 
-  color:
-    rgba(
-      255,
-      255,
-      255,
-      .47
-    );
+  color: rgba(255,255,255,.48);
 
-  line-height: 1.65;
-
-  font-size: 13px;
-
+  font-size: 12px;
+  line-height: 1.7;
 }
-
 
 .footer-heading {
+  color: var(--gold-light);
 
-  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: .18em;
 
-  letter-spacing: .15em;
-
-  font-size: 10px;
-
-  margin-bottom: 18px;
-
+  margin-bottom: 17px;
 }
 
-
 .footer-links {
-
   display: flex;
-
   flex-direction: column;
 
   gap: 11px;
 
-  color:
-    rgba(
-      255,
-      255,
-      255,
-      .61
-    );
+  color: rgba(255,255,255,.62);
 
-  font-size: 13px;
-
+  font-size: 12px;
 }
-
 
 .legal {
+  margin-top: 52px;
+  padding-top: 23px;
 
-  margin-top: 55px;
+  border-top: 1px solid var(--dark-line);
 
-  padding-top: 24px;
+  color: rgba(255,255,255,.34);
 
-  border-top:
-    1px solid
-    var(--light-line);
-
-  color:
-    rgba(
-      255,
-      255,
-      255,
-      .35
-    );
-
-  font-size: 10px;
-
+  font-size: 9px;
   line-height: 1.6;
-
 }
 
 
-
-/* =========================================
+/* ========================================
 MOBILE
-========================================= */
+======================================== */
 
+@media (max-width: 900px) {
 
-@media
-(max-width: 900px) {
-
-
-  .nav-links a:not(.nav-button) {
-
+  .nav-links a:not(.nav-cta) {
     display: none;
-
   }
 
-
-  .who-grid,
-  .guyana-grid,
-  .movement-grid,
-  .contact-grid {
-
+  .intro-grid,
+  .toronto-grid,
+  .mobility-grid,
+  .consultation-grid {
     grid-template-columns: 1fr;
-
     gap: 50px;
-
   }
 
-
-  .clients-grid {
-
-    grid-template-columns:
-      repeat(
-        2,
-        1fr
-      );
-
-  }
-
-
-  .division-grid {
-
+  .city-pair,
+  .niagara-grid {
     grid-template-columns: 1fr;
-
   }
-
-
-  .destination-row {
-
-    grid-template-columns:
-      150px
-      1fr;
-
-  }
-
-
-  .destination-row > div:last-child {
-
-    grid-column: 2;
-
-  }
-
-
-  .signature-grid {
-
-    grid-template-columns:
-      repeat(
-        2,
-        1fr
-      );
-
-  }
-
 
   .footer-grid {
-
-    grid-template-columns:
-      1fr
-      1fr;
-
+    grid-template-columns: 1fr 1fr;
   }
-
 
   .footer-grid > div:first-child {
-
-    grid-column:
-      1 / -1;
-
+    grid-column: 1 / -1;
   }
-
 }
 
 
-
-@media
-(max-width: 640px) {
-
+@media (max-width: 640px) {
 
   .container {
-
-    width:
-      calc(
-        100% - 28px
-      );
-
+    width: calc(100% - 28px);
   }
-
 
   .nav {
-
     min-height: 76px;
-
   }
 
-
-  .logo {
-
+  .main-logo {
     width: 150px;
-
   }
 
+  .nav-cta {
+    padding: 10px 11px;
+  }
 
   .hero {
-
-    min-height: 820px;
-
+    min-height: 850px;
   }
-
 
   .hero-inner {
-
     padding-top: 110px;
-
   }
 
-
-  .hero-bottom {
-
-    grid-template-columns:
-      repeat(
-        2,
-        1fr
-      );
-
+  .hero-micro {
+    grid-template-columns: repeat(2, 1fr);
   }
 
+  .intro,
+  .services,
+  .toronto,
+  .niagara,
+  .mobility,
+  .luxury-statement,
+  .consultation {
+    padding: 82px 0;
+  }
 
-  .clients-grid {
-
+  .services-grid {
     grid-template-columns: 1fr;
-
   }
 
-
-  .division {
-
-    min-height: 450px;
-
+  .service-card {
+    min-height: 380px;
     padding: 28px;
-
   }
 
+  .photo-feature {
+    min-height: 600px;
+  }
 
-  .destination-row {
+  .destination-feature {
+    min-height: 590px;
+  }
 
+  .city-card {
+    min-height: 550px;
+  }
+
+  .niagara-card {
+    min-height: 520px;
+  }
+
+  .guyana {
+    min-height: 780px;
+  }
+
+  .mobility-list {
     grid-template-columns: 1fr;
-
-    gap: 17px;
-
-    padding:
-      37px
-      0;
-
   }
 
-
-  .destination-row > div:last-child {
-
-    grid-column: auto;
-
+  .form {
+    padding: 27px 18px;
   }
-
-
-  .signature-grid {
-
-    grid-template-columns: 1fr;
-
-  }
-
-
-  .guyana-services,
-  .movement-services {
-
-    grid-template-columns: 1fr;
-
-  }
-
-
-  .quote-form {
-
-    padding:
-      27px
-      18px;
-
-  }
-
 
   .form-grid {
-
     grid-template-columns: 1fr;
-
   }
 
-
-  .field-full {
-
+  .full {
     grid-column: auto;
-
   }
-
 
   .footer-grid {
-
     grid-template-columns: 1fr;
-
   }
-
 
   .footer-grid > div:first-child {
-
     grid-column: auto;
-
   }
-
-
-  .who,
-  .clients,
-  .what,
-  .where,
-  .guyana-feature,
-  .signature,
-  .movement,
-  .statement,
-  .contact {
-
-    padding:
-      82px
-      0;
-
-  }
-
 }
-
 
 </style>
 
-
 </head>
-
 
 
 <body>
 
 
-
-<!-- ========================================
-HEADER
-======================================== -->
-
+<!-- HEADER -->
 
 <header>
 
-
 <div class="container nav">
-
 
 <a href="/">
 
-
 <img
-  class="logo"
+  class="main-logo"
   src="/images/travaza/travaza-gold.png"
   alt="Travaza"
 />
 
-
 </a>
-
 
 
 <nav class="nav-links">
 
-
-<a href="#who">
-Who We Are
+<a href="#about">
+About
 </a>
 
-
-<a href="#clients">
-Who We Serve
+<a href="#services">
+Services
 </a>
 
-
-<a href="#what">
-What We Do
+<a href="#destinations">
+Destinations
 </a>
 
-
-<a href="#where">
-Where We Go
+<a href="#guyana">
+Guyana
 </a>
 
+<a href="#mobility">
+Global Mobility
+</a>
 
-<a href="#contact" class="nav-button">
+<a
+  href="#consultation"
+  class="nav-cta"
+>
 Private Consultation
 </a>
 
-
 </nav>
-
 
 </div>
 
-
 </header>
-
 
 
 
 <main>
 
 
-
-<!-- ========================================
-HERO
-======================================== -->
-
+<!-- HERO -->
 
 <section class="hero">
-
 
 <div class="container hero-inner">
 
 
-<div class="eyebrow">
+<div class="eyebrow eyebrow-light">
 
-PRIVATE TRAVEL • GLOBAL MOBILITY • EXPERIENCES
+PRIVATE TRAVEL • GLOBAL MOBILITY • CURATED EXPERIENCES
 
 </div>
-
 
 
 <h1>
@@ -2377,72 +1619,60 @@ PRIVATE TRAVEL • GLOBAL MOBILITY • EXPERIENCES
 The world,
 <br />
 
-<span class="gold">
-
+<span>
 handled.
-
 </span>
 
 </h1>
 
 
+<p class="hero-copy">
 
-<p class="hero-description">
-
-Travaza plans and executes sophisticated travel,
-transportation and destination experiences for private clients,
-global organizations, professional sports, entertainment
-and people whose time matters.
+Travaza plans and executes exceptional travel,
+transportation and destination experiences
+for private clients,
+global organizations,
+professional sports
+and entertainment.
 
 </p>
 
 
-
 <div class="hero-actions">
 
-
 <a
-  href="#contact"
-  class="btn btn-gold"
+  href="#consultation"
+  class="button button-gold"
 >
-
-Start a Private Consultation
-
+Begin Planning
 </a>
 
-
 <a
-  href="#what"
-  class="btn btn-outline"
+  href="#destinations"
+  class="button button-outline"
 >
-
-Discover Travaza
-
+Explore Travaza
 </a>
-
 
 </div>
 
 
+<div class="hero-micro">
 
-<div class="hero-bottom">
-
-
-<div class="hero-stat">
+<div>
 
 <strong>
 Private Clients
 </strong>
 
 <span>
-Personal travel executed around your priorities.
+Travel designed around your time.
 </span>
 
 </div>
 
 
-
-<div class="hero-stat">
+<div>
 
 <strong>
 Global Organizations
@@ -2455,22 +1685,20 @@ Executive and large-scale mobility.
 </div>
 
 
-
-<div class="hero-stat">
+<div>
 
 <strong>
 Sports & Entertainment
 </strong>
 
 <span>
-High-performance transportation and logistics.
+Precision logistics for people in motion.
 </span>
 
 </div>
 
 
-
-<div class="hero-stat">
+<div>
 
 <strong>
 Luxury Travel
@@ -2482,62 +1710,49 @@ Aviation, yachts and curated access.
 
 </div>
 
-
 </div>
 
 
 </div>
-
 
 </section>
 
 
 
-
-<!-- ========================================
-WHO WE ARE
-======================================== -->
-
+<!-- ABOUT -->
 
 <section
-  id="who"
-  class="who"
+  id="about"
+  class="intro"
 >
 
-
-<div class="container who-grid">
+<div class="container intro-grid">
 
 
 <div>
 
-
 <div class="eyebrow">
-
-WHO WE ARE
-
+THE TRAVAZA APPROACH
 </div>
 
+<h2 class="section-title">
 
-<h2 class="display-heading">
-
-One relationship.
-A world of possibilities.
+Travel should
+feel effortless.
 
 </h2>
 
-
 </div>
 
 
-
-<div class="who-copy">
-
+<div class="intro-copy">
 
 <p>
 
-Travaza is a global travel,
-transportation and experience company
-created for clients who expect more than a booking confirmation.
+Travaza is a private travel,
+global mobility and destination company
+created for people who want the experience
+without managing every detail behind it.
 
 </p>
 
@@ -2548,242 +1763,132 @@ We bring together
 
 <strong>
 
-private transportation,
-aviation,
+transportation,
+private aviation,
 yachts,
-destination expertise,
-touring,
 hotels,
+destination expertise,
 guides,
-events and complex logistics
+events
+and complex logistics
 
 </strong>
 
-through one coordinated relationship.
+through one trusted relationship.
 
 </p>
 
 
-<p>
+<div class="intro-statement">
 
-Our role is simple:
+You experience the destination.
+We manage everything around it.
 
-understand what needs to happen,
-anticipate the details
-and execute it.
-
-</p>
-
-
-
-<div class="promise">
-
-You enjoy the experience.
-We manage everything behind it.
+</div>
 
 </div>
 
 
 </div>
-
-
-</div>
-
 
 </section>
 
 
 
+<!-- AUDIENCE -->
 
-<!-- ========================================
-WHO WE SERVE
-======================================== -->
+<section class="audience">
 
-
-<section
-  id="clients"
-  class="clients"
->
-
-
-<div class="container">
-
-
-<div class="eyebrow">
-
-WHO WE SERVE
-
-</div>
-
-
-<h2 class="display-heading">
-
-For clients who expect
-more than transportation.
-
-</h2>
-
-
-<p class="section-copy">
-
-Travaza is built for individuals and organizations
-where time, discretion, presentation and execution matter.
-
-</p>
-
-
-
-<div class="clients-grid">
-
+<div class="container audience-list">
 
 {
-  clientTypes.map(
-    (
-      client,
-      index
-    ) => (
+  audiences.map(
+    audience => (
 
-
-<article class="client-card">
-
-
-<div class="client-number">
-
-0{index + 1}
-
-</div>
-
-
-<h3>
-
-{client.title}
-
-</h3>
-
-
-<p>
-
-{client.description}
-
-</p>
-
-
-</article>
-
+<span>
+{audience}
+</span>
 
     )
   )
 }
 
-
 </div>
-
-
-</div>
-
 
 </section>
 
 
 
-
-<!-- ========================================
-WHAT WE DO
-======================================== -->
-
+<!-- SERVICES -->
 
 <section
-  id="what"
-  class="what"
+  id="services"
+  class="services"
 >
-
 
 <div class="container">
 
 
 <div class="eyebrow">
-
 WHAT WE DO
-
 </div>
 
 
-<h2 class="display-heading">
+<h2 class="section-title">
 
-Plan.
-Coordinate.
-Execute.
+One journey.
+Many moving parts.
 
 </h2>
 
 
 <p class="section-copy">
 
-Different journeys require different expertise.
-Travaza brings the pieces together under one relationship.
+From one executive transfer
+to an international multi-city program,
+Travaza coordinates the details
+through one relationship.
 
 </p>
 
 
-
-<div class="division-grid">
+<div class="services-grid">
 
 
 {
-  divisions.map(
-    division => (
+  services.map(
+    service => (
 
-
-<article class="division">
+<article class="service-card">
 
 
 <img
-  src={division.image}
-  alt={division.label}
+  class="service-logo"
+  src={service.logo}
+  alt={service.subtitle}
 />
 
 
 <h3>
-
-{division.name}
-
+{service.title}
 </h3>
 
 
 <p>
-
-{division.description}
-
+{service.description}
 </p>
 
 
-
-<div class="mini-services">
-
-
-{
-  division.services.map(
-    service => (
-
-
-<span class="mini-service">
-
-{service}
-
-</span>
-
-
-    )
-  )
-}
-
-
-</div>
+<a
+  class="card-link"
+  href={service.link}
+>
+Start Planning →
+</a>
 
 
 </article>
 
-
     )
   )
 }
@@ -2793,37 +1898,81 @@ Travaza brings the pieces together under one relationship.
 
 
 </div>
-
 
 </section>
 
 
 
+<!-- MIAMI -->
 
-<!-- ========================================
-WHERE WE GO
-BLACK SECTION
-======================================== -->
+<section class="photo-feature">
+
+<img
+  src="/images/travaza/miami.png"
+  alt="Travaza Miami luxury experiences"
+/>
 
 
-<section
-  id="where"
-  class="where"
+<div class="container photo-feature-content">
+
+<div class="eyebrow eyebrow-light">
+TRAVAZA MIAMI
+</div>
+
+
+<h2>
+
+Life looks different
+from the water.
+
+</h2>
+
+
+<p>
+
+Private yachts,
+executive transportation,
+aviation connections,
+VIP events
+and curated South Florida experiences
+designed around your time.
+
+</p>
+
+
+<div style="margin-top:26px;">
+
+<a
+  href="#consultation"
+  class="button button-gold"
 >
-
-
-<div class="container">
-
-
-<div class="eyebrow">
-
-WHERE WE GO
+Plan Miami
+</a>
 
 </div>
 
 
+</div>
 
-<h2 class="display-heading">
+</section>
+
+
+
+<!-- DESTINATION INTRO -->
+
+<section
+  id="destinations"
+  class="destination-intro"
+>
+
+<div class="container">
+
+<div class="eyebrow eyebrow-light">
+WHERE WE GO
+</div>
+
+
+<h2 class="section-title">
 
 Local knowledge.
 Global ambition.
@@ -2831,91 +1980,98 @@ Global ambition.
 </h2>
 
 
-
 <p class="section-copy">
 
-Deep destination knowledge in the places
-where we operate directly,
-supported by trusted partners and transportation
-capabilities around the world.
+Deep expertise in core destinations,
+supported by trusted relationships
+and transportation capabilities
+around the world.
 
 </p>
 
+</div>
 
-
-<div class="destination-list">
-
-
-{
-  destinations.map(
-    destination => (
-
-
-<article class="destination-row">
+</section>
 
 
 
-{
-  destination.image
-  ? (
+<!-- NEW YORK -->
 
+<section class="destination-feature">
 
 <img
-  src={destination.image}
-  alt={`Travaza ${destination.name}`}
+  src="/images/travaza/new-york-2.png"
+  alt="Travaza New York"
 />
 
 
-  )
-  : (
+<div class="container destination-feature-content">
 
-
-<div class="destination-logo-fallback">
+<div class="eyebrow eyebrow-light">
+NEW YORK • USA
 </div>
 
 
-  )
-}
-
-
-
-<div>
-
-
-<div class="destination-region">
-
-{destination.region}
-
-</div>
-
-
-<h3>
-
-{destination.name}
-
-</h3>
-
-
-</div>
-
-
-
-<div>
-
-
-<div class="headline">
-
-{destination.headline}
-
-</div>
+<h2>
+The world's stage.
+</h2>
 
 
 <p>
 
-{destination.description}
+Executive mobility,
+private touring,
+corporate programs,
+sports,
+entertainment logistics
+and sophisticated New York experiences
+for travellers who value time and access.
 
 </p>
 
+
+</div>
+
+</section>
+
+
+
+<!-- LONDON + PARIS -->
+
+<section class="city-pair">
+
+
+<article class="city-card">
+
+
+<img
+  src="/images/travaza/london.png"
+  alt="Travaza London"
+/>
+
+
+<div class="city-content">
+
+<div class="eyebrow eyebrow-light">
+LONDON • UNITED KINGDOM
+</div>
+
+
+<h3>
+Global.
+Timeless.
+Personal.
+</h3>
+
+
+<p>
+
+Executive transportation,
+private touring,
+destination planning
+and thoughtfully curated London programs.
+
+</p>
 
 </div>
 
@@ -2923,60 +2079,290 @@ capabilities around the world.
 </article>
 
 
-    )
-  )
-}
 
+<article class="city-card">
+
+
+<img
+  src="/images/travaza/paris.png"
+  alt="Travaza Paris"
+/>
+
+
+<div class="city-content">
+
+<div class="eyebrow eyebrow-light">
+PARIS • FRANCE
+</div>
+
+
+<h3>
+Culture,
+elevated.
+</h3>
+
+
+<p>
+
+Private touring,
+culinary experiences,
+executive transportation
+and bespoke Paris itineraries
+designed around your preferences.
+
+</p>
 
 </div>
 
 
-</div>
+</article>
 
 
 </section>
 
 
 
+<!-- TORONTO -->
 
-<!-- ========================================
-GUYANA DESTINATION FEATURE
-======================================== -->
+<section class="toronto">
 
-
-<section class="guyana-feature">
-
-
-<div class="container guyana-grid">
+<div class="container toronto-grid">
 
 
 <div>
 
+<img
+  class="destination-brand"
+  src="/images/travaza/travaza-toronto.png"
+  alt="Travaza Toronto"
+/>
+
+</div>
+
+
+<div>
+
+<div class="eyebrow">
+TORONTO • CANADA
+</div>
+
+
+<h2 class="section-title">
+
+Canada's global
+city.
+
+</h2>
+
+
+<p class="destination-copy-large">
+
+Executive transportation,
+corporate programs,
+private touring,
+professional sports,
+concerts,
+airport movements
+and curated experiences
+throughout Toronto and Southern Ontario.
+
+</p>
+
+
+<div class="micro-grid">
+
+<div class="micro-item">
+Executive Transportation
+</div>
+
+<div class="micro-item">
+Corporate Programs
+</div>
+
+<div class="micro-item">
+Professional Sports
+</div>
+
+<div class="micro-item">
+Private City Experiences
+</div>
+
+<div class="micro-item">
+Airport Transfers
+</div>
+
+<div class="micro-item">
+Large Group Movements
+</div>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- NIAGARA -->
+
+<section class="niagara">
+
+
+<div class="container">
+
+
+<div class="niagara-heading">
+
+<div class="eyebrow eyebrow-light">
+NIAGARA FALLS • CANADA + USA
+</div>
+
+
+<h2 class="section-title">
+
+Two countries.
+One extraordinary destination.
+
+</h2>
+
+
+<p class="section-copy">
+
+Private experiences,
+iconic attractions,
+wine country,
+cross-border touring
+and local expertise
+on both sides of Niagara Falls.
+
+</p>
+
+</div>
+
+
+<div class="niagara-grid">
+
+
+<article class="niagara-card">
+
 
 <img
-  class="guyana-brand"
+  src="/images/travaza/journey-behind-the-falls-couple.png"
+  alt="Journey Behind the Falls Canada"
+/>
+
+
+<div class="niagara-content">
+
+<div class="eyebrow eyebrow-light">
+NIAGARA FALLS CANADA
+</div>
+
+
+<h3>
+Experience the Falls,
+privately.
+</h3>
+
+
+<p>
+
+Private touring,
+Journey Behind the Falls,
+Niagara City Cruises,
+wine country,
+culinary experiences
+and custom Canadian-side itineraries.
+
+</p>
+
+</div>
+
+
+</article>
+
+
+
+<article class="niagara-card">
+
+
+<img
+  src="/images/travaza/cave-winds.png"
+  alt="Cave of the Winds Niagara Falls USA"
+/>
+
+
+<div class="niagara-content">
+
+<div class="eyebrow eyebrow-light">
+NIAGARA FALLS USA
+</div>
+
+
+<h3>
+Closer than
+you imagined.
+</h3>
+
+
+<p>
+
+Niagara Falls State Park,
+Maid of the Mist,
+Cave of the Winds,
+private guides,
+group programs
+and curated American-side experiences.
+
+</p>
+
+</div>
+
+
+</article>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- GUYANA -->
+
+<section
+  id="guyana"
+  class="guyana"
+>
+
+
+<img
+  class="guyana-bg"
+  src="/images/travaza/kaieteur-falls.png"
+  alt="Kaieteur Falls Guyana"
+/>
+
+
+<div class="container guyana-content">
+
+
+<img
+  class="guyana-logo"
   src="/images/travaza/travaza-guyana.png"
   alt="Travaza Guyana"
 />
 
 
-<div class="year-badge">
+<div class="year">
 
 TRAVAZA DESTINATION OF THE YEAR • 2026
-
-</div>
-
-
-</div>
-
-
-
-<div>
-
-
-<div class="eyebrow">
-
-DISCOVER GUYANA
 
 </div>
 
@@ -2993,188 +2379,25 @@ everyone else does.
 
 Guyana is entering an extraordinary new chapter.
 
-Its rapidly expanding economy,
-remarkable natural environment,
-cultural diversity and growing international profile
-are creating one of South America's most exciting
-emerging destinations.
+With one of the world's fastest-growing economies,
+extraordinary natural landscapes
+and a rich multicultural identity,
+the destination is attracting a new generation
+of business and leisure travellers.
 
 </p>
-
-
-<p class="section-copy">
-
-Travaza is developing curated Guyana experiences
-for leisure travellers,
-private clients,
-corporate visitors
-and groups who want to experience the country
-with transportation,
-accommodation and local logistics already handled.
-
-</p>
-
 
 
 <div class="guyana-services">
 
 
-<div class="guyana-service">
-Curated multi-day tours
-</div>
-
-
-<div class="guyana-service">
-Airport transfers
-</div>
-
-
-<div class="guyana-service">
-Private transportation
-</div>
-
-
-<div class="guyana-service">
-Group shuttles
-</div>
-
-
-<div class="guyana-service">
-Hotel packages
-</div>
-
-
-<div class="guyana-service">
-Cultural experiences
-</div>
-
-
-<div class="guyana-service">
-Nature & wildlife
-</div>
-
-
-<div class="guyana-service">
-Corporate movements
-</div>
-
-
-<div class="guyana-service">
-Private guides
-</div>
-
-
-<div class="guyana-service">
-Custom itineraries
-</div>
-
-
-</div>
-
-
-
-<div
-  style="
-    margin-top:32px;
-  "
->
-
-
-<a
-  href="#contact"
-  class="btn btn-gold"
->
-
-Plan Guyana
-
-</a>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-<!-- ========================================
-SIGNATURE EXPERIENCES
-======================================== -->
-
-
-<section
-  id="experiences"
-  class="signature"
->
-
-
-<div class="container">
-
-
-<div class="eyebrow">
-
-SIGNATURE EXPERIENCES
-
-</div>
-
-
-<h2 class="display-heading">
-
-Travel worth remembering.
-
-</h2>
-
-
-<p class="section-copy">
-
-Begin with one of our signature concepts
-or let us build something entirely around you.
-
-</p>
-
-
-
-<div class="signature-grid">
-
-
 {
-  signatureExperiences.map(
-    experience => (
+  guyanaServices.map(
+    service => (
 
-
-<article class="signature-card">
-
-
-<div class="eyebrow">
-
-{experience.eyebrow}
-
-</div>
-
-
-<h3>
-
-{experience.title}
-
-</h3>
-
-
-<p>
-
-{experience.description}
-
-</p>
-
-
-</article>
-
+<span class="guyana-service">
+{service}
+</span>
 
     )
   )
@@ -3184,6 +2407,62 @@ or let us build something entirely around you.
 </div>
 
 
+<div style="margin-top:32px;">
+
+<a
+  href="#consultation"
+  class="button button-gold"
+>
+Discover Guyana
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- SECOND NY EDITORIAL -->
+
+<section class="editorial-image">
+
+
+<img
+  src="/images/travaza/New-york.png"
+  alt="Travaza luxury New York travel"
+/>
+
+
+<div class="container editorial-content">
+
+<div class="eyebrow eyebrow-light">
+TRAVEL BUILT AROUND YOU
+</div>
+
+
+<h2>
+
+Your itinerary
+shouldn't look
+like everyone else's.
+
+</h2>
+
+
+<p>
+
+Travaza brings transportation,
+destination expertise,
+hospitality
+and private experiences together
+to create journeys designed around
+the people taking them.
+
+</p>
+
 </div>
 
 
@@ -3191,29 +2470,24 @@ or let us build something entirely around you.
 
 
 
+<!-- GLOBAL MOBILITY -->
 
-<!-- ========================================
-GLOBAL TRANSPORTATION
-======================================== -->
+<section
+  id="mobility"
+  class="mobility"
+>
 
-
-<section class="movement">
-
-
-<div class="container movement-grid">
+<div class="container mobility-grid">
 
 
 <div>
 
-
 <div class="eyebrow">
-
 GLOBAL MOBILITY
-
 </div>
 
 
-<h2>
+<h2 class="section-title">
 
 The movement
 behind the moment.
@@ -3221,53 +2495,54 @@ behind the moment.
 </h2>
 
 
-<p class="movement-copy">
+<p class="section-copy">
 
-The best transportation is the transportation
-your guests never have to think about.
+The best transportation
+is the transportation your guests
+never have to think about.
+
+</p>
+
+
+<p class="section-copy">
+
+One executive.
+One sports team.
+One touring artist.
+One hundred motorcoaches.
+Multiple countries.
+
+Travaza builds the movement
+around the program.
 
 </p>
 
 
-<p class="movement-copy">
-
-Travaza coordinates individual vehicles,
-executive transportation,
-motorcoaches,
-airport programs
-and multi-fleet movements around your itinerary.
-
-</p>
-
+<div style="margin-top:25px;">
 
 <a
-  href="#contact"
-  class="btn btn-gold"
+  href="#consultation"
+  class="button button-dark"
 >
-
-Discuss Your Movement
-
+Discuss Transportation
 </a>
+
+</div>
 
 
 </div>
 
 
-
-<div class="movement-services">
+<div class="mobility-list">
 
 
 {
-  movementServices.map(
+  mobilityServices.map(
     service => (
 
-
-<div class="movement-item">
-
+<div class="mobility-item">
 {service}
-
 </div>
-
 
     )
   )
@@ -3279,38 +2554,28 @@ Discuss Your Movement
 
 </div>
 
-
 </section>
 
 
 
+<!-- LUXURY STATEMENT -->
 
-<!-- ========================================
-STATEMENT
-======================================== -->
+<section class="luxury-statement">
 
-
-<section class="statement">
+<div class="container">
 
 
-<div class="container statement-inner">
-
-
-<div class="eyebrow">
-
+<div class="eyebrow eyebrow-light">
 THE TRAVAZA STANDARD
-
 </div>
-
 
 
 <blockquote>
 
-The luxury isn't simply
+Luxury isn't simply
 where you stay.
 
 <br />
-
 
 <span>
 
@@ -3319,103 +2584,82 @@ has already been handled.
 
 </span>
 
-
 </blockquote>
 
 
 </div>
 
-
 </section>
 
 
 
-
-<!-- ========================================
-CONTACT FORM
-======================================== -->
-
+<!-- CONSULTATION -->
 
 <section
-  id="contact"
-  class="contact"
+  id="consultation"
+  class="consultation"
 >
 
-
-<div class="container contact-grid">
+<div class="container consultation-grid">
 
 
 <div>
 
 
 <div class="eyebrow">
-
 PRIVATE CONSULTATION
-
 </div>
 
 
-<h2>
+<h2 class="section-title">
 
 Tell us what
-you want to accomplish.
+you want to experience.
 
 </h2>
 
 
-<p class="contact-copy">
+<p class="consultation-copy">
 
-You don't need to have every detail figured out.
+You don't need to have
+every detail figured out.
 
-Tell us the destination,
-the people,
-the occasion
-and what matters most.
+Tell us who is travelling,
+where you're going,
+what matters most
+and what you would like us to handle.
 
-Our team can help structure the rest.
+We'll help structure the rest.
 
 </p>
 
 
-
-<div class="direct-contact">
+<div class="direct">
 
 Travel Planning & Reservations
 
 <br />
 
-
-<a
-  href="mailto:reservations@travaza.com"
->
+<a href="mailto:reservations@travaza.com">
 
 reservations@travaza.com
 
 </a>
 
-
 </div>
 
 
 </div>
-
 
 
 
 <form
-
-  class="quote-form"
-
+  class="form"
   name="travaza-charter-request"
-
   method="POST"
-
   data-netlify="true"
-
   netlify-honeypot="bot-field"
-
   action="/thank-you"
-
 >
 
 
@@ -3426,50 +2670,34 @@ reservations@travaza.com
 />
 
 
-<p
-  style="
-    display:none;
-  "
->
-
+<p style="display:none;">
 
 <label>
 
 Do not fill:
 
-<input
-  name="bot-field"
-/>
-
+<input name="bot-field" />
 
 </label>
-
 
 </p>
 
 
-
 <h3>
 
-Request a Private Consultation
+Begin Planning
 
 </h3>
-
 
 
 <div class="form-grid">
 
 
-
 <div class="field">
 
-
 <label for="name">
-
 Name *
-
 </label>
-
 
 <input
   id="name"
@@ -3478,20 +2706,14 @@ Name *
   required
 />
 
-
 </div>
-
 
 
 <div class="field">
 
-
 <label for="company">
-
 Company / Organization
-
 </label>
-
 
 <input
   id="company"
@@ -3499,20 +2721,14 @@ Company / Organization
   type="text"
 />
 
-
 </div>
-
 
 
 <div class="field">
 
-
 <label for="email">
-
 Email *
-
 </label>
-
 
 <input
   id="email"
@@ -3521,20 +2737,14 @@ Email *
   required
 />
 
-
 </div>
-
 
 
 <div class="field">
 
-
 <label for="phone">
-
 Phone
-
 </label>
-
 
 <input
   id="phone"
@@ -3542,121 +2752,90 @@ Phone
   type="tel"
 />
 
-
 </div>
 
 
-
-<div class="field field-full">
-
+<div class="field full">
 
 <label for="service">
-
-What are you planning? *
-
+What are you planning?
 </label>
-
 
 <select
   id="service"
   name="service"
-  required
 >
-
-
-<option value="">
-
-Select
-
-</option>
-
 
 <option>
 Private Travel
 </option>
 
+<option>
+Corporate Program
+</option>
 
 <option>
 Executive Transportation
 </option>
 
-
 <option>
-Corporate Program
+VIP Event
 </option>
-
-
-<option>
-High-End Event
-</option>
-
 
 <option>
 Professional Sports Team
 </option>
 
-
 <option>
 Musician / Touring Production
 </option>
-
 
 <option>
 Private Jet Charter
 </option>
 
-
 <option>
 Private Yacht
 </option>
-
-
-<option>
-Custom Travel Package
-</option>
-
 
 <option>
 Coach Charter
 </option>
 
-
 <option>
-Group Transportation
+Large Group Movement
 </option>
-
 
 <option>
 Guyana Travel
 </option>
 
+<option>
+Niagara Falls
+</option>
 
 <option>
 Private Tour
 </option>
 
+<option>
+Custom Travel Package
+</option>
 
 <option>
 Other
 </option>
 
-
 </select>
-
 
 </div>
 
 
-
 <div class="field">
 
-
 <label for="date">
-
 Starting Date
-
 </label>
-
 
 <input
   id="date"
@@ -3664,20 +2843,14 @@ Starting Date
   type="date"
 />
 
-
 </div>
-
 
 
 <div class="field">
 
-
 <label for="passengers">
-
 Number of Guests
-
 </label>
-
 
 <input
   id="passengers"
@@ -3686,20 +2859,14 @@ Number of Guests
   min="1"
 />
 
-
 </div>
-
 
 
 <div class="field">
 
-
 <label for="origin">
-
 Starting Location
-
 </label>
-
 
 <input
   id="origin"
@@ -3707,20 +2874,14 @@ Starting Location
   type="text"
 />
 
-
 </div>
-
 
 
 <div class="field">
 
-
 <label for="destination">
-
 Destination
-
 </label>
-
 
 <input
   id="destination"
@@ -3728,13 +2889,10 @@ Destination
   type="text"
 />
 
-
 </div>
 
 
-
-<div class="field field-full">
-
+<div class="field full">
 
 <label for="details">
 
@@ -3742,29 +2900,21 @@ What Would You Like Us To Handle?
 
 </label>
 
-
 <textarea
-
   id="details"
-
   name="details"
-
-  placeholder="Tell us about the travellers, destination, hotels, flights, transportation, events, experiences, special requirements and what would make this journey exceptional."
-
+  placeholder="Hotels, flights, private aviation, transportation, yachts, events, guides, experiences, special access, group logistics or anything else that would make this journey exceptional."
 ></textarea>
 
-
 </div>
 
 
-
 </div>
-
 
 
 <button
-  type="submit"
   class="submit"
+  type="submit"
 >
 
 Begin Planning With Travaza
@@ -3772,13 +2922,12 @@ Begin Planning With Travaza
 </button>
 
 
-
-<div class="form-note">
+<p class="form-note">
 
 Your inquiry will be reviewed by our travel and reservations team.
 Submission does not constitute a confirmed reservation.
 
-</div>
+</p>
 
 
 </form>
@@ -3786,20 +2935,14 @@ Submission does not constitute a confirmed reservation.
 
 </div>
 
-
 </section>
-
 
 
 </main>
 
 
 
-
-<!-- ========================================
-FOOTER
-======================================== -->
-
+<!-- FOOTER -->
 
 <footer>
 
@@ -3807,9 +2950,7 @@ FOOTER
 <div class="container">
 
 
-
 <div class="footer-grid">
-
 
 
 <div>
@@ -3825,10 +2966,12 @@ FOOTER
 <p class="footer-copy">
 
 Private travel,
-global transportation
+global mobility
 and curated experiences
-for clients who value time,
-access and execution.
+for clients who value
+time,
+access
+and execution.
 
 </p>
 
@@ -3841,39 +2984,31 @@ access and execution.
 
 
 <div class="footer-heading">
-
-TRAVAZA
-
+EXPLORE
 </div>
 
 
 <div class="footer-links">
 
-
-<a href="#who">
-Who We Are
+<a href="#about">
+About Travaza
 </a>
 
-
-<a href="#clients">
-Who We Serve
+<a href="#services">
+Services
 </a>
 
-
-<a href="#what">
-What We Do
+<a href="#destinations">
+Destinations
 </a>
 
-
-<a href="#where">
-Where We Go
+<a href="#guyana">
+Guyana
 </a>
 
-
-<a href="#experiences">
-Experiences
+<a href="#mobility">
+Global Mobility
 </a>
-
 
 </div>
 
@@ -3886,21 +3021,15 @@ Experiences
 
 
 <div class="footer-heading">
-
 START PLANNING
-
 </div>
 
 
 <div class="footer-links">
 
-
-<a href="#contact">
-
+<a href="#consultation">
 Private Consultation
-
 </a>
-
 
 <a href="mailto:reservations@travaza.com">
 
@@ -3908,28 +3037,31 @@ reservations@travaza.com
 
 </a>
 
-
 </div>
 
 
 </div>
 
 
-
 </div>
-
 
 
 <div class="legal">
 
 © {new Date().getFullYear()} Travaza.
 
-Travel, transportation, aviation, yacht and destination services
-are subject to availability, supplier terms,
-regulatory requirements and final confirmation.
+Private travel,
+transportation,
+aviation,
+yacht,
+destination
+and event services
+are subject to availability,
+supplier terms,
+regulatory requirements
+and final confirmation.
 
 </div>
-
 
 
 </div>
@@ -3938,8 +3070,6 @@ regulatory requirements and final confirmation.
 </footer>
 
 
-
 </body>
-
 
 </html>
