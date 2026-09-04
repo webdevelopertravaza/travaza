@@ -1997,273 +1997,203 @@ reservations@travaza.com
 
 
 <form
+  id="travaza-form"
   class="form"
   name="travaza-charter-request"
   method="POST"
   data-netlify="true"
   netlify-honeypot="bot-field"
-  action="/thank-you"
 >
 
-<input
-  type="hidden"
-  name="form-name"
-  value="travaza-charter-request"
-/>
-
-<p style="display:none;">
-
-<label>
-Do not fill:
-<input name="bot-field" />
-</label>
-
-</p>
-
-
-<h3>
-Begin Planning
-</h3>
-
-
-<div class="form-grid">
-
-
-<div class="field">
-
-<label for="name">
-Name *
-</label>
-
-<input
-  id="name"
-  name="name"
-  type="text"
-  required
-/>
-
-</div>
-
-
-<div class="field">
-
-<label for="company">
-Company / Organization
-</label>
-
-<input
-  id="company"
-  name="company"
-  type="text"
-/>
-
-</div>
-
-
-<div class="field">
-
-<label for="email">
-Email *
-</label>
-
-<input
-  id="email"
-  name="email"
-  type="email"
-  required
-/>
-
-</div>
-
-
-<div class="field">
-
-<label for="phone">
-Phone
-</label>
-
-<input
-  id="phone"
-  name="phone"
-  type="tel"
-/>
-
-</div>
-
-
-<div class="field full">
-
-<label for="service">
-How can we assist?
-</label>
-
-<select
-  id="service"
-  name="service"
->
-
-<option value="">
-Select
-</option>
-
-<option>
-Private Travel
-</option>
-
-<option>
-Custom Travel Experience
-</option>
-
-<option>
-Private Chauffeur
-</option>
-
-<option>
-Executive Transportation
-</option>
-
-<option>
-Corporate Program
-</option>
-
-<option>
-Professional Sports Team
-</option>
-
-<option>
-Musician / Touring Production
-</option>
-
-<option>
-Private Jet Charter
-</option>
-
-<option>
-Private Yacht
-</option>
-
-<option>
-Global Movement
-</option>
-
-<option>
-Coach Charter
-</option>
-
-<option>
-Large Group Movement
-</option>
-
-<option>
-Guyana Travel
-</option>
-
-<option>
-Niagara Falls
-</option>
-
-<option>
-Private Tour
-</option>
-
-<option>
-Other
-</option>
-
-</select>
-
-</div>
-
-
-<div class="field">
-
-<label for="date">
-Starting Date
-</label>
-
-<input
-  id="date"
-  name="date"
-  type="date"
-/>
-
-</div>
-
-
-<div class="field">
-
-<label for="guests">
-Number of Guests
-</label>
-
-<input
-  id="guests"
-  name="guests"
-  type="number"
-  min="1"
-/>
-
-</div>
-
-
-<div class="field">
-
-<label for="origin">
-Starting Location
-</label>
-
-<input
-  id="origin"
-  name="starting_location"
-  type="text"
-/>
-
-</div>
-
-
-<div class="field">
-
-<label for="destination">
-Destination
-</label>
-
-<input
-  id="destination"
-  name="destination"
-  type="text"
-/>
-
-</div>
-
-
-<div class="field full">
-
-<label for="details">
-Tell Us About Your Journey
-</label>
-
-<textarea
-  id="details"
-  name="details"
-  placeholder="Dates, destinations, hotels, flights, private aviation, yachts, transportation, experiences, events, guides, special access or anything else you would like us to handle."
-></textarea>
-
-</div>
-
-
-</div>
-
-
-<button
-  type="submit"
-  class="submit"
->
-Request a Private Consultation
-</button>
-
+  <input
+    type="hidden"
+    name="form-name"
+    value="travaza-charter-request"
+  />
+
+  <p style="display:none;">
+    <label>
+      Do not fill:
+      <input name="bot-field" />
+    </label>
+  </p>
+
+  <h3>
+    Begin Planning
+  </h3>
+
+  <div class="form-grid">
+
+    <div class="field">
+      <label for="name">Name *</label>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        required
+      />
+    </div>
+
+    <div class="field">
+      <label for="company">Company / Organization</label>
+      <input
+        id="company"
+        name="company"
+        type="text"
+      />
+    </div>
+
+    <div class="field">
+      <label for="email">Email *</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        required
+      />
+    </div>
+
+    <div class="field">
+      <label for="phone">Phone</label>
+      <input
+        id="phone"
+        name="phone"
+        type="tel"
+      />
+    </div>
+
+    <div class="field full">
+      <label for="service">How can we assist? *</label>
+
+      <select
+        id="service"
+        name="service"
+        required
+      >
+        <option value="">Select</option>
+        <option>Private Travel</option>
+        <option>Custom Travel Experience</option>
+        <option>Private Chauffeur</option>
+        <option>Executive Transportation</option>
+        <option>Corporate Program</option>
+        <option>Professional Sports Team</option>
+        <option>Musician / Touring Production</option>
+        <option>Private Jet Charter</option>
+        <option>Private Yacht</option>
+        <option>Global Movement</option>
+        <option>Coach Charter</option>
+        <option>Large Group Movement</option>
+        <option>Guyana Travel</option>
+        <option>Niagara Falls</option>
+        <option>Private Tour</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="date">Starting Date</label>
+      <input
+        id="date"
+        name="date"
+        type="date"
+      />
+    </div>
+
+    <div class="field">
+      <label for="guests">Number of Guests</label>
+      <input
+        id="guests"
+        name="guests"
+        type="number"
+        min="1"
+      />
+    </div>
+
+    <div class="field">
+      <label for="origin">Starting Location</label>
+      <input
+        id="origin"
+        name="starting_location"
+        type="text"
+      />
+    </div>
+
+    <div class="field">
+      <label for="destination">Destination</label>
+      <input
+        id="destination"
+        name="destination"
+        type="text"
+      />
+    </div>
+
+    <div class="field full">
+      <label for="details">
+        Tell Us About Your Journey
+      </label>
+
+      <textarea
+        id="details"
+        name="details"
+        placeholder="Dates, destinations, hotels, flights, private aviation, yachts, transportation, experiences, events, guides, special access or anything else you would like us to handle."
+      ></textarea>
+    </div>
+
+  </div>
+
+  <button
+    id="submit-button"
+    type="submit"
+    class="submit"
+  >
+    Request a Private Consultation
+  </button>
+
+  <p
+    id="form-status"
+    style="margin-top:14px;font-size:12px;"
+  ></p>
 
 </form>
 
+<script>
+  const form = document.getElementById("travaza-form");
+  const status = document.getElementById("form-status");
+  const button = document.getElementById("submit-button");
+
+  form?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    status.textContent = "";
+    button.disabled = true;
+    button.textContent = "Sending...";
+
+    try {
+      const formData = new FormData(form);
+
+      const response = await fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: new URLSearchParams(formData).toString()
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      window.location.href = "/thank-you";
+
+    } catch (error) {
+      status.textContent =
+        "We could not send your request. Please email reservations@travaza.com.";
+
+      button.disabled = false;
+      button.textContent = "Request a Private Consultation";
+    }
+  });
+</script>
 
 </div>
 
