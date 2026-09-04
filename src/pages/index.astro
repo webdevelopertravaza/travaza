@@ -2001,10 +2001,10 @@ reservations@travaza.com
   class="form"
   name="travaza-charter-request"
   method="POST"
+  action="/thank-you"
   data-netlify="true"
   netlify-honeypot="bot-field"
 >
-
   <input
     type="hidden"
     name="form-name"
@@ -2155,45 +2155,6 @@ reservations@travaza.com
   ></p>
 
 </form>
-
-<script>
-  const form = document.getElementById("travaza-form");
-  const status = document.getElementById("form-status");
-  const button = document.getElementById("submit-button");
-
-  form?.addEventListener("submit", async (event) => {
-    event.preventDefault();
-
-    status.textContent = "";
-    button.disabled = true;
-    button.textContent = "Sending...";
-
-    try {
-      const formData = new FormData(form);
-
-      const response = await fetch("/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: new URLSearchParams(formData).toString()
-      });
-
-      if (!response.ok) {
-        throw new Error("Form submission failed");
-      }
-
-      window.location.href = "/thank-you";
-
-    } catch (error) {
-      status.textContent =
-        "We could not send your request. Please email reservations@travaza.com.";
-
-      button.disabled = false;
-      button.textContent = "Request a Private Consultation";
-    }
-  });
-</script>
 
 </div>
 
