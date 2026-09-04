@@ -3,7 +3,7 @@ const audiences = [
   "Private Clients",
   "Family Offices",
   "Professional Sports",
-  "Fortune & Forbes Companies",
+  "Global Companies",
   "Musicians & Entertainment",
   "Luxury FIT Travel",
   "Executive Leadership",
@@ -11,85 +11,78 @@ const audiences = [
   "Major Events"
 ];
 
-const services = [
-  {
-    eyebrow: "PRIVATE TRAVEL",
-    title: "Bespoke Journeys",
-    description:
-      "Highly personalized travel designed around your time, interests, pace and priorities — from one extraordinary day to a complete multi-destination itinerary."
-  },
-  {
-    eyebrow: "CORPORATE",
-    title: "Executive Programs",
-    description:
-      "Leadership retreats, client entertainment, conferences, executive movements and complex travel programs delivered with discretion and precision."
-  },
-  {
-    eyebrow: "EVENTS",
-    title: "High-Touch Events",
-    description:
-      "VIP guest logistics, launches, sporting events, premieres, productions and private experiences where timing and presentation matter."
-  },
-  {
-    eyebrow: "AVIATION",
-    title: "Private Aviation",
-    description:
-      "Private aircraft sourcing coordinated with ground transportation and destination services for a seamless door-to-door journey."
-  }
-];
-
-const globalMovement = [
+const movement = [
   {
     number: "01",
     title: "Private Chauffeur",
-    text:
-      "Sedans, SUVs and executive vehicles for private clients, airport movements, meetings, evenings and discreet point-to-point travel."
+    text: "Sedans, SUVs and executive vehicles for private clients, airport arrivals, meetings, evenings and discreet point-to-point travel."
   },
   {
     number: "02",
     title: "Executive Sprinters",
-    text:
-      "Premium group transportation for families, executives, artists and small groups who want to travel together without sacrificing comfort."
+    text: "Premium private transportation for families, executives, artists and small groups who prefer to travel together."
   },
   {
     number: "03",
     title: "Private Motorcoaches",
-    text:
-      "Full-size and mini coaches for executive programs, sports teams, touring artists, corporate groups and complex private itineraries."
+    text: "Mini and full-size coaches for executive programs, professional teams, touring artists, private groups and complex itineraries."
   },
   {
     number: "04",
-    title: "Airport & Aviation Coordination",
-    text:
-      "Arrival and departure programs coordinated around commercial or private aviation, including vehicles, groups and onward movements."
+    title: "Private Aviation",
+    text: "Private jet charter coordinated with ground transportation, destination services and onward travel."
   },
   {
     number: "05",
     title: "Sports & Entertainment",
-    text:
-      "Transportation and movement planning for teams, athletes, ownership groups, artists, touring productions and VIP guests."
+    text: "Precision movement for teams, athletes, ownership groups, artists, productions and VIP guests."
   },
   {
     number: "06",
     title: "Complex Group Movements",
-    text:
-      "Multi-vehicle, multi-location and time-sensitive logistics coordinated by one team from planning through execution."
+    text: "Multi-vehicle, multi-location and time-sensitive programs managed by one team from planning through execution."
+  }
+];
+
+const experiences = [
+  {
+    number: "01",
+    label: "PRIVATE TRAVEL",
+    title: "Bespoke Journeys",
+    text: "Highly personalized journeys designed around your interests, schedule, pace and priorities — from one extraordinary day to a complete multi-destination itinerary."
+  },
+  {
+    number: "02",
+    label: "CORPORATE",
+    title: "Executive Programs",
+    text: "Leadership retreats, conferences, client entertainment, executive movements and complex travel programs delivered with discretion and precision."
+  },
+  {
+    number: "03",
+    label: "EVENTS",
+    title: "High-Touch Events",
+    text: "VIP guest movements, launches, premieres, sporting events, productions, executive dinners and brand activations."
+  },
+  {
+    number: "04",
+    label: "PRIVATE AVIATION",
+    title: "Travel Without Boundaries",
+    text: "Private aircraft sourcing coordinated with chauffeur service and destination arrangements for a seamless door-to-door journey."
   }
 ];
 
 const guyanaServices = [
-  "Curated multi-day experiences",
-  "Private tours",
-  "Airport transfers",
-  "Private transportation",
-  "Group shuttles",
-  "Hotel packages",
-  "Nature & wildlife",
-  "Cultural experiences",
-  "Corporate programs",
-  "Private guides",
-  "Custom itineraries",
-  "Group travel"
+  "Private Tours",
+  "Curated Multi-Day Journeys",
+  "Kaieteur Falls",
+  "Nature & Wildlife",
+  "Cultural Experiences",
+  "Private Guides",
+  "Airport Transfers",
+  "Private Transportation",
+  "Hotel Packages",
+  "Corporate Travel",
+  "Custom Itineraries"
 ];
 ---
 
@@ -105,23 +98,15 @@ const guyanaServices = [
 />
 
 <title>
-Travaza | Private Travel, Global Movement & Curated Experiences
+Travaza | Private Travel, Curated Experiences & Global Movement
 </title>
 
 <meta
   name="description"
-  content="Travaza creates and executes private travel, global movement, executive transportation, corporate programs, private aviation, yacht experiences, sports team movements and curated journeys worldwide."
+  content="Travaza creates private travel, curated destination experiences and seamless global movement for private clients, executives, companies, professional sports and entertainment."
 />
 
-<meta
-  name="keywords"
-  content="luxury travel, private travel, global transportation, private jet charter, yacht charter, executive transportation, sports team transportation, corporate travel, Niagara Falls, Guyana travel, Miami yacht charter"
- />
-
-<link
-  rel="preconnect"
-  href="https://fonts.googleapis.com"
-/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
 
 <link
   rel="preconnect"
@@ -137,21 +122,15 @@ Travaza | Private Travel, Global Movement & Curated Experiences
 <style>
 
 :root {
-  --black: #050605;
-  --black-soft: #101210;
-
+  --black: #050505;
   --white: #ffffff;
-  --soft-white: #fafafa;
-
+  --soft: #f8f8f6;
   --gold: #c89a3d;
   --gold-light: #e6c57d;
-  --gold-dark: #92702d;
-
-  --text: #171917;
-  --muted: #6a6e6a;
-
-  --line: #e5e6e3;
-  --dark-line: rgba(255,255,255,.14);
+  --gold-dark: #98732d;
+  --text: #171817;
+  --muted: #666a66;
+  --line: #e4e5e2;
 }
 
 * {
@@ -164,27 +143,17 @@ html {
 
 body {
   margin: 0;
-
   background: var(--white);
   color: var(--text);
-
-  font-family:
-    "Manrope",
-    Arial,
-    sans-serif;
-
+  font-family: "Manrope", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 h1,
 h2,
 h3,
-h4,
 blockquote {
-  font-family:
-    "Cormorant Garamond",
-    Georgia,
-    serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
 }
 
 img {
@@ -205,7 +174,7 @@ button {
 }
 
 .container {
-  width: min(1240px, calc(100% - 46px));
+  width: min(1240px, calc(100% - 48px));
   margin: auto;
 }
 
@@ -222,46 +191,37 @@ button {
 }
 
 .section-title {
-  margin: 14px 0 20px;
-
-  font-size:
-    clamp(
-      50px,
-      6.4vw,
-      88px
-    );
-
-  line-height: .94;
+  margin: 15px 0 22px;
+  font-size: clamp(52px, 6.5vw, 90px);
+  line-height: .93;
   font-weight: 400;
   letter-spacing: -.035em;
 }
 
 .section-copy {
   max-width: 700px;
-
   color: var(--muted);
-
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.8;
 }
 
 .button {
   min-height: 55px;
-  padding: 0 26px;
-
+  padding: 0 27px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
+  border: 0;
   font-size: 10px;
   font-weight: 600;
   letter-spacing: .17em;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .button-gold {
   background: var(--gold);
-  color: #080908;
+  color: #080808;
 }
 
 .button-dark {
@@ -270,127 +230,103 @@ button {
 }
 
 .button-outline {
-  border: 1px solid rgba(255,255,255,.35);
+  border: 1px solid rgba(255,255,255,.5);
   color: white;
+  background: transparent;
 }
+
 
 /* HEADER */
 
 header {
   position: absolute;
+  top: 0;
   width: 100%;
-  z-index: 30;
-
-  border-bottom:
-    1px solid
-    rgba(255,255,255,.17);
+  z-index: 50;
+  border-bottom: 1px solid rgba(255,255,255,.2);
 }
 
 .nav {
-  min-height: 94px;
-
+  min-height: 92px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 30px;
 }
 
-.main-logo {
-  width: 190px;
+.logo {
+  width: 188px;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 27px;
+  gap: 25px;
 }
 
 .nav-links a {
-  color: rgba(255,255,255,.82);
-
+  color: rgba(255,255,255,.88);
   font-size: 10px;
   font-weight: 500;
-  letter-spacing: .16em;
+  letter-spacing: .14em;
   text-transform: uppercase;
 }
 
-.nav-links a:hover {
-  color: var(--gold-light);
+.nav-cta {
+  padding: 13px 17px;
+  border: 1px solid rgba(230,197,125,.8);
 }
 
-.nav-cta {
-  border: 1px solid rgba(230,197,125,.72);
-  padding: 13px 17px;
-}
 
 /* HERO */
 
 .hero {
-  min-height: 940px;
-
-  display: flex;
-  align-items: center;
-
+  min-height: 100vh;
   position: relative;
+  display: flex;
+  align-items: flex-end;
   overflow: hidden;
-
   color: white;
+}
 
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
   background:
-    radial-gradient(
-      circle at 83% 34%,
-      rgba(200,154,61,.17),
-      transparent 29%
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.78) 0%,
+      rgba(0,0,0,.40) 48%,
+      rgba(0,0,0,.12) 100%
     ),
     linear-gradient(
-      120deg,
-      #020302,
-      #080b08 65%,
-      #16130b
+      0deg,
+      rgba(0,0,0,.58) 0%,
+      transparent 55%
     );
 }
 
-.hero:before {
-  content: "";
-
-  position: absolute;
-
-  width: 670px;
-  height: 670px;
-
-  right: -240px;
-  top: 150px;
-
-  border-radius: 50%;
-
-  border:
-    1px solid
-    rgba(200,154,61,.18);
-}
-
-.hero-inner {
+.hero-content {
   position: relative;
   z-index: 2;
-
-  padding-top: 110px;
-
-  max-width: 1060px;
+  padding-bottom: 85px;
+  max-width: 950px;
 }
 
 .hero h1 {
-  margin: 28px 0 37px;
-
-  font-size:
-    clamp(
-      76px,
-      10vw,
-      148px
-    );
-
+  margin: 25px 0 28px;
+  font-size: clamp(80px, 10vw, 145px);
   line-height: .78;
-  letter-spacing: -.055em;
   font-weight: 300;
+  letter-spacing: -.055em;
 }
 
 .hero h1 span {
@@ -399,375 +335,116 @@ header {
 }
 
 .hero-copy {
-  max-width: 790px;
-
-  color: rgba(255,255,255,.73);
-
+  max-width: 730px;
+  margin: 0;
+  color: rgba(255,255,255,.88);
   font-size: 19px;
-  line-height: 1.75;
+  line-height: 1.7;
 }
 
 .hero-actions {
-  margin-top: 39px;
-
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  margin-top: 35px;
 }
 
-.hero-micro {
-  margin-top: 80px;
-  padding-top: 26px;
 
-  border-top: 1px solid var(--dark-line);
-
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 30px;
-}
-
-.hero-micro strong {
-  display: block;
-
-  color: var(--gold-light);
-
-  font-family:
-    "Cormorant Garamond",
-    serif;
-
-  font-size: 22px;
-  font-weight: 400;
-
-  margin-bottom: 5px;
-}
-
-.hero-micro span {
-  color: rgba(255,255,255,.48);
-
-  font-size: 11px;
-  line-height: 1.5;
-}
-
-/* INTRO */
-
-.intro {
-  padding: 135px 0;
-  background: white;
-}
-
-.intro-grid {
-  display: grid;
-  grid-template-columns: .8fr 1.2fr;
-
-  gap: 105px;
-}
-
-.intro-copy {
-  color: var(--muted);
-
-  font-size: 18px;
-  line-height: 1.9;
-}
-
-.intro-copy strong {
-  color: var(--text);
-  font-weight: 500;
-}
-
-.intro-statement {
-  margin-top: 33px;
-  padding-top: 30px;
-
-  border-top: 1px solid var(--line);
-
-  font-family:
-    "Cormorant Garamond",
-    serif;
-
-  font-size: 33px;
-  line-height: 1.22;
-}
-
-/* AUDIENCE */
-
-.audience {
-  padding: 32px 0;
-
-  background: var(--soft-white);
-
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.audience-list {
-  display: flex;
-  flex-wrap: wrap;
-
-  justify-content: center;
-
-  gap: 16px 39px;
-}
-
-.audience-list span {
-  color: #585c58;
-
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: .13em;
-  text-transform: uppercase;
-}
-
-/* PRIVATE EXPERIENCES */
-
-.services {
-  padding: 125px 0;
-  background: white;
-}
-
-.services-intro {
-  max-width: 800px;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-
-  margin-top: 58px;
-
-  border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
-}
-
-.service-card {
-  min-height: 385px;
-
-  padding: 43px;
-
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-
-  display: flex;
-  flex-direction: column;
-
-  background: white;
-}
-
-.service-card .card-number {
-  color: var(--gold-dark);
-
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: .15em;
-}
-
-.service-card h3 {
-  margin: auto 0 14px;
-
-  font-size: 46px;
-  font-weight: 400;
-}
-
-.service-card p {
-  margin: 0;
-
-  max-width: 490px;
-
-  color: var(--muted);
-
-  line-height: 1.75;
-}
-
-/* MIAMI */
-
-.photo-feature {
-  min-height: 760px;
-
-  position: relative;
-
-  display: flex;
-  align-items: flex-end;
-
-  overflow: hidden;
-
-  color: white;
-}
-
-.photo-feature > img {
-  position: absolute;
-  inset: 0;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-}
-
-.photo-feature:after {
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(
-      0deg,
-      rgba(0,0,0,.85),
-      rgba(0,0,0,.05) 68%
-    );
-}
-
-.photo-feature-content {
-  position: relative;
-  z-index: 2;
-
-  max-width: 780px;
-
-  padding-bottom: 75px;
-}
-
-.photo-feature h2 {
-  margin: 12px 0 14px;
-
-  font-size:
-    clamp(
-      52px,
-      6.8vw,
-      90px
-    );
-
-  line-height: .92;
-  font-weight: 400;
-}
-
-.photo-feature p {
-  max-width: 630px;
-
-  color: rgba(255,255,255,.8);
-
-  line-height: 1.75;
-}
-
-/* DESTINATION INTRO */
+/* CURATED DESTINATIONS */
 
 .destination-intro {
-  padding: 120px 0 65px;
-
+  padding: 125px 0 70px;
   background: var(--black);
   color: white;
 }
 
 .destination-intro .section-copy {
-  color: rgba(255,255,255,.6);
+  color: rgba(255,255,255,.62);
 }
+
 
 /* NEW YORK */
 
 .destination-feature {
-  min-height: 700px;
-
+  min-height: 720px;
   position: relative;
-
   display: flex;
   align-items: flex-end;
-
   overflow: hidden;
-
   color: white;
 }
 
 .destination-feature img {
   position: absolute;
   inset: 0;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
 }
 
 .destination-feature:after {
   content: "";
-
   position: absolute;
   inset: 0;
-
   background:
     linear-gradient(
       0deg,
-      rgba(0,0,0,.9),
-      rgba(0,0,0,.06) 70%
+      rgba(0,0,0,.86),
+      rgba(0,0,0,.05) 70%
     );
 }
 
-.destination-feature-content {
+.destination-content {
   position: relative;
   z-index: 2;
-
-  padding-bottom: 68px;
-
   max-width: 720px;
+  padding-bottom: 65px;
 }
 
-.destination-feature h2 {
-  margin: 11px 0 10px;
-
-  font-size:
-    clamp(
-      53px,
-      7vw,
-      92px
-    );
-
+.destination-content h2 {
+  margin: 10px 0 12px;
+  font-size: clamp(58px, 7vw, 94px);
+  line-height: .9;
   font-weight: 400;
-  line-height: .91;
 }
 
-.destination-feature p {
-  max-width: 630px;
-
-  color: rgba(255,255,255,.76);
-
-  line-height: 1.7;
+.destination-content p {
+  max-width: 620px;
+  color: rgba(255,255,255,.78);
+  line-height: 1.75;
 }
 
-/* LONDON + PARIS */
+
+/* LONDON PARIS */
 
 .city-pair {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
   background: black;
 }
 
 .city-card {
   min-height: 650px;
-
   position: relative;
-
   overflow: hidden;
 }
 
 .city-card img {
   position: absolute;
   inset: 0;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
 }
 
 .city-card:after {
   content: "";
-
   position: absolute;
   inset: 0;
-
   background:
     linear-gradient(
       0deg,
-      rgba(0,0,0,.85),
+      rgba(0,0,0,.82),
       rgba(0,0,0,.04) 70%
     );
 }
@@ -775,142 +452,69 @@ header {
 .city-content {
   position: absolute;
   z-index: 2;
-
-  bottom: 45px;
   left: 42px;
   right: 42px;
-
+  bottom: 44px;
   color: white;
 }
 
 .city-content h3 {
-  margin: 8px 0 8px;
-
+  margin: 8px 0;
   font-size: 59px;
   font-weight: 400;
+  line-height: .95;
 }
 
 .city-content p {
   max-width: 480px;
-
   margin: 0;
-
-  color: rgba(255,255,255,.7);
-
+  color: rgba(255,255,255,.74);
   font-size: 13px;
   line-height: 1.65;
 }
 
-/* TORONTO */
-
-.toronto {
-  padding: 130px 0;
-
-  background: white;
-}
-
-.toronto-grid {
-  display: grid;
-  grid-template-columns: .7fr 1.3fr;
-
-  gap: 90px;
-
-  align-items: center;
-}
-
-.toronto-mark {
-  color: var(--gold-dark);
-
-  font-family:
-    "Cormorant Garamond",
-    serif;
-
-  font-size: 80px;
-  line-height: .9;
-}
-
-.destination-copy-large {
-  color: var(--muted);
-
-  font-size: 17px;
-  line-height: 1.8;
-}
-
-.micro-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-
-  margin-top: 30px;
-
-  border-top: 1px solid var(--line);
-}
-
-.micro-item {
-  padding: 17px 3px;
-
-  border-bottom: 1px solid var(--line);
-
-  color: #555a56;
-
-  font-size: 13px;
-}
-
-.micro-item:before {
-  content: "—";
-  color: var(--gold);
-  margin-right: 10px;
-}
 
 /* NIAGARA */
 
 .niagara {
   padding: 125px 0;
-
   background: var(--black);
   color: white;
 }
 
 .niagara-heading {
-  max-width: 760px;
-
+  max-width: 790px;
   margin-bottom: 55px;
 }
 
 .niagara-heading .section-copy {
-  color: rgba(255,255,255,.6);
+  color: rgba(255,255,255,.62);
 }
 
 .niagara-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
   gap: 18px;
 }
 
 .niagara-card {
   min-height: 620px;
-
   position: relative;
-
   overflow: hidden;
 }
 
 .niagara-card img {
   position: absolute;
   inset: 0;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
 }
 
 .niagara-card:after {
   content: "";
-
   position: absolute;
   inset: 0;
-
   background:
     linear-gradient(
       0deg,
@@ -922,387 +526,404 @@ header {
 .niagara-content {
   position: absolute;
   z-index: 2;
-
-  bottom: 36px;
-  left: 34px;
-  right: 34px;
+  bottom: 38px;
+  left: 35px;
+  right: 35px;
 }
 
 .niagara-content h3 {
-  margin: 8px 0 7px;
-
-  font-size: 44px;
+  margin: 8px 0;
+  font-size: 47px;
+  line-height: .95;
   font-weight: 400;
 }
 
 .niagara-content p {
-  max-width: 530px;
-
+  max-width: 520px;
   margin: 0;
-
-  color: rgba(255,255,255,.7);
-
+  color: rgba(255,255,255,.72);
   font-size: 13px;
-  line-height: 1.65;
+  line-height: 1.7;
 }
+
 
 /* GUYANA */
 
 .guyana {
-  min-height: 820px;
-
+  min-height: 830px;
   position: relative;
-
   display: flex;
   align-items: center;
-
   overflow: hidden;
-
   color: white;
 }
 
-.guyana-bg {
+.guyana img {
   position: absolute;
   inset: 0;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
 }
 
 .guyana:after {
   content: "";
-
   position: absolute;
   inset: 0;
-
   background:
     linear-gradient(
       90deg,
-      rgba(0,0,0,.9),
-      rgba(0,0,0,.35) 62%,
-      rgba(0,0,0,.18)
+      rgba(0,0,0,.90),
+      rgba(0,0,0,.37) 63%,
+      rgba(0,0,0,.12)
     );
 }
 
 .guyana-content {
   position: relative;
   z-index: 2;
-
-  max-width: 720px;
-
+  max-width: 730px;
   padding: 85px 0;
 }
 
 .year {
   display: inline-block;
-
   padding: 10px 14px;
-
+  border: 1px solid rgba(230,197,125,.7);
   color: var(--gold-light);
-
-  border: 1px solid rgba(230,197,125,.65);
-
   font-size: 9px;
   letter-spacing: .17em;
 }
 
 .guyana h2 {
-  margin: 20px 0 20px;
-
-  font-size:
-    clamp(
-      58px,
-      7.3vw,
-      100px
-    );
-
-  line-height: .89;
+  margin: 21px 0;
+  font-size: clamp(62px, 7.5vw, 103px);
+  line-height: .88;
   font-weight: 400;
 }
 
 .guyana-lead {
-  max-width: 650px;
-
-  color: rgba(255,255,255,.82);
-
-  font-size: 19px;
-  line-height: 1.75;
+  max-width: 660px;
+  color: rgba(255,255,255,.84);
+  font-size: 18px;
+  line-height: 1.8;
 }
 
 .guyana-services {
   display: flex;
   flex-wrap: wrap;
-
   gap: 8px;
-
-  margin-top: 30px;
+  margin-top: 28px;
 }
 
 .guyana-service {
   padding: 9px 11px;
-
   border: 1px solid rgba(255,255,255,.28);
-
-  color: rgba(255,255,255,.76);
-
+  color: rgba(255,255,255,.8);
   font-size: 10px;
 }
 
-/* EDITORIAL NY */
 
-.editorial-image {
-  min-height: 680px;
+/* TRAVEL BUILT AROUND YOU */
 
+.travel-built {
+  min-height: 730px;
   position: relative;
-
   display: flex;
   align-items: center;
-
   overflow: hidden;
-}
-
-.editorial-image img {
-  position: absolute;
-  inset: 0;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-}
-
-.editorial-image:after {
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0,0,0,.82),
-      rgba(0,0,0,.12)
-    );
-}
-
-.editorial-content {
-  position: relative;
-  z-index: 2;
-
-  max-width: 690px;
-
   color: white;
 }
 
-.editorial-content h2 {
-  margin: 13px 0 16px;
+.travel-built img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-  font-size:
-    clamp(
-      52px,
-      6vw,
-      82px
+.travel-built:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.86),
+      rgba(0,0,0,.15)
     );
+}
 
+.travel-built-content {
+  position: relative;
+  z-index: 2;
+  max-width: 730px;
+}
+
+.travel-built h2 {
+  margin: 14px 0 20px;
+  font-size: clamp(57px, 7vw, 95px);
+  line-height: .9;
   font-weight: 400;
-  line-height: .94;
 }
 
-.editorial-content p {
-  color: rgba(255,255,255,.76);
-  line-height: 1.75;
+.travel-built p {
+  max-width: 630px;
+  color: rgba(255,255,255,.8);
+  font-size: 17px;
+  line-height: 1.8;
 }
+
 
 /* GLOBAL MOVEMENT */
 
 .global-movement {
   padding: 130px 0;
-
   background: white;
 }
 
-.global-movement-header {
+.movement-intro {
   display: grid;
-  grid-template-columns: .8fr 1.2fr;
-
+  grid-template-columns: .85fr 1.15fr;
   gap: 100px;
-
   align-items: end;
-
-  margin-bottom: 70px;
+  margin-bottom: 75px;
 }
 
-.global-movement-lead {
+.movement-lead {
   color: var(--muted);
-
   font-size: 18px;
   line-height: 1.85;
 }
 
-.global-movement-grid {
+.movement-list {
   border-top: 1px solid var(--line);
 }
 
 .movement-row {
   display: grid;
-  grid-template-columns: 90px 280px 1fr;
-
+  grid-template-columns: 80px 310px 1fr;
   gap: 35px;
-
   align-items: center;
-
-  padding: 32px 0;
-
+  padding: 33px 0;
   border-bottom: 1px solid var(--line);
 }
 
 .movement-number {
   color: var(--gold-dark);
-
   font-size: 9px;
   font-weight: 600;
-  letter-spacing: .16em;
+  letter-spacing: .17em;
 }
 
 .movement-row h3 {
   margin: 0;
-
-  font-size: 34px;
+  font-size: 35px;
   font-weight: 400;
 }
 
 .movement-row p {
+  max-width: 640px;
   margin: 0;
-
-  max-width: 650px;
-
   color: var(--muted);
-
   font-size: 13px;
   line-height: 1.7;
 }
 
-.movement-closing {
-  margin-top: 80px;
-
-  padding: 65px;
-
+.movement-footer {
+  margin-top: 75px;
+  padding: 58px 65px;
   background: var(--black);
   color: white;
-
-  display: grid;
-  grid-template-columns: 1fr auto;
-
-  gap: 40px;
-
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 45px;
 }
 
-.movement-closing h3 {
+.movement-footer h3 {
+  max-width: 760px;
   margin: 0;
-
-  font-size:
-    clamp(
-      38px,
-      5vw,
-      64px
-    );
-
+  font-size: clamp(40px, 5vw, 65px);
+  line-height: .96;
   font-weight: 400;
-  line-height: .98;
 }
 
-/* LUXURY STATEMENT */
 
-.luxury-statement {
+/* TRAVAZA APPROACH */
+
+.approach {
+  padding: 140px 0;
+  background: var(--soft);
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: .82fr 1.18fr;
+  gap: 105px;
+}
+
+.approach-copy {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.approach-copy strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.approach-statement {
+  margin-top: 35px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+  color: var(--text);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.audience {
+  margin-top: 80px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px 35px;
+}
+
+.audience span {
+  color: #626662;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+
+/* PRIVATE CUSTOM */
+
+.experiences {
+  padding: 130px 0;
+  background: white;
+}
+
+.experience-heading {
+  max-width: 830px;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 60px;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.experience {
+  min-height: 390px;
+  padding: 42px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-number {
+  color: var(--gold-dark);
+  font-size: 9px;
+  letter-spacing: .17em;
+}
+
+.experience h3 {
+  margin: auto 0 14px;
+  font-size: 48px;
+  line-height: .98;
+  font-weight: 400;
+}
+
+.experience p {
+  max-width: 500px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+
+/* STATEMENT */
+
+.statement {
   padding: 145px 0;
-
   background: var(--black);
   color: white;
-
   text-align: center;
 }
 
-.luxury-statement blockquote {
+.statement blockquote {
   max-width: 1000px;
-
-  margin: 20px auto 0;
-
-  font-size:
-    clamp(
-      49px,
-      6.4vw,
-      86px
-    );
-
+  margin: 22px auto 0;
+  font-size: clamp(50px, 6.4vw, 87px);
   line-height: 1;
   font-weight: 400;
 }
 
-.luxury-statement blockquote span {
+.statement span {
   color: var(--gold-light);
   font-style: italic;
 }
+
 
 /* CONSULTATION */
 
 .consultation {
   padding: 130px 0;
-
   background: white;
 }
 
 .consultation-grid {
   display: grid;
   grid-template-columns: .72fr 1.28fr;
-
   gap: 95px;
 }
 
-.consultation-copy {
+.consultation-text {
   color: var(--muted);
+  font-size: 16px;
   line-height: 1.8;
 }
 
-.direct {
+.contact {
   margin-top: 30px;
   padding-top: 25px;
-
   border-top: 1px solid var(--line);
 }
 
-.direct a {
+.contact a {
   font-weight: 600;
 }
 
 .form {
   padding: 40px;
-
   border: 1px solid var(--line);
-
-  background: white;
 }
 
 .form h3 {
-  margin: 0 0 27px;
-
-  font-size: 40px;
+  margin: 0 0 28px;
+  font-size: 42px;
   font-weight: 400;
 }
 
 .form-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
   gap: 17px;
 }
 
 .field {
   display: flex;
   flex-direction: column;
-
   gap: 7px;
 }
 
@@ -1312,7 +933,6 @@ header {
 
 label {
   color: #626762;
-
   font-size: 9px;
   font-weight: 600;
   letter-spacing: .15em;
@@ -1323,15 +943,10 @@ input,
 select,
 textarea {
   width: 100%;
-
   min-height: 51px;
-
   padding: 12px 13px;
-
   border: 1px solid #d9dcd9;
-
   background: #fafafa;
-
   border-radius: 0;
   outline: none;
 }
@@ -1349,29 +964,23 @@ textarea:focus {
 
 .submit {
   width: 100%;
-
   min-height: 59px;
-
   margin-top: 19px;
-
   border: none;
-
   background: var(--black);
   color: white;
-
   cursor: pointer;
-
   font-size: 10px;
   font-weight: 600;
   letter-spacing: .16em;
   text-transform: uppercase;
 }
 
+
 /* FOOTER */
 
 footer {
   padding: 68px 0 35px;
-
   background: var(--black);
   color: white;
 }
@@ -1379,7 +988,6 @@ footer {
 .footer-grid {
   display: grid;
   grid-template-columns: 1.4fr .7fr .7fr;
-
   gap: 60px;
 }
 
@@ -1388,21 +996,16 @@ footer {
 }
 
 .footer-copy {
-  max-width: 460px;
-
+  max-width: 450px;
   margin-top: 20px;
-
   color: rgba(255,255,255,.48);
-
   font-size: 12px;
   line-height: 1.7;
 }
 
-.footer-heading {
+.footer-title {
   margin-bottom: 17px;
-
   color: var(--gold-light);
-
   font-size: 9px;
   letter-spacing: .18em;
 }
@@ -1410,27 +1013,22 @@ footer {
 .footer-links {
   display: flex;
   flex-direction: column;
-
   gap: 11px;
-
-  color: rgba(255,255,255,.62);
-
+  color: rgba(255,255,255,.65);
   font-size: 12px;
 }
 
 .legal {
   margin-top: 52px;
   padding-top: 23px;
-
-  border-top: 1px solid var(--dark-line);
-
-  color: rgba(255,255,255,.34);
-
+  border-top: 1px solid rgba(255,255,255,.13);
+  color: rgba(255,255,255,.35);
   font-size: 9px;
   line-height: 1.6;
 }
 
-/* MOBILE */
+
+/* RESPONSIVE */
 
 @media (max-width: 900px) {
 
@@ -1438,32 +1036,25 @@ footer {
     display: none;
   }
 
-  .intro-grid,
-  .toronto-grid,
-  .global-movement-header,
-  .consultation-grid {
-    grid-template-columns: 1fr;
-
-    gap: 50px;
-  }
-
   .city-pair,
-  .niagara-grid {
+  .niagara-grid,
+  .movement-intro,
+  .approach-grid,
+  .consultation-grid {
     grid-template-columns: 1fr;
   }
 
   .movement-row {
     grid-template-columns: 55px 1fr;
-
-    gap: 20px;
   }
 
   .movement-row p {
     grid-column: 2;
   }
 
-  .movement-closing {
-    grid-template-columns: 1fr;
+  .movement-footer {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .footer-grid {
@@ -1473,6 +1064,7 @@ footer {
   .footer-grid > div:first-child {
     grid-column: 1 / -1;
   }
+
 }
 
 @media (max-width: 640px) {
@@ -1485,51 +1077,26 @@ footer {
     min-height: 76px;
   }
 
-  .main-logo {
+  .logo {
     width: 150px;
   }
 
-  .nav-cta {
-    padding: 10px 11px;
-  }
-
   .hero {
-    min-height: 850px;
+    min-height: 820px;
   }
 
-  .hero-inner {
-    padding-top: 110px;
+  .hero-content {
+    padding-bottom: 60px;
   }
 
-  .hero-micro {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .intro,
-  .services,
-  .toronto,
+  .destination-intro,
   .niagara,
   .global-movement,
-  .luxury-statement,
+  .approach,
+  .experiences,
+  .statement,
   .consultation {
     padding: 82px 0;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .service-card {
-    min-height: 340px;
-    padding: 28px;
-  }
-
-  .photo-feature {
-    min-height: 600px;
-  }
-
-  .destination-feature {
-    min-height: 590px;
   }
 
   .city-card {
@@ -1544,12 +1111,26 @@ footer {
     min-height: 780px;
   }
 
-  .movement-row {
-    grid-template-columns: 40px 1fr;
+  .travel-built {
+    min-height: 650px;
   }
 
-  .movement-closing {
-    padding: 40px 28px;
+  .movement-row {
+    grid-template-columns: 40px 1fr;
+    gap: 18px;
+  }
+
+  .movement-footer {
+    padding: 38px 27px;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience {
+    min-height: 350px;
+    padding: 28px;
   }
 
   .form {
@@ -1571,6 +1152,7 @@ footer {
   .footer-grid > div:first-child {
     grid-column: auto;
   }
+
 }
 
 </style>
@@ -1581,6 +1163,8 @@ footer {
 <body>
 
 
+<!-- HEADER -->
+
 <header>
 
 <div class="container nav">
@@ -1588,7 +1172,7 @@ footer {
 <a href="/">
 
 <img
-  class="main-logo"
+  class="logo"
   src="/images/travaza/travaza-gold.png"
   alt="Travaza"
 />
@@ -1598,14 +1182,6 @@ footer {
 
 <nav class="nav-links">
 
-<a href="#about">
-About
-</a>
-
-<a href="#experiences">
-Private Travel
-</a>
-
 <a href="#destinations">
 Destinations
 </a>
@@ -1614,8 +1190,16 @@ Destinations
 Global Movement
 </a>
 
+<a href="#approach">
+Our Approach
+</a>
+
+<a href="#experiences">
+Private Experiences
+</a>
+
 <a href="#consultation" class="nav-cta">
-Private Consultation
+Begin Planning
 </a>
 
 </nav>
@@ -1628,14 +1212,23 @@ Private Consultation
 <main>
 
 
-<!-- HERO -->
+<!-- 1 HERO WITH PHOTO -->
 
 <section class="hero">
 
-<div class="container hero-inner">
+<img
+  class="hero-image"
+  src="/images/travaza/miami.png"
+  alt="Private travel with Travaza"
+/>
+
+<div class="hero-overlay"></div>
+
+
+<div class="container hero-content">
 
 <div class="eyebrow eyebrow-light">
-PRIVATE TRAVEL • GLOBAL MOVEMENT • CURATED EXPERIENCES
+PRIVATE TRAVEL • CURATED EXPERIENCES • GLOBAL MOVEMENT
 </div>
 
 <h1>
@@ -1646,11 +1239,11 @@ The world,
 
 <p class="hero-copy">
 
-Travaza creates and executes exceptional private travel,
-destination experiences and global movement for private clients,
-leading companies, professional sports and entertainment.
+Private journeys, extraordinary experiences and seamless
+global movement — designed around you and handled entirely by us.
 
 </p>
+
 
 <div class="hero-actions">
 
@@ -1658,243 +1251,24 @@ leading companies, professional sports and entertainment.
   href="#consultation"
   class="button button-gold"
 >
-Begin Planning
+Begin Your Journey
 </a>
 
 <a
   href="#destinations"
   class="button button-outline"
 >
-Explore Travaza
+Explore Destinations
 </a>
 
 </div>
 
-
-<div class="hero-micro">
-
-<div>
-<strong>Private Clients</strong>
-<span>Travel designed around your time.</span>
-</div>
-
-<div>
-<strong>Global Organizations</strong>
-<span>Executive programs and major movements.</span>
-</div>
-
-<div>
-<strong>Sports & Entertainment</strong>
-<span>Precision logistics for demanding schedules.</span>
-</div>
-
-<div>
-<strong>Private Experiences</strong>
-<span>Aviation, yachts and extraordinary destinations.</span>
-</div>
-
-</div>
-
 </div>
 
 </section>
 
 
-<!-- INTRO -->
-
-<section
-  id="about"
-  class="intro"
->
-
-<div class="container intro-grid">
-
-<div>
-
-<div class="eyebrow">
-THE TRAVAZA APPROACH
-</div>
-
-<h2 class="section-title">
-Designed around you.
-</h2>
-
-</div>
-
-
-<div class="intro-copy">
-
-<p>
-
-Travaza is a private travel,
-global movement and destination company
-for people who want the experience
-without managing every detail behind it.
-
-</p>
-
-<p>
-
-We bring together
-
-<strong>
-
-transportation,
-private aviation,
-yachts,
-hotels,
-guides,
-events,
-destination expertise
-and custom experiences
-
-</strong>
-
-through one trusted relationship.
-
-</p>
-
-<div class="intro-statement">
-
-You enjoy the journey.
-We handle everything around it.
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- AUDIENCE -->
-
-<section class="audience">
-
-<div class="container audience-list">
-
-{
-  audiences.map(
-    audience => (
-
-<span>
-{audience}
-</span>
-
-    )
-  )
-}
-
-</div>
-
-</section>
-
-
-<!-- PRIVATE EXPERIENCES -->
-
-<section
-  id="experiences"
-  class="services"
->
-
-<div class="container">
-
-<div class="services-intro">
-
-<div class="eyebrow">
-PRIVATE & CUSTOM EXPERIENCES
-</div>
-
-<h2 class="section-title">
-Made for you.
-Not everyone.
-</h2>
-
-<p class="section-copy">
-
-The best journeys feel personal.
-Travaza creates experiences around your interests,
-schedule, destination and the way you prefer to travel.
-
-</p>
-
-</div>
-
-
-<div class="services-grid">
-
-{
-  services.map(
-    (service, index) => (
-
-<article class="service-card">
-
-<div class="card-number">
-0{index + 1}
-</div>
-
-<div class="eyebrow" style="margin-top:20px;">
-{service.eyebrow}
-</div>
-
-<h3>
-{service.title}
-</h3>
-
-<p>
-{service.description}
-</p>
-
-</article>
-
-    )
-  )
-}
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- MIAMI -->
-
-<section class="photo-feature">
-
-<img
-  src="/images/travaza/miami.png"
-  alt="Travaza Miami"
-/>
-
-<div class="container photo-feature-content">
-
-<div class="eyebrow eyebrow-light">
-MIAMI
-</div>
-
-<h2>
-Life looks different
-from the water.
-</h2>
-
-<p>
-
-Private yachts,
-chauffeured transportation,
-aviation,
-VIP events
-and curated South Florida experiences.
-
-</p>
-
-</div>
-
-</section>
-
-
-<!-- DESTINATION INTRO -->
+<!-- 2 CURATED DESTINATIONS -->
 
 <section
   id="destinations"
@@ -1909,13 +1283,17 @@ CURATED DESTINATIONS
 
 <h2 class="section-title">
 Local knowledge.
+<br />
 Global ambition.
 </h2>
 
 <p class="section-copy">
 
-We don't simply take you somewhere.
-We create a way to experience it.
+The best travel is never simply about arriving.
+
+It is about knowing where to go,
+what is worth your time
+and having someone who can make it all happen.
 
 </p>
 
@@ -1930,10 +1308,10 @@ We create a way to experience it.
 
 <img
   src="/images/travaza/new-york-2.png"
-  alt="New York"
+  alt="New York private travel"
 />
 
-<div class="container destination-feature-content">
+<div class="container destination-content">
 
 <div class="eyebrow eyebrow-light">
 NEW YORK • USA
@@ -1945,8 +1323,8 @@ The world's stage.
 
 <p>
 
-Executive mobility,
-private touring,
+Private touring,
+executive mobility,
 corporate programs,
 sports,
 entertainment
@@ -1969,7 +1347,7 @@ built around your time.
 
 <img
   src="/images/travaza/london.png"
-  alt="London"
+  alt="London private travel"
 />
 
 <div class="city-content">
@@ -1987,7 +1365,7 @@ Personal.
 <p>
 
 Private touring,
-executive transportation
+chauffeured transportation
 and curated London experiences
 designed around your priorities.
 
@@ -2002,7 +1380,7 @@ designed around your priorities.
 
 <img
   src="/images/travaza/paris.png"
-  alt="Paris"
+  alt="Paris private travel"
 />
 
 <div class="city-content">
@@ -2020,7 +1398,7 @@ elevated.
 
 Private touring,
 culinary experiences,
-executive transportation
+chauffeured transportation
 and bespoke Paris itineraries.
 
 </p>
@@ -2032,75 +1410,7 @@ and bespoke Paris itineraries.
 </section>
 
 
-<!-- TORONTO -->
-
-<section class="toronto">
-
-<div class="container toronto-grid">
-
-<div class="toronto-mark">
-Toronto
-</div>
-
-<div>
-
-<div class="eyebrow">
-TORONTO • CANADA
-</div>
-
-<h2 class="section-title">
-Our city.
-Your Toronto.
-</h2>
-
-<p class="destination-copy-large">
-
-Executive transportation,
-private city experiences,
-professional sports,
-corporate programs,
-concerts,
-airport movements
-and custom itineraries throughout Toronto and Southern Ontario.
-
-</p>
-
-<div class="micro-grid">
-
-<div class="micro-item">
-Executive Transportation
-</div>
-
-<div class="micro-item">
-Private Experiences
-</div>
-
-<div class="micro-item">
-Professional Sports
-</div>
-
-<div class="micro-item">
-Corporate Programs
-</div>
-
-<div class="micro-item">
-Airport Transfers
-</div>
-
-<div class="micro-item">
-Large Group Movements
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- NIAGARA -->
+<!-- 3 NIAGARA -->
 
 <section class="niagara">
 
@@ -2114,16 +1424,19 @@ NIAGARA FALLS • CANADA + USA
 
 <h2 class="section-title">
 Two countries.
+<br />
 One extraordinary destination.
 </h2>
 
 <p class="section-copy">
 
-Private experiences,
+Experience Niagara beyond the standard itinerary.
+
+Private touring,
 iconic attractions,
 wine country,
-cross-border touring
-and local expertise on both sides of Niagara Falls.
+cross-border experiences
+and local expertise on both sides of the Falls.
 
 </p>
 
@@ -2155,9 +1468,10 @@ privately.
 
 Journey Behind the Falls,
 Niagara City Cruises,
+Niagara-on-the-Lake,
 wine country,
 private touring
-and curated Canadian-side experiences.
+and curated Canadian experiences.
 
 </p>
 
@@ -2190,7 +1504,7 @@ Niagara Falls State Park,
 Maid of the Mist,
 Cave of the Winds,
 private guides
-and custom American-side experiences.
+and customized American-side experiences.
 
 </p>
 
@@ -2206,15 +1520,15 @@ and custom American-side experiences.
 </section>
 
 
-<!-- GUYANA -->
+<!-- 4 GUYANA -->
 
 <section class="guyana">
 
 <img
-  class="guyana-bg"
   src="/images/travaza/kaieteur-falls.png"
   alt="Kaieteur Falls Guyana"
 />
+
 
 <div class="container guyana-content">
 
@@ -2239,28 +1553,28 @@ everyone else does.
 Guyana is entering an extraordinary new chapter.
 
 With one of the world's fastest-growing economies,
-extraordinary landscapes
+extraordinary natural landscapes
 and a rich multicultural identity,
 it is becoming one of South America's
 most compelling emerging destinations.
 
 </p>
 
+
 <div class="guyana-services">
 
 {
-  guyanaServices.map(
-    service => (
+  guyanaServices.map(service => (
 
 <span class="guyana-service">
 {service}
 </span>
 
-    )
-  )
+  ))
 }
 
 </div>
+
 
 <div style="margin-top:32px;">
 
@@ -2268,7 +1582,7 @@ most compelling emerging destinations.
   href="#consultation"
   class="button button-gold"
 >
-Discover Guyana
+Design Your Guyana Journey
 </a>
 
 </div>
@@ -2278,43 +1592,63 @@ Discover Guyana
 </section>
 
 
-<!-- SECOND NEW YORK EDITORIAL -->
+<!-- 5 TRAVEL BUILT AROUND YOU -->
 
-<section class="editorial-image">
+<section class="travel-built">
 
 <img
   src="/images/travaza/New-york.png"
-  alt="New York private travel"
+  alt="Custom private travel"
 />
 
-<div class="container editorial-content">
+
+<div class="container travel-built-content">
 
 <div class="eyebrow eyebrow-light">
 TRAVEL BUILT AROUND YOU
 </div>
 
 <h2>
-Your itinerary
+Your journey
 shouldn't look
 like everyone else's.
 </h2>
 
 <p>
 
-Travaza brings transportation,
-destination expertise,
-hospitality
-and private experiences together
-to create journeys designed around the people taking them.
+Tell us where you want to go,
+who is travelling
+and how you want the experience to feel.
 
 </p>
+
+<p>
+
+We bring together the transportation,
+hotels,
+private guides,
+experiences,
+aviation,
+yachts
+and details required to turn that idea into one seamless journey.
+
+</p>
+
+
+<a
+  href="#consultation"
+  class="button button-gold"
+  style="margin-top:22px;"
+>
+Create Something Private
+</a>
 
 </div>
 
 </section>
 
 
-<!-- GLOBAL MOVEMENT -->
+<!-- 6 GLOBAL MOVEMENT -->
 
 <section
   id="global-movement"
@@ -2324,7 +1658,8 @@ to create journeys designed around the people taking them.
 <div class="container">
 
 
-<div class="global-movement-header">
+<div class="movement-intro">
+
 
 <div>
 
@@ -2340,28 +1675,26 @@ considered.
 </div>
 
 
-<div class="global-movement-lead">
+<div class="movement-lead">
 
-The best transportation is almost invisible.
+The journey between extraordinary moments
+should feel just as considered as the moments themselves.
 
-It arrives where it should,
-when it should,
-with the right vehicle,
-the right information
-and the right people behind it.
-
-Travaza coordinates the journey between the moments that matter.
-
-</div>
+From one private arrival to the movement of an entire
+executive team, professional sports organization
+or touring production, Travaza coordinates
+the details behind the scenes.
 
 </div>
 
 
-<div class="global-movement-grid">
+</div>
+
+
+<div class="movement-list">
 
 {
-  globalMovement.map(
-    item => (
+  movement.map(item => (
 
 <article class="movement-row">
 
@@ -2379,20 +1712,17 @@ Travaza coordinates the journey between the moments that matter.
 
 </article>
 
-    )
-  )
+  ))
 }
 
 </div>
 
 
-<div class="movement-closing">
+<div class="movement-footer">
 
 <h3>
-
-One traveller or one thousand.
-One city or several countries.
-
+However you move,
+it should feel effortless.
 </h3>
 
 <a
@@ -2410,9 +1740,186 @@ Plan Your Movement
 </section>
 
 
+<!-- 7 TRAVAZA APPROACH -->
+
+<section
+  id="approach"
+  class="approach"
+>
+
+<div class="container">
+
+
+<div class="approach-grid">
+
+
+<div>
+
+<div class="eyebrow">
+THE TRAVAZA APPROACH
+</div>
+
+<h2 class="section-title">
+You experience
+the destination.
+</h2>
+
+</div>
+
+
+<div class="approach-copy">
+
+<p>
+
+Exceptional travel is not about adding more.
+
+It is about removing friction.
+
+</p>
+
+<p>
+
+Travaza brings together
+
+<strong>
+
+private transportation,
+aviation,
+yachts,
+hotels,
+guides,
+events,
+destination expertise
+and custom experiences
+
+</strong>
+
+through one trusted relationship.
+
+</p>
+
+<p>
+
+We plan around your schedule,
+your priorities
+and the way you prefer to travel.
+
+</p>
+
+
+<div class="approach-statement">
+
+You enjoy the journey.
+<br />
+We manage everything around it.
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="audience">
+
+{
+  audiences.map(audience => (
+
+<span>
+{audience}
+</span>
+
+  ))
+}
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- 8 PRIVATE CUSTOM EXPERIENCES -->
+
+<section
+  id="experiences"
+  class="experiences"
+>
+
+<div class="container">
+
+
+<div class="experience-heading">
+
+<div class="eyebrow">
+PRIVATE & CUSTOM EXPERIENCES
+</div>
+
+<h2 class="section-title">
+Made for you.
+<br />
+Not everyone.
+</h2>
+
+<p class="section-copy">
+
+No fixed formula.
+No ordinary itinerary.
+
+Every Travaza experience can be shaped around
+what you want to discover,
+how you want to travel
+and how you want the journey to feel.
+
+</p>
+
+</div>
+
+
+<div class="experience-grid">
+
+{
+  experiences.map(item => (
+
+<article class="experience">
+
+<div class="experience-number">
+{item.number}
+</div>
+
+<div
+  class="eyebrow"
+  style="margin-top:20px;"
+>
+{item.label}
+</div>
+
+<h3>
+{item.title}
+</h3>
+
+<p>
+{item.text}
+</p>
+
+</article>
+
+  ))
+}
+
+</div>
+
+
+</div>
+
+</section>
+
+
 <!-- LUXURY STATEMENT -->
 
-<section class="luxury-statement">
+<section class="statement">
 
 <div class="container">
 
@@ -2422,16 +1929,14 @@ THE TRAVAZA STANDARD
 
 <blockquote>
 
-Luxury isn't simply
+The luxury isn't simply
 where you stay.
 
 <br />
 
 <span>
-
 It's knowing everything
 has already been handled.
-
 </span>
 
 </blockquote>
@@ -2462,24 +1967,25 @@ Where would you
 like to go next?
 </h2>
 
-<p class="consultation-copy">
+<p class="consultation-text">
 
 Every journey begins with a conversation.
 
-Tell us who is travelling,
-where you want to go,
+Tell us where you want to go,
+who is travelling,
 what matters most
 and what you would like us to handle.
 
-We'll help structure the rest.
+Our team will build the journey around you.
 
 </p>
 
-<div class="direct">
+
+<div class="contact">
 
 Travel Planning & Reservations
 
-<br />
+<br /><br />
 
 <a href="mailto:reservations@travaza.com">
 reservations@travaza.com
@@ -2596,6 +2102,10 @@ How can we assist?
   name="service"
 >
 
+<option value="">
+Select
+</option>
+
 <option>
 Private Travel
 </option>
@@ -2641,7 +2151,7 @@ Coach Charter
 </option>
 
 <option>
-Large Group Transportation
+Large Group Movement
 </option>
 
 <option>
@@ -2682,13 +2192,13 @@ Starting Date
 
 <div class="field">
 
-<label for="passengers">
+<label for="guests">
 Number of Guests
 </label>
 
 <input
-  id="passengers"
-  name="passengers"
+  id="guests"
+  name="guests"
   type="number"
   min="1"
 />
@@ -2735,7 +2245,7 @@ Tell Us About Your Journey
 <textarea
   id="details"
   name="details"
-  placeholder="Destinations, hotels, flights, private aviation, yachts, transportation, experiences, events, guides, special access, group logistics or anything else you would like Travaza to handle."
+  placeholder="Dates, destinations, hotels, flights, private aviation, yachts, transportation, experiences, events, guides, special access or anything else you would like us to handle."
 ></textarea>
 
 </div>
@@ -2763,9 +2273,12 @@ Request a Private Consultation
 </main>
 
 
+<!-- FOOTER -->
+
 <footer>
 
 <div class="container">
+
 
 <div class="footer-grid">
 
@@ -2781,12 +2294,12 @@ Request a Private Consultation
 <p class="footer-copy">
 
 Private travel,
-global movement
-and curated experiences
+curated experiences
+and global movement
 for clients who value
 time,
 access
-and execution.
+and exceptional execution.
 
 </p>
 
@@ -2795,19 +2308,11 @@ and execution.
 
 <div>
 
-<div class="footer-heading">
+<div class="footer-title">
 EXPLORE
 </div>
 
 <div class="footer-links">
-
-<a href="#about">
-About
-</a>
-
-<a href="#experiences">
-Private Travel
-</a>
 
 <a href="#destinations">
 Destinations
@@ -2817,6 +2322,14 @@ Destinations
 Global Movement
 </a>
 
+<a href="#approach">
+Our Approach
+</a>
+
+<a href="#experiences">
+Private Experiences
+</a>
+
 </div>
 
 </div>
@@ -2824,7 +2337,7 @@ Global Movement
 
 <div>
 
-<div class="footer-heading">
+<div class="footer-title">
 START PLANNING
 </div>
 
@@ -2850,16 +2363,9 @@ reservations@travaza.com
 
 © {new Date().getFullYear()} Travaza.
 
-Private travel,
-transportation,
-aviation,
-yacht,
-destination
-and event services
-are subject to availability,
-supplier terms,
-regulatory requirements
-and final confirmation.
+Private travel, transportation, aviation, yacht,
+destination and event services are subject to availability,
+supplier terms, regulatory requirements and final confirmation.
 
 </div>
 
