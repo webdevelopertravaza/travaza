@@ -2,80 +2,223 @@
 ---
 
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>Thank You | Travaza</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #050706;
-      color: white;
-    }
+<meta charset="UTF-8" />
 
-    .wrap {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 30px;
-    }
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+/>
 
-    .content {
-      max-width: 650px;
-    }
+<title>Thank You | Travaza</title>
 
-    .gold {
-      color: #d5a03a;
-    }
+<meta
+  name="robots"
+  content="noindex"
+/>
 
-    h1 {
-      font-size: clamp(42px, 8vw, 76px);
-      margin: 0 0 20px;
-      font-weight: 400;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com" />
 
-    p {
-      color: rgba(255,255,255,.7);
-      line-height: 1.7;
-      font-size: 18px;
-    }
+<link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin
+/>
 
-    a {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 14px 22px;
-      background: #d5a03a;
-      color: #050706;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
+<link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Manrope:wght@300;400;500;600&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #050505;
+  color: #ffffff;
+
+  font-family: "Manrope", Arial, sans-serif;
+}
+
+.page {
+  width: min(900px, calc(100% - 40px));
+
+  text-align: center;
+
+  padding: 80px 20px;
+}
+
+.logo {
+  width: 190px;
+
+  margin: 0 auto 75px;
+}
+
+.eyebrow {
+  color: #e6c57d;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: .22em;
+
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 22px 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(65px, 9vw, 115px);
+
+  line-height: .88;
+
+  font-weight: 300;
+
+  letter-spacing: -.04em;
+}
+
+h1 span {
+  color: #e6c57d;
+  font-style: italic;
+}
+
+p {
+  max-width: 620px;
+
+  margin: 30px auto;
+
+  color: rgba(255,255,255,.72);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+.button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 55px;
+
+  margin-top: 20px;
+
+  padding: 0 28px;
+
+  background: #c89a3d;
+  color: #080808;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: .17em;
+
+  text-transform: uppercase;
+
+  text-decoration: none;
+}
+
+.contact {
+  margin-top: 70px;
+
+  padding-top: 30px;
+
+  border-top: 1px solid rgba(255,255,255,.15);
+
+  color: rgba(255,255,255,.45);
+
+  font-size: 11px;
+}
+
+.contact a {
+  color: #e6c57d;
+  text-decoration: none;
+}
+
+</style>
+
 </head>
 
+
 <body>
-  <div class="wrap">
-    <div class="content">
-      <div class="gold">TRAVAZA</div>
 
-      <h1>We've got it from here.</h1>
+<main class="page">
 
-      <p>
-        Thank you for contacting Travaza. Your request has been sent to our
-        reservations team and we will review the details of your transportation
-        or travel experience.
-      </p>
+<a href="/">
 
-      <p>
-        A member of our team will follow up with availability, recommendations
-        and next steps.
-      </p>
+<img
+  class="logo"
+  src="/images/travaza/travaza-gold.png"
+  alt="Travaza"
+/>
 
-      <a href="/">Return to Travaza</a>
-    </div>
-  </div>
+</a>
+
+
+<div class="eyebrow">
+YOUR JOURNEY STARTS HERE
+</div>
+
+
+<h1>
+
+Thank you.
+
+<br />
+
+<span>We'll take it from here.</span>
+
+</h1>
+
+
+<p>
+
+Your request has been received by Travaza.
+
+A member of our team will review the details of your journey
+and connect with you to begin creating your experience.
+
+</p>
+
+
+<a
+  href="/"
+  class="button"
+>
+Return to Travaza
+</a>
+
+
+<div class="contact">
+
+PRIVATE TRAVEL • CURATED EXPERIENCES • GLOBAL MOVEMENT
+
+<br /><br />
+
+<a href="mailto:reservations@travaza.com">
+reservations@travaza.com
+</a>
+
+</div>
+
+</main>
+
 </body>
+
 </html>
