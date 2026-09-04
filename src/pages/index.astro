@@ -1,39 +1,4 @@
 ---
-const services = [
-  {
-    title: "Corporate",
-    subtitle: "TRAVAZA CORPORATE",
-    logo: "/images/travaza/travaza-corporate.png",
-    description:
-      "Executive transportation, leadership retreats, client entertainment, incentive programs, conferences and high-touch corporate travel.",
-    link: "#consultation"
-  },
-  {
-    title: "Events",
-    subtitle: "TRAVAZA EVENTS",
-    logo: "/images/travaza/travaza-events.png",
-    description:
-      "VIP event movements, launches, premieres, sporting events, productions, executive dinners and complex guest logistics.",
-    link: "#consultation"
-  },
-  {
-    title: "Private Travel",
-    subtitle: "TRAVAZA LUXURY",
-    logo: "/images/travaza/travaza-luxury.png",
-    description:
-      "Bespoke journeys designed around privacy, access, time and the way you actually want to experience a destination.",
-    link: "#consultation"
-  },
-  {
-    title: "Private Aviation",
-    subtitle: "TRAVAZA AVIATION",
-    logo: "/images/travaza/travaza-aviation.png",
-    description:
-      "Private aircraft sourcing paired with executive ground transportation and complete destination coordination.",
-    link: "#consultation"
-  }
-];
-
 const audiences = [
   "Private Clients",
   "Family Offices",
@@ -46,27 +11,70 @@ const audiences = [
   "Major Events"
 ];
 
-const mobilityServices = [
-  "Worldwide motorcoach charters",
-  "Executive Sprinter transportation",
-  "Private chauffeur service",
-  "Airport transfers",
-  "Corporate shuttle programs",
-  "Professional sports teams",
-  "Athletes & ownership groups",
-  "Touring musicians",
-  "Entertainment productions",
-  "Conference transportation",
-  "Executive retreats",
-  "Client entertainment",
-  "Large group movements",
-  "Cross-border transportation",
-  "Multi-day touring",
-  "Step-on guides",
-  "Audio-guided experiences",
-  "Private destination guides",
-  "FIT transportation",
-  "Custom multi-city logistics"
+const services = [
+  {
+    eyebrow: "PRIVATE TRAVEL",
+    title: "Bespoke Journeys",
+    description:
+      "Highly personalized travel designed around your time, interests, pace and priorities — from one extraordinary day to a complete multi-destination itinerary."
+  },
+  {
+    eyebrow: "CORPORATE",
+    title: "Executive Programs",
+    description:
+      "Leadership retreats, client entertainment, conferences, executive movements and complex travel programs delivered with discretion and precision."
+  },
+  {
+    eyebrow: "EVENTS",
+    title: "High-Touch Events",
+    description:
+      "VIP guest logistics, launches, sporting events, premieres, productions and private experiences where timing and presentation matter."
+  },
+  {
+    eyebrow: "AVIATION",
+    title: "Private Aviation",
+    description:
+      "Private aircraft sourcing coordinated with ground transportation and destination services for a seamless door-to-door journey."
+  }
+];
+
+const globalMovement = [
+  {
+    number: "01",
+    title: "Private Chauffeur",
+    text:
+      "Sedans, SUVs and executive vehicles for private clients, airport movements, meetings, evenings and discreet point-to-point travel."
+  },
+  {
+    number: "02",
+    title: "Executive Sprinters",
+    text:
+      "Premium group transportation for families, executives, artists and small groups who want to travel together without sacrificing comfort."
+  },
+  {
+    number: "03",
+    title: "Private Motorcoaches",
+    text:
+      "Full-size and mini coaches for executive programs, sports teams, touring artists, corporate groups and complex private itineraries."
+  },
+  {
+    number: "04",
+    title: "Airport & Aviation Coordination",
+    text:
+      "Arrival and departure programs coordinated around commercial or private aviation, including vehicles, groups and onward movements."
+  },
+  {
+    number: "05",
+    title: "Sports & Entertainment",
+    text:
+      "Transportation and movement planning for teams, athletes, ownership groups, artists, touring productions and VIP guests."
+  },
+  {
+    number: "06",
+    title: "Complex Group Movements",
+    text:
+      "Multi-vehicle, multi-location and time-sensitive logistics coordinated by one team from planning through execution."
+  }
 ];
 
 const guyanaServices = [
@@ -76,12 +84,12 @@ const guyanaServices = [
   "Private transportation",
   "Group shuttles",
   "Hotel packages",
-  "Nature & wildlife experiences",
+  "Nature & wildlife",
   "Cultural experiences",
-  "Corporate movements",
+  "Corporate programs",
   "Private guides",
   "Custom itineraries",
-  "Group travel programs"
+  "Group travel"
 ];
 ---
 
@@ -97,18 +105,18 @@ const guyanaServices = [
 />
 
 <title>
-Travaza | Private Travel, Global Mobility & Curated Experiences
+Travaza | Private Travel, Global Movement & Curated Experiences
 </title>
 
 <meta
   name="description"
-  content="Travaza creates and executes private travel, executive transportation, corporate programs, luxury experiences, private aviation, yacht charters, sports team movements and curated journeys worldwide."
+  content="Travaza creates and executes private travel, global movement, executive transportation, corporate programs, private aviation, yacht experiences, sports team movements and curated journeys worldwide."
 />
 
 <meta
   name="keywords"
-  content="luxury travel, high net worth travel, private jet charter, yacht charter, executive transportation, worldwide coach charter, corporate travel, sports team transportation, Niagara Falls private tours, Toronto transportation, Guyana luxury travel, Miami yacht charter"
-/>
+  content="luxury travel, private travel, global transportation, private jet charter, yacht charter, executive transportation, sports team transportation, corporate travel, Niagara Falls, Guyana travel, Miami yacht charter"
+ />
 
 <link
   rel="preconnect"
@@ -130,7 +138,8 @@ Travaza | Private Travel, Global Mobility & Curated Experiences
 
 :root {
   --black: #050605;
-  --soft-black: #101210;
+  --black-soft: #101210;
+
   --white: #ffffff;
   --soft-white: #fafafa;
 
@@ -139,9 +148,9 @@ Travaza | Private Travel, Global Mobility & Curated Experiences
   --gold-dark: #92702d;
 
   --text: #171917;
-  --muted: #686d69;
+  --muted: #6a6e6a;
 
-  --line: #e7e7e4;
+  --line: #e5e6e3;
   --dark-line: rgba(255,255,255,.14);
 }
 
@@ -155,6 +164,7 @@ html {
 
 body {
   margin: 0;
+
   background: var(--white);
   color: var(--text);
 
@@ -183,8 +193,8 @@ img {
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 input,
@@ -227,8 +237,10 @@ button {
 }
 
 .section-copy {
-  max-width: 690px;
+  max-width: 700px;
+
   color: var(--muted);
+
   font-size: 16px;
   line-height: 1.8;
 }
@@ -245,17 +257,11 @@ button {
   font-weight: 600;
   letter-spacing: .17em;
   text-transform: uppercase;
-
-  transition: .2s ease;
 }
 
 .button-gold {
   background: var(--gold);
   color: #080908;
-}
-
-.button-gold:hover {
-  background: var(--gold-light);
 }
 
 .button-dark {
@@ -268,10 +274,7 @@ button {
   color: white;
 }
 
-
-/* ========================================
-HEADER
-======================================== */
+/* HEADER */
 
 header {
   position: absolute;
@@ -287,8 +290,8 @@ header {
   min-height: 94px;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
   gap: 30px;
 }
@@ -321,10 +324,7 @@ header {
   padding: 13px 17px;
 }
 
-
-/* ========================================
-HERO
-======================================== */
+/* HERO */
 
 .hero {
   min-height: 940px;
@@ -375,7 +375,7 @@ HERO
 
   padding-top: 110px;
 
-  max-width: 1070px;
+  max-width: 1060px;
 }
 
 .hero h1 {
@@ -399,7 +399,7 @@ HERO
 }
 
 .hero-copy {
-  max-width: 780px;
+  max-width: 790px;
 
   color: rgba(255,255,255,.73);
 
@@ -408,11 +408,11 @@ HERO
 }
 
 .hero-actions {
+  margin-top: 39px;
+
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-
-  margin-top: 39px;
 }
 
 .hero-micro {
@@ -423,11 +423,13 @@ HERO
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+
   gap: 30px;
 }
 
 .hero-micro strong {
   display: block;
+
   color: var(--gold-light);
 
   font-family:
@@ -442,28 +444,28 @@ HERO
 
 .hero-micro span {
   color: rgba(255,255,255,.48);
+
   font-size: 11px;
   line-height: 1.5;
 }
 
-
-/* ========================================
-INTRO
-======================================== */
+/* INTRO */
 
 .intro {
-  background: white;
   padding: 135px 0;
+  background: white;
 }
 
 .intro-grid {
   display: grid;
   grid-template-columns: .8fr 1.2fr;
+
   gap: 105px;
 }
 
 .intro-copy {
   color: var(--muted);
+
   font-size: 18px;
   line-height: 1.9;
 }
@@ -487,10 +489,7 @@ INTRO
   line-height: 1.22;
 }
 
-
-/* ========================================
-AUDIENCE
-======================================== */
+/* AUDIENCE */
 
 .audience {
   padding: 32px 0;
@@ -511,37 +510,39 @@ AUDIENCE
 }
 
 .audience-list span {
+  color: #585c58;
+
   font-size: 10px;
   font-weight: 500;
   letter-spacing: .13em;
   text-transform: uppercase;
-  color: #585c58;
 }
 
-
-/* ========================================
-SERVICES
-======================================== */
+/* PRIVATE EXPERIENCES */
 
 .services {
   padding: 125px 0;
   background: white;
 }
 
+.services-intro {
+  max-width: 800px;
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  margin-top: 55px;
+  margin-top: 58px;
 
   border-top: 1px solid var(--line);
   border-left: 1px solid var(--line);
 }
 
 .service-card {
-  min-height: 430px;
+  min-height: 385px;
 
-  padding: 42px;
+  padding: 43px;
 
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -552,39 +553,32 @@ SERVICES
   background: white;
 }
 
-.service-logo {
-  width: 220px;
-  height: 82px;
+.service-card .card-number {
+  color: var(--gold-dark);
 
-  object-fit: contain;
-  object-position: left center;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .15em;
 }
 
 .service-card h3 {
-  margin: auto 0 12px;
+  margin: auto 0 14px;
 
-  font-size: 44px;
+  font-size: 46px;
   font-weight: 400;
 }
 
 .service-card p {
+  margin: 0;
+
+  max-width: 490px;
+
   color: var(--muted);
+
   line-height: 1.75;
-  margin-bottom: 23px;
 }
 
-.card-link {
-  color: var(--gold-dark);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-}
-
-
-/* ========================================
-MIAMI FEATURE
-======================================== */
+/* MIAMI */
 
 .photo-feature {
   min-height: 760px;
@@ -654,13 +648,11 @@ MIAMI FEATURE
   line-height: 1.75;
 }
 
-
-/* ========================================
-DESTINATION INTRO
-======================================== */
+/* DESTINATION INTRO */
 
 .destination-intro {
   padding: 120px 0 65px;
+
   background: var(--black);
   color: white;
 }
@@ -669,15 +661,12 @@ DESTINATION INTRO
   color: rgba(255,255,255,.6);
 }
 
-
-/* ========================================
-NEW YORK
-======================================== */
+/* NEW YORK */
 
 .destination-feature {
-  position: relative;
-
   min-height: 700px;
+
+  position: relative;
 
   display: flex;
   align-items: flex-end;
@@ -742,10 +731,7 @@ NEW YORK
   line-height: 1.7;
 }
 
-
-/* ========================================
-LONDON + PARIS
-======================================== */
+/* LONDON + PARIS */
 
 .city-pair {
   display: grid;
@@ -815,33 +801,39 @@ LONDON + PARIS
   line-height: 1.65;
 }
 
-
-/* ========================================
-TORONTO
-======================================== */
+/* TORONTO */
 
 .toronto {
   padding: 130px 0;
+
   background: white;
 }
 
 .toronto-grid {
   display: grid;
-  grid-template-columns: .65fr 1.35fr;
+  grid-template-columns: .7fr 1.3fr;
 
   gap: 90px;
 
   align-items: center;
 }
 
-.destination-brand {
-  max-width: 330px;
+.toronto-mark {
+  color: var(--gold-dark);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 80px;
+  line-height: .9;
 }
 
 .destination-copy-large {
   color: var(--muted);
-  line-height: 1.8;
+
   font-size: 17px;
+  line-height: 1.8;
 }
 
 .micro-grid {
@@ -869,19 +861,18 @@ TORONTO
   margin-right: 10px;
 }
 
-
-/* ========================================
-NIAGARA PHOTO SPLIT
-======================================== */
+/* NIAGARA */
 
 .niagara {
+  padding: 125px 0;
+
   background: var(--black);
   color: white;
-  padding: 125px 0;
 }
 
 .niagara-heading {
-  max-width: 750px;
+  max-width: 760px;
+
   margin-bottom: 55px;
 }
 
@@ -955,10 +946,7 @@ NIAGARA PHOTO SPLIT
   line-height: 1.65;
 }
 
-
-/* ========================================
-GUYANA FULL IMAGE
-======================================== */
+/* GUYANA */
 
 .guyana {
   min-height: 820px;
@@ -1007,19 +995,14 @@ GUYANA FULL IMAGE
   padding: 85px 0;
 }
 
-.guyana-logo {
-  max-width: 290px;
-  margin-bottom: 26px;
-}
-
 .year {
   display: inline-block;
+
+  padding: 10px 14px;
 
   color: var(--gold-light);
 
   border: 1px solid rgba(230,197,125,.65);
-
-  padding: 10px 14px;
 
   font-size: 9px;
   letter-spacing: .17em;
@@ -1058,18 +1041,16 @@ GUYANA FULL IMAGE
 }
 
 .guyana-service {
-  border: 1px solid rgba(255,255,255,.28);
-
   padding: 9px 11px;
 
-  font-size: 10px;
+  border: 1px solid rgba(255,255,255,.28);
+
   color: rgba(255,255,255,.76);
+
+  font-size: 10px;
 }
 
-
-/* ========================================
-SECOND NEW YORK IMAGE / EDITORIAL
-======================================== */
+/* EDITORIAL NY */
 
 .editorial-image {
   min-height: 680px;
@@ -1134,55 +1115,112 @@ SECOND NEW YORK IMAGE / EDITORIAL
   line-height: 1.75;
 }
 
+/* GLOBAL MOVEMENT */
 
-/* ========================================
-GLOBAL MOBILITY
-======================================== */
-
-.mobility {
+.global-movement {
   padding: 130px 0;
+
   background: white;
 }
 
-.mobility-grid {
+.global-movement-header {
   display: grid;
-  grid-template-columns: .75fr 1.25fr;
+  grid-template-columns: .8fr 1.2fr;
 
-  gap: 95px;
+  gap: 100px;
+
+  align-items: end;
+
+  margin-bottom: 70px;
 }
 
-.mobility-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.global-movement-lead {
+  color: var(--muted);
 
+  font-size: 18px;
+  line-height: 1.85;
+}
+
+.global-movement-grid {
   border-top: 1px solid var(--line);
 }
 
-.mobility-item {
-  padding: 17px 4px;
+.movement-row {
+  display: grid;
+  grid-template-columns: 90px 280px 1fr;
+
+  gap: 35px;
+
+  align-items: center;
+
+  padding: 32px 0;
 
   border-bottom: 1px solid var(--line);
+}
 
-  color: #565b57;
+.movement-number {
+  color: var(--gold-dark);
+
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .16em;
+}
+
+.movement-row h3 {
+  margin: 0;
+
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.movement-row p {
+  margin: 0;
+
+  max-width: 650px;
+
+  color: var(--muted);
+
   font-size: 13px;
+  line-height: 1.7;
 }
 
-.mobility-item:before {
-  content: "—";
-  color: var(--gold);
-  margin-right: 11px;
-}
+.movement-closing {
+  margin-top: 80px;
 
+  padding: 65px;
 
-/* ========================================
-LUXURY STATEMENT
-======================================== */
-
-.luxury-statement {
   background: var(--black);
   color: white;
 
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  gap: 40px;
+
+  align-items: center;
+}
+
+.movement-closing h3 {
+  margin: 0;
+
+  font-size:
+    clamp(
+      38px,
+      5vw,
+      64px
+    );
+
+  font-weight: 400;
+  line-height: .98;
+}
+
+/* LUXURY STATEMENT */
+
+.luxury-statement {
   padding: 145px 0;
+
+  background: var(--black);
+  color: white;
 
   text-align: center;
 }
@@ -1208,15 +1246,12 @@ LUXURY STATEMENT
   font-style: italic;
 }
 
-
-/* ========================================
-CONSULTATION
-======================================== */
+/* CONSULTATION */
 
 .consultation {
-  background: white;
-
   padding: 130px 0;
+
+  background: white;
 }
 
 .consultation-grid {
@@ -1243,11 +1278,11 @@ CONSULTATION
 }
 
 .form {
-  background: white;
+  padding: 40px;
 
   border: 1px solid var(--line);
 
-  padding: 40px;
+  background: white;
 }
 
 .form h3 {
@@ -1332,19 +1367,7 @@ textarea:focus {
   text-transform: uppercase;
 }
 
-.form-note {
-  margin-top: 13px;
-
-  color: #777b77;
-
-  font-size: 10px;
-  line-height: 1.5;
-}
-
-
-/* ========================================
-FOOTER
-======================================== */
+/* FOOTER */
 
 footer {
   padding: 68px 0 35px;
@@ -1376,12 +1399,12 @@ footer {
 }
 
 .footer-heading {
+  margin-bottom: 17px;
+
   color: var(--gold-light);
 
   font-size: 9px;
   letter-spacing: .18em;
-
-  margin-bottom: 17px;
 }
 
 .footer-links {
@@ -1407,10 +1430,7 @@ footer {
   line-height: 1.6;
 }
 
-
-/* ========================================
-MOBILE
-======================================== */
+/* MOBILE */
 
 @media (max-width: 900px) {
 
@@ -1420,14 +1440,29 @@ MOBILE
 
   .intro-grid,
   .toronto-grid,
-  .mobility-grid,
+  .global-movement-header,
   .consultation-grid {
     grid-template-columns: 1fr;
+
     gap: 50px;
   }
 
   .city-pair,
   .niagara-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .movement-row {
+    grid-template-columns: 55px 1fr;
+
+    gap: 20px;
+  }
+
+  .movement-row p {
+    grid-column: 2;
+  }
+
+  .movement-closing {
     grid-template-columns: 1fr;
   }
 
@@ -1439,7 +1474,6 @@ MOBILE
     grid-column: 1 / -1;
   }
 }
-
 
 @media (max-width: 640px) {
 
@@ -1475,7 +1509,7 @@ MOBILE
   .services,
   .toronto,
   .niagara,
-  .mobility,
+  .global-movement,
   .luxury-statement,
   .consultation {
     padding: 82px 0;
@@ -1486,7 +1520,7 @@ MOBILE
   }
 
   .service-card {
-    min-height: 380px;
+    min-height: 340px;
     padding: 28px;
   }
 
@@ -1510,8 +1544,12 @@ MOBILE
     min-height: 780px;
   }
 
-  .mobility-list {
-    grid-template-columns: 1fr;
+  .movement-row {
+    grid-template-columns: 40px 1fr;
+  }
+
+  .movement-closing {
+    padding: 40px 28px;
   }
 
   .form {
@@ -1543,8 +1581,6 @@ MOBILE
 <body>
 
 
-<!-- HEADER -->
-
 <header>
 
 <div class="container nav">
@@ -1566,26 +1602,19 @@ MOBILE
 About
 </a>
 
-<a href="#services">
-Services
+<a href="#experiences">
+Private Travel
 </a>
 
 <a href="#destinations">
 Destinations
 </a>
 
-<a href="#guyana">
-Guyana
+<a href="#global-movement">
+Global Movement
 </a>
 
-<a href="#mobility">
-Global Mobility
-</a>
-
-<a
-  href="#consultation"
-  class="nav-cta"
->
+<a href="#consultation" class="nav-cta">
 Private Consultation
 </a>
 
@@ -1594,7 +1623,6 @@ Private Consultation
 </div>
 
 </header>
-
 
 
 <main>
@@ -1606,37 +1634,23 @@ Private Consultation
 
 <div class="container hero-inner">
 
-
 <div class="eyebrow eyebrow-light">
-
-PRIVATE TRAVEL • GLOBAL MOBILITY • CURATED EXPERIENCES
-
+PRIVATE TRAVEL • GLOBAL MOVEMENT • CURATED EXPERIENCES
 </div>
 
-
 <h1>
-
 The world,
 <br />
-
-<span>
-handled.
-</span>
-
+<span>handled.</span>
 </h1>
-
 
 <p class="hero-copy">
 
-Travaza plans and executes exceptional travel,
-transportation and destination experiences
-for private clients,
-global organizations,
-professional sports
-and entertainment.
+Travaza creates and executes exceptional private travel,
+destination experiences and global movement for private clients,
+leading companies, professional sports and entertainment.
 
 </p>
-
 
 <div class="hero-actions">
 
@@ -1660,66 +1674,33 @@ Explore Travaza
 <div class="hero-micro">
 
 <div>
-
-<strong>
-Private Clients
-</strong>
-
-<span>
-Travel designed around your time.
-</span>
-
+<strong>Private Clients</strong>
+<span>Travel designed around your time.</span>
 </div>
-
 
 <div>
-
-<strong>
-Global Organizations
-</strong>
-
-<span>
-Executive and large-scale mobility.
-</span>
-
+<strong>Global Organizations</strong>
+<span>Executive programs and major movements.</span>
 </div>
-
 
 <div>
-
-<strong>
-Sports & Entertainment
-</strong>
-
-<span>
-Precision logistics for people in motion.
-</span>
-
+<strong>Sports & Entertainment</strong>
+<span>Precision logistics for demanding schedules.</span>
 </div>
-
 
 <div>
-
-<strong>
-Luxury Travel
-</strong>
-
-<span>
-Aviation, yachts and curated access.
-</span>
-
+<strong>Private Experiences</strong>
+<span>Aviation, yachts and extraordinary destinations.</span>
 </div>
 
 </div>
-
 
 </div>
 
 </section>
 
 
-
-<!-- ABOUT -->
+<!-- INTRO -->
 
 <section
   id="about"
@@ -1728,7 +1709,6 @@ Aviation, yachts and curated access.
 
 <div class="container intro-grid">
 
-
 <div>
 
 <div class="eyebrow">
@@ -1736,10 +1716,7 @@ THE TRAVAZA APPROACH
 </div>
 
 <h2 class="section-title">
-
-Travel should
-feel effortless.
-
+Designed around you.
 </h2>
 
 </div>
@@ -1750,12 +1727,11 @@ feel effortless.
 <p>
 
 Travaza is a private travel,
-global mobility and destination company
-created for people who want the experience
+global movement and destination company
+for people who want the experience
 without managing every detail behind it.
 
 </p>
-
 
 <p>
 
@@ -1767,10 +1743,10 @@ transportation,
 private aviation,
 yachts,
 hotels,
-destination expertise,
 guides,
-events
-and complex logistics
+events,
+destination expertise
+and custom experiences
 
 </strong>
 
@@ -1778,21 +1754,18 @@ through one trusted relationship.
 
 </p>
 
-
 <div class="intro-statement">
 
-You experience the destination.
-We manage everything around it.
+You enjoy the journey.
+We handle everything around it.
 
 </div>
 
 </div>
-
 
 </div>
 
 </section>
-
 
 
 <!-- AUDIENCE -->
@@ -1818,74 +1791,60 @@ We manage everything around it.
 </section>
 
 
-
-<!-- SERVICES -->
+<!-- PRIVATE EXPERIENCES -->
 
 <section
-  id="services"
+  id="experiences"
   class="services"
 >
 
 <div class="container">
 
+<div class="services-intro">
 
 <div class="eyebrow">
-WHAT WE DO
+PRIVATE & CUSTOM EXPERIENCES
 </div>
 
-
 <h2 class="section-title">
-
-One journey.
-Many moving parts.
-
+Made for you.
+Not everyone.
 </h2>
-
 
 <p class="section-copy">
 
-From one executive transfer
-to an international multi-city program,
-Travaza coordinates the details
-through one relationship.
+The best journeys feel personal.
+Travaza creates experiences around your interests,
+schedule, destination and the way you prefer to travel.
 
 </p>
+
+</div>
 
 
 <div class="services-grid">
 
-
 {
   services.map(
-    service => (
+    (service, index) => (
 
 <article class="service-card">
 
+<div class="card-number">
+0{index + 1}
+</div>
 
-<img
-  class="service-logo"
-  src={service.logo}
-  alt={service.subtitle}
-/>
-
+<div class="eyebrow" style="margin-top:20px;">
+{service.eyebrow}
+</div>
 
 <h3>
 {service.title}
 </h3>
 
-
 <p>
 {service.description}
 </p>
-
-
-<a
-  class="card-link"
-  href={service.link}
->
-Start Planning →
-</a>
-
 
 </article>
 
@@ -1893,14 +1852,11 @@ Start Planning →
   )
 }
 
-
 </div>
-
 
 </div>
 
 </section>
-
 
 
 <!-- MIAMI -->
@@ -1909,53 +1865,33 @@ Start Planning →
 
 <img
   src="/images/travaza/miami.png"
-  alt="Travaza Miami luxury experiences"
+  alt="Travaza Miami"
 />
-
 
 <div class="container photo-feature-content">
 
 <div class="eyebrow eyebrow-light">
-TRAVAZA MIAMI
+MIAMI
 </div>
 
-
 <h2>
-
 Life looks different
 from the water.
-
 </h2>
-
 
 <p>
 
 Private yachts,
-executive transportation,
-aviation connections,
+chauffeured transportation,
+aviation,
 VIP events
-and curated South Florida experiences
-designed around your time.
+and curated South Florida experiences.
 
 </p>
-
-
-<div style="margin-top:26px;">
-
-<a
-  href="#consultation"
-  class="button button-gold"
->
-Plan Miami
-</a>
-
-</div>
-
 
 </div>
 
 </section>
-
 
 
 <!-- DESTINATION INTRO -->
@@ -1968,31 +1904,24 @@ Plan Miami
 <div class="container">
 
 <div class="eyebrow eyebrow-light">
-WHERE WE GO
+CURATED DESTINATIONS
 </div>
 
-
 <h2 class="section-title">
-
 Local knowledge.
 Global ambition.
-
 </h2>
-
 
 <p class="section-copy">
 
-Deep expertise in core destinations,
-supported by trusted relationships
-and transportation capabilities
-around the world.
+We don't simply take you somewhere.
+We create a way to experience it.
 
 </p>
 
 </div>
 
 </section>
-
 
 
 <!-- NEW YORK -->
@@ -2001,9 +1930,8 @@ around the world.
 
 <img
   src="/images/travaza/new-york-2.png"
-  alt="Travaza New York"
+  alt="New York"
 />
-
 
 <div class="container destination-feature-content">
 
@@ -2011,11 +1939,9 @@ around the world.
 NEW YORK • USA
 </div>
 
-
 <h2>
 The world's stage.
 </h2>
-
 
 <p>
 
@@ -2023,17 +1949,15 @@ Executive mobility,
 private touring,
 corporate programs,
 sports,
-entertainment logistics
+entertainment
 and sophisticated New York experiences
-for travellers who value time and access.
+built around your time.
 
 </p>
-
 
 </div>
 
 </section>
-
 
 
 <!-- LONDON + PARIS -->
@@ -2043,12 +1967,10 @@ for travellers who value time and access.
 
 <article class="city-card">
 
-
 <img
   src="/images/travaza/london.png"
-  alt="Travaza London"
+  alt="London"
 />
-
 
 <div class="city-content">
 
@@ -2056,38 +1978,32 @@ for travellers who value time and access.
 LONDON • UNITED KINGDOM
 </div>
 
-
 <h3>
 Global.
 Timeless.
 Personal.
 </h3>
 
-
 <p>
 
-Executive transportation,
-private touring,
-destination planning
-and thoughtfully curated London programs.
+Private touring,
+executive transportation
+and curated London experiences
+designed around your priorities.
 
 </p>
 
 </div>
 
-
 </article>
-
 
 
 <article class="city-card">
 
-
 <img
   src="/images/travaza/paris.png"
-  alt="Travaza Paris"
+  alt="Paris"
 />
-
 
 <div class="city-content">
 
@@ -2095,31 +2011,25 @@ and thoughtfully curated London programs.
 PARIS • FRANCE
 </div>
 
-
 <h3>
 Culture,
 elevated.
 </h3>
-
 
 <p>
 
 Private touring,
 culinary experiences,
 executive transportation
-and bespoke Paris itineraries
-designed around your preferences.
+and bespoke Paris itineraries.
 
 </p>
 
 </div>
 
-
 </article>
 
-
 </section>
-
 
 
 <!-- TORONTO -->
@@ -2128,17 +2038,9 @@ designed around your preferences.
 
 <div class="container toronto-grid">
 
-
-<div>
-
-<img
-  class="destination-brand"
-  src="/images/travaza/travaza-toronto.png"
-  alt="Travaza Toronto"
-/>
-
+<div class="toronto-mark">
+Toronto
 </div>
-
 
 <div>
 
@@ -2146,28 +2048,22 @@ designed around your preferences.
 TORONTO • CANADA
 </div>
 
-
 <h2 class="section-title">
-
-Canada's global
-city.
-
+Our city.
+Your Toronto.
 </h2>
-
 
 <p class="destination-copy-large">
 
 Executive transportation,
-corporate programs,
-private touring,
+private city experiences,
 professional sports,
+corporate programs,
 concerts,
 airport movements
-and curated experiences
-throughout Toronto and Southern Ontario.
+and custom itineraries throughout Toronto and Southern Ontario.
 
 </p>
-
 
 <div class="micro-grid">
 
@@ -2176,7 +2072,7 @@ Executive Transportation
 </div>
 
 <div class="micro-item">
-Corporate Programs
+Private Experiences
 </div>
 
 <div class="micro-item">
@@ -2184,7 +2080,7 @@ Professional Sports
 </div>
 
 <div class="micro-item">
-Private City Experiences
+Corporate Programs
 </div>
 
 <div class="micro-item">
@@ -2197,23 +2093,18 @@ Large Group Movements
 
 </div>
 
-
 </div>
-
 
 </div>
 
 </section>
 
 
-
 <!-- NIAGARA -->
 
 <section class="niagara">
 
-
 <div class="container">
-
 
 <div class="niagara-heading">
 
@@ -2221,14 +2112,10 @@ Large Group Movements
 NIAGARA FALLS • CANADA + USA
 </div>
 
-
 <h2 class="section-title">
-
 Two countries.
 One extraordinary destination.
-
 </h2>
-
 
 <p class="section-copy">
 
@@ -2236,8 +2123,7 @@ Private experiences,
 iconic attractions,
 wine country,
 cross-border touring
-and local expertise
-on both sides of Niagara Falls.
+and local expertise on both sides of Niagara Falls.
 
 </p>
 
@@ -2249,12 +2135,10 @@ on both sides of Niagara Falls.
 
 <article class="niagara-card">
 
-
 <img
   src="/images/travaza/journey-behind-the-falls-couple.png"
-  alt="Journey Behind the Falls Canada"
+  alt="Niagara Falls Canada"
 />
-
 
 <div class="niagara-content">
 
@@ -2262,39 +2146,32 @@ on both sides of Niagara Falls.
 NIAGARA FALLS CANADA
 </div>
 
-
 <h3>
 Experience the Falls,
 privately.
 </h3>
 
-
 <p>
 
-Private touring,
 Journey Behind the Falls,
 Niagara City Cruises,
 wine country,
-culinary experiences
-and custom Canadian-side itineraries.
+private touring
+and curated Canadian-side experiences.
 
 </p>
 
 </div>
 
-
 </article>
-
 
 
 <article class="niagara-card">
 
-
 <img
   src="/images/travaza/cave-winds.png"
-  alt="Cave of the Winds Niagara Falls USA"
+  alt="Niagara Falls USA"
 />
-
 
 <div class="niagara-content">
 
@@ -2302,46 +2179,36 @@ and custom Canadian-side itineraries.
 NIAGARA FALLS USA
 </div>
 
-
 <h3>
 Closer than
 you imagined.
 </h3>
-
 
 <p>
 
 Niagara Falls State Park,
 Maid of the Mist,
 Cave of the Winds,
-private guides,
-group programs
-and curated American-side experiences.
+private guides
+and custom American-side experiences.
 
 </p>
 
 </div>
-
 
 </article>
 
 
 </div>
 
-
 </div>
 
 </section>
 
 
-
 <!-- GUYANA -->
 
-<section
-  id="guyana"
-  class="guyana"
->
-
+<section class="guyana">
 
 <img
   class="guyana-bg"
@@ -2349,47 +2216,37 @@ and curated American-side experiences.
   alt="Kaieteur Falls Guyana"
 />
 
-
 <div class="container guyana-content">
 
-
-<img
-  class="guyana-logo"
-  src="/images/travaza/travaza-guyana.png"
-  alt="Travaza Guyana"
-/>
-
-
 <div class="year">
-
 TRAVAZA DESTINATION OF THE YEAR • 2026
-
 </div>
 
+<div
+  class="eyebrow eyebrow-light"
+  style="margin-top:25px;"
+>
+GUYANA
+</div>
 
 <h2>
-
 Go before
 everyone else does.
-
 </h2>
-
 
 <p class="guyana-lead">
 
 Guyana is entering an extraordinary new chapter.
 
 With one of the world's fastest-growing economies,
-extraordinary natural landscapes
+extraordinary landscapes
 and a rich multicultural identity,
-the destination is attracting a new generation
-of business and leisure travellers.
+it is becoming one of South America's
+most compelling emerging destinations.
 
 </p>
 
-
 <div class="guyana-services">
-
 
 {
   guyanaServices.map(
@@ -2403,9 +2260,7 @@ of business and leisure travellers.
   )
 }
 
-
 </div>
-
 
 <div style="margin-top:32px;">
 
@@ -2418,23 +2273,19 @@ Discover Guyana
 
 </div>
 
-
 </div>
 
 </section>
 
 
-
-<!-- SECOND NY EDITORIAL -->
+<!-- SECOND NEW YORK EDITORIAL -->
 
 <section class="editorial-image">
 
-
 <img
   src="/images/travaza/New-york.png"
-  alt="Travaza luxury New York travel"
+  alt="New York private travel"
 />
-
 
 <div class="container editorial-content">
 
@@ -2442,15 +2293,11 @@ Discover Guyana
 TRAVEL BUILT AROUND YOU
 </div>
 
-
 <h2>
-
 Your itinerary
 shouldn't look
 like everyone else's.
-
 </h2>
-
 
 <p>
 
@@ -2458,73 +2305,101 @@ Travaza brings transportation,
 destination expertise,
 hospitality
 and private experiences together
-to create journeys designed around
-the people taking them.
+to create journeys designed around the people taking them.
 
 </p>
 
 </div>
-
 
 </section>
 
 
-
-<!-- GLOBAL MOBILITY -->
+<!-- GLOBAL MOVEMENT -->
 
 <section
-  id="mobility"
-  class="mobility"
+  id="global-movement"
+  class="global-movement"
 >
 
-<div class="container mobility-grid">
+<div class="container">
 
+
+<div class="global-movement-header">
 
 <div>
 
 <div class="eyebrow">
-GLOBAL MOBILITY
+GLOBAL MOVEMENT
+</div>
+
+<h2 class="section-title">
+Every movement,
+considered.
+</h2>
+
 </div>
 
 
-<h2 class="section-title">
+<div class="global-movement-lead">
 
-The movement
-behind the moment.
+The best transportation is almost invisible.
 
-</h2>
+It arrives where it should,
+when it should,
+with the right vehicle,
+the right information
+and the right people behind it.
+
+Travaza coordinates the journey between the moments that matter.
+
+</div>
+
+</div>
 
 
-<p class="section-copy">
+<div class="global-movement-grid">
 
-The best transportation
-is the transportation your guests
-never have to think about.
+{
+  globalMovement.map(
+    item => (
 
+<article class="movement-row">
+
+<div class="movement-number">
+{item.number}
+</div>
+
+<h3>
+{item.title}
+</h3>
+
+<p>
+{item.text}
 </p>
 
+</article>
 
-<p class="section-copy">
+    )
+  )
+}
 
-One executive.
-One sports team.
-One touring artist.
-One hundred motorcoaches.
-Multiple countries.
-
-Travaza builds the movement
-around the program.
-
-</p>
+</div>
 
 
-<div style="margin-top:25px;">
+<div class="movement-closing">
+
+<h3>
+
+One traveller or one thousand.
+One city or several countries.
+
+</h3>
 
 <a
   href="#consultation"
-  class="button button-dark"
+  class="button button-gold"
 >
-Discuss Transportation
+Plan Your Movement
 </a>
 
 </div>
@@ -2532,30 +2407,7 @@ Discuss Transportation
 
 </div>
 
-
-<div class="mobility-list">
-
-
-{
-  mobilityServices.map(
-    service => (
-
-<div class="mobility-item">
-{service}
-</div>
-
-    )
-  )
-}
-
-
-</div>
-
-
-</div>
-
 </section>
-
 
 
 <!-- LUXURY STATEMENT -->
@@ -2564,11 +2416,9 @@ Discuss Transportation
 
 <div class="container">
 
-
 <div class="eyebrow eyebrow-light">
 THE TRAVAZA STANDARD
 </div>
-
 
 <blockquote>
 
@@ -2586,11 +2436,9 @@ has already been handled.
 
 </blockquote>
 
-
 </div>
 
 </section>
-
 
 
 <!-- CONSULTATION -->
@@ -2605,34 +2453,27 @@ has already been handled.
 
 <div>
 
-
 <div class="eyebrow">
 PRIVATE CONSULTATION
 </div>
 
-
 <h2 class="section-title">
-
-Tell us what
-you want to experience.
-
+Where would you
+like to go next?
 </h2>
-
 
 <p class="consultation-copy">
 
-You don't need to have
-every detail figured out.
+Every journey begins with a conversation.
 
 Tell us who is travelling,
-where you're going,
+where you want to go,
 what matters most
 and what you would like us to handle.
 
 We'll help structure the rest.
 
 </p>
-
 
 <div class="direct">
 
@@ -2641,16 +2482,12 @@ Travel Planning & Reservations
 <br />
 
 <a href="mailto:reservations@travaza.com">
-
 reservations@travaza.com
-
 </a>
 
 </div>
 
-
 </div>
-
 
 
 <form
@@ -2662,31 +2499,24 @@ reservations@travaza.com
   action="/thank-you"
 >
 
-
 <input
   type="hidden"
   name="form-name"
   value="travaza-charter-request"
 />
 
-
 <p style="display:none;">
 
 <label>
-
 Do not fill:
-
 <input name="bot-field" />
-
 </label>
 
 </p>
 
 
 <h3>
-
 Begin Planning
-
 </h3>
 
 
@@ -2758,7 +2588,7 @@ Phone
 <div class="field full">
 
 <label for="service">
-What are you planning?
+How can we assist?
 </label>
 
 <select
@@ -2771,7 +2601,11 @@ Private Travel
 </option>
 
 <option>
-Corporate Program
+Custom Travel Experience
+</option>
+
+<option>
+Private Chauffeur
 </option>
 
 <option>
@@ -2779,7 +2613,7 @@ Executive Transportation
 </option>
 
 <option>
-VIP Event
+Corporate Program
 </option>
 
 <option>
@@ -2799,11 +2633,15 @@ Private Yacht
 </option>
 
 <option>
+Global Movement
+</option>
+
+<option>
 Coach Charter
 </option>
 
 <option>
-Large Group Movement
+Large Group Transportation
 </option>
 
 <option>
@@ -2816,10 +2654,6 @@ Niagara Falls
 
 <option>
 Private Tour
-</option>
-
-<option>
-Custom Travel Package
 </option>
 
 <option>
@@ -2895,15 +2729,13 @@ Destination
 <div class="field full">
 
 <label for="details">
-
-What Would You Like Us To Handle?
-
+Tell Us About Your Journey
 </label>
 
 <textarea
   id="details"
   name="details"
-  placeholder="Hotels, flights, private aviation, transportation, yachts, events, guides, experiences, special access, group logistics or anything else that would make this journey exceptional."
+  placeholder="Destinations, hotels, flights, private aviation, yachts, transportation, experiences, events, guides, special access, group logistics or anything else you would like Travaza to handle."
 ></textarea>
 
 </div>
@@ -2913,21 +2745,11 @@ What Would You Like Us To Handle?
 
 
 <button
-  class="submit"
   type="submit"
+  class="submit"
 >
-
-Begin Planning With Travaza
-
+Request a Private Consultation
 </button>
-
-
-<p class="form-note">
-
-Your inquiry will be reviewed by our travel and reservations team.
-Submission does not constitute a confirmed reservation.
-
-</p>
 
 
 </form>
@@ -2941,20 +2763,14 @@ Submission does not constitute a confirmed reservation.
 </main>
 
 
-
-<!-- FOOTER -->
-
 <footer>
 
-
 <div class="container">
-
 
 <div class="footer-grid">
 
 
 <div>
-
 
 <img
   class="footer-logo"
@@ -2962,11 +2778,10 @@ Submission does not constitute a confirmed reservation.
   alt="Travaza"
 />
 
-
 <p class="footer-copy">
 
 Private travel,
-global mobility
+global movement
 and curated experiences
 for clients who value
 time,
@@ -2975,55 +2790,43 @@ and execution.
 
 </p>
 
-
 </div>
 
 
-
 <div>
-
 
 <div class="footer-heading">
 EXPLORE
 </div>
 
-
 <div class="footer-links">
 
 <a href="#about">
-About Travaza
+About
 </a>
 
-<a href="#services">
-Services
+<a href="#experiences">
+Private Travel
 </a>
 
 <a href="#destinations">
 Destinations
 </a>
 
-<a href="#guyana">
-Guyana
-</a>
-
-<a href="#mobility">
-Global Mobility
+<a href="#global-movement">
+Global Movement
 </a>
 
 </div>
 
-
 </div>
-
 
 
 <div>
 
-
 <div class="footer-heading">
 START PLANNING
 </div>
-
 
 <div class="footer-links">
 
@@ -3032,13 +2835,10 @@ Private Consultation
 </a>
 
 <a href="mailto:reservations@travaza.com">
-
 reservations@travaza.com
-
 </a>
 
 </div>
-
 
 </div>
 
@@ -3065,7 +2865,6 @@ and final confirmation.
 
 
 </div>
-
 
 </footer>
 
