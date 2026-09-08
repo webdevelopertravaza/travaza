@@ -1,52 +1,46 @@
 ---
 const collections = [
   {
-    title: "Golf Escapes",
+    title: "Golf Packages",
     kicker: "PLAY SOMEWHERE EXTRAORDINARY",
     description:
-      "Championship courses, luxury stays and thoughtfully planned golf getaways in remarkable destinations around the world.",
-    image:
-      "https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=1600&q=85",
+      "Championship courses, luxury accommodations and curated golf escapes designed around the way you want to travel.",
+    image: "/images/travaza-luxury.png",
   },
   {
     title: "Spa & Wellness",
-    kicker: "RESET",
+    kicker: "REST. RESET. RETURN.",
     description:
-      "Luxury spa retreats, wellness weekends and restorative escapes designed around you.",
-    image:
-      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1600&q=85",
+      "Luxury spa retreats, wellness weekends and restorative escapes in exceptional destinations around the world.",
+    image: "/images/travaza-luxury.png",
   },
   {
     title: "Weekend Getaways",
-    kicker: "ESCAPE",
+    kicker: "ESCAPE FOR A WHILE",
     description:
-      "A few days can change everything. Curated city stays, countryside retreats and spontaneous luxury escapes.",
-    image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=85",
+      "Curated city stays, romantic weekends, culinary escapes and spontaneous luxury getaways.",
+    image: "/images/travaza-miami.png",
   },
   {
     title: "Private Aviation",
     kicker: "FLY YOUR WAY",
     description:
       "Private aviation and bespoke air travel coordinated around your schedule, destination and experience.",
-    image:
-      "https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=1600&q=85",
+    image: "/images/travaza-aviation.png",
   },
   {
     title: "Corporate Retreats",
     kicker: "GO FURTHER TOGETHER",
     description:
-      "Destination retreats, leadership experiences and team escapes created to bring people together.",
-    image:
-      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1600&q=85",
+      "Destination retreats, leadership experiences and team escapes designed to bring people together.",
+    image: "/images/travaza-corporate.png",
   },
   {
-    title: "Private Transportation",
+    title: "Transportation",
     kicker: "MOVE EFFORTLESSLY",
     description:
-      "Premium transportation, private drivers, executive vehicles, coaches, airport transfers and group movements.",
-    image:
-      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1600&q=85",
+      "Executive vehicles, private drivers, airport transfers, group shuttles and highway coaches coordinated from beginning to end.",
+    image: "/images/travaza-events.png",
   },
 ];
 
@@ -54,45 +48,42 @@ const trending = [
   {
     title: "Aurora Borealis",
     location: "Canada & Iceland",
-    eyebrow: "CHASE THE NORTHERN LIGHTS",
+    kicker: "CHASE THE NORTHERN LIGHTS",
     description:
-      "Remote landscapes. Dark skies. Extraordinary nights. Let us design a Northern Lights escape worth travelling for.",
-    image:
-      "https://images.unsplash.com/photo-1483347756197-71ef80e95f73?auto=format&fit=crop&w=1800&q=90",
+      "Remote landscapes, dark skies and extraordinary nights. Let us create a Northern Lights journey worth travelling for.",
+    image: "/images/travaza-luxury.png",
   },
   {
     title: "Fall Colours",
     location: "Canada",
-    eyebrow: "AUTUMN, ELEVATED",
+    kicker: "CANADA IN COLOUR",
     description:
-      "Experience Canada's spectacular fall landscapes through private touring, countryside stays and curated seasonal escapes.",
-    image:
-      "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?auto=format&fit=crop&w=1800&q=90",
+      "Experience Canada's spectacular autumn landscapes through private touring, countryside escapes and curated seasonal journeys.",
+    image: "/images/travaza-niagara.png",
   },
   {
     title: "Québec City",
     location: "Québec, Canada",
-    eyebrow: "OLD WORLD. CLOSE TO HOME.",
+    kicker: "OLD WORLD. CLOSE TO HOME.",
     description:
-      "Historic streets, exceptional dining, beautiful hotels and unmistakable European character.",
-    image:
-      "https://images.unsplash.com/photo-1519178614-68673b201f36?auto=format&fit=crop&w=1800&q=90",
+      "Historic streets, remarkable cuisine, beautiful hotels and unmistakable European character without leaving Canada.",
+    image: "/images/travaza-toronto.png",
   },
 ];
 
 const destinations = [
-  { name: "Canada", tag: "Explore" },
-  { name: "USA", tag: "Explore" },
-  { name: "Thailand", tag: "Explore" },
-  { name: "Switzerland", tag: "Explore" },
-  { name: "Italy", tag: "Explore" },
-  { name: "Greece", tag: "Explore" },
-  { name: "London", tag: "Explore" },
-  { name: "Paris", tag: "Explore" },
-  { name: "Japan", tag: "Explore" },
-  { name: "Iceland", tag: "Explore" },
-  { name: "South Africa", tag: "Explore" },
-  { name: "Guyana", tag: "Destination of the Year" },
+  "Canada",
+  "USA",
+  "Thailand",
+  "Switzerland",
+  "Italy",
+  "Greece",
+  "London",
+  "Paris",
+  "Japan",
+  "Iceland",
+  "South Africa",
+  "Guyana",
 ];
 
 const corporateServices = [
@@ -113,800 +104,967 @@ const corporateServices = [
 
 <head>
 
-<meta charset="UTF-8" />
+  <meta charset="UTF-8" />
 
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
-/>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
 
-<meta
-  name="description"
-  content="Travaza creates extraordinary travel experiences around the world, from private aviation and luxury escapes to yachts, corporate retreats, conferences and premium transportation."
-/>
+  <meta
+    name="description"
+    content="Travaza creates extraordinary global travel experiences, luxury escapes, private aviation, yachts, corporate retreats, events and premium transportation."
+  />
 
-<title>Travaza | The World, Handled.</title>
+  <title>Travaza | The World, Handled.</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap"
-  rel="stylesheet"
-/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
 
 </head>
+
 
 <body>
 
 
-<!-- ========================================
-     HERO
-========================================= -->
-
-<header class="hero">
+<!-- ======================================================
+     NAVIGATION
+======================================================= -->
 
 <nav class="nav">
 
-<a href="/" class="brand">
+  <a href="/" class="brand">
+    <img
+      src="/images/travaza-gold.png"
+      alt="Travaza"
+      class="travaza-logo"
+    />
+  </a>
 
-<img
-  src="/images/travaza-logo.png"
-  alt="Travaza"
-  class="travaza-logo"
-/>
+  <div class="nav-links">
+    <a href="#experiences">Experiences</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#yachts">Yachts</a>
+    <a href="#corporate">Corporate</a>
+  </div>
 
-</a>
-
-<div class="nav-links">
-<a href="#experiences">Experiences</a>
-<a href="#destinations">Destinations</a>
-<a href="#yachts">Yachts</a>
-<a href="#corporate">Corporate</a>
-</div>
-
-<a href="#plan" class="nav-button">
-Plan Your Journey
-</a>
+  <a href="#plan" class="nav-button">
+    Plan Your Journey
+  </a>
 
 </nav>
 
 
-<div class="hero-grid">
+<!-- ======================================================
+     HERO
+======================================================= -->
 
-<div
-  class="hero-image hero-one"
-  style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=90')"
-></div>
+<header class="hero">
 
-<div
-  class="hero-image hero-two"
-  style="background-image:url('https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1600&q=90')"
-></div>
+  <div class="hero-grid">
 
-<div
-  class="hero-image hero-three"
-  style="background-image:url('https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1600&q=90')"
-></div>
+    <div class="hero-main">
+      <img
+        src="/images/travaza-luxury.png"
+        alt="Luxury global travel with Travaza"
+      />
+    </div>
 
-<div class="hero-overlay"></div>
+    <div class="hero-small hero-top">
+      <img
+        src="/images/travaza-aviation.png"
+        alt="Private aviation"
+      />
+    </div>
 
-<div class="hero-content">
+    <div class="hero-small hero-bottom">
+      <img
+        src="/images/travaza-miami.png"
+        alt="Luxury destinations"
+      />
+    </div>
 
-<p class="eyebrow light">
-TRAVEL WITHOUT LIMITS
-</p>
+    <div class="hero-overlay"></div>
 
-<h1>
-The world,<br />
-<em>handled.</em>
-</h1>
+    <div class="hero-content">
 
-<p class="hero-copy">
-Extraordinary experiences, private journeys and seamless
-travel around the world.
-</p>
+      <p class="eyebrow light">
+        TRAVEL WITHOUT LIMITS
+      </p>
 
-<a href="#experiences" class="button light-button">
-Explore Travaza
-</a>
+      <h1>
+        The world,<br />
+        <em>handled.</em>
+      </h1>
 
-</div>
+      <p class="hero-copy">
+        Extraordinary experiences, private journeys and seamless
+        travel around the world.
+      </p>
 
-</div>
+      <a href="#experiences" class="button light-button">
+        Explore Travaza
+      </a>
+
+    </div>
+
+  </div>
 
 </header>
 
 
-<!-- ========================================
-     INTRO
-========================================= -->
+<!-- ======================================================
+     INTRODUCTION
+======================================================= -->
 
 <section class="intro">
 
-<p class="eyebrow">
-TRAVAZA GLOBAL
-</p>
+  <p class="eyebrow">
+    TRAVAZA GLOBAL
+  </p>
 
-<h2>
-Wherever you want to go,<br />
-<em>we make it happen.</em>
-</h2>
+  <h2>
+    Wherever you want to go,<br />
+    <em>we make it happen.</em>
+  </h2>
 
-<p class="intro-copy">
-Travaza is a global travel and experiences brand creating
-unforgettable journeys for individuals, families, groups and
-organizations. From a weekend escape to a multi-country itinerary,
-private aviation to a corporate retreat, we bring every element
-together into one seamless experience.
-</p>
+  <p class="intro-copy">
+    Travaza is a global travel and experiences brand creating
+    extraordinary journeys for individuals, families, groups and
+    organizations. From a weekend escape to a multi-country itinerary,
+    private aviation to a corporate retreat, we bring every element
+    together into one seamless experience.
+  </p>
 
-<p class="signature">
-Travel should feel effortless.
-</p>
+  <p class="signature">
+    Travel should feel effortless.
+  </p>
 
 </section>
 
 
-<!-- ========================================
+<!-- ======================================================
      EXPERIENCE COLLECTION
-========================================= -->
+======================================================= -->
 
 <section id="experiences" class="collections">
 
-<div class="section-heading">
+  <div class="section-heading">
 
-<div>
+    <div>
+      <p class="eyebrow">
+        THE TRAVAZA COLLECTION
+      </p>
 
-<p class="eyebrow">
-THE TRAVAZA COLLECTION
-</p>
+      <h2>
+        Travel designed<br />
+        <em>around you.</em>
+      </h2>
+    </div>
 
-<h2>
-Travel designed<br />
-<em>around you.</em>
-</h2>
+    <p>
+      Start with an idea. We’ll build the experience around it.
+    </p>
 
-</div>
-
-<p>
-Start with an idea. We’ll build the experience around it.
-</p>
-
-</div>
+  </div>
 
 
-<div class="collection-grid">
+  <div class="collection-grid">
 
-{
-collections.map((item) => (
+    {
+      collections.map((item) => (
 
-<article class="collection-card">
+        <article class="collection-card">
 
-<img
-  src={item.image}
-  alt={item.title}
-  loading="lazy"
-/>
+          <img
+            src={item.image}
+            alt={item.title}
+            loading="lazy"
+          />
 
-<div class="card-shade"></div>
+          <div class="card-overlay"></div>
 
-<div class="collection-content">
+          <div class="collection-content">
 
-<p>{item.kicker}</p>
+            <p>{item.kicker}</p>
 
-<h3>{item.title}</h3>
+            <h3>{item.title}</h3>
 
-<span>
-{item.description}
-</span>
+            <span>
+              {item.description}
+            </span>
 
-</div>
+          </div>
 
-</article>
+        </article>
 
-))
-}
+      ))
+    }
 
-</div>
+  </div>
 
 </section>
 
 
-<!-- ========================================
-     TRENDING NOW
-========================================= -->
+<!-- ======================================================
+     TRENDING
+======================================================= -->
 
 <section class="trending">
 
-<div class="center-heading">
+  <div class="center-heading">
 
-<p class="eyebrow">
-TRENDING NOW
-</p>
+    <p class="eyebrow">
+      TRENDING NOW
+    </p>
 
-<h2>
-Where the world is<br />
-<em>calling.</em>
-</h2>
+    <h2>
+      Where the world is<br />
+      <em>calling.</em>
+    </h2>
 
-</div>
+  </div>
 
 
-<div class="trending-grid">
+  <div class="trend-grid">
 
-{
-trending.map((item) => (
+    {
+      trending.map((item) => (
 
-<article class="trend-card">
+        <article class="trend-card">
 
-<div class="trend-photo">
+          <div class="trend-image">
 
-<img
-  src={item.image}
-  alt={item.title}
-  loading="lazy"
-/>
+            <img
+              src={item.image}
+              alt={item.title}
+              loading="lazy"
+            />
 
-</div>
+          </div>
 
-<div class="trend-copy">
+          <div class="trend-content">
 
-<p class="eyebrow">
-{item.eyebrow}
-</p>
+            <p class="eyebrow">
+              {item.kicker}
+            </p>
 
-<h3>
-{item.title}
-</h3>
+            <h3>{item.title}</h3>
 
-<span class="location">
-{item.location}
-</span>
+            <span class="location">
+              {item.location}
+            </span>
 
-<p>
-{item.description}
-</p>
+            <p class="trend-description">
+              {item.description}
+            </p>
 
-<a href="#plan">
-Create This Experience →
-</a>
+            <a href="#plan" class="text-link">
+              Create This Experience →
+            </a>
 
-</div>
+          </div>
 
-</article>
+        </article>
 
-))
-}
+      ))
+    }
 
-</div>
+  </div>
 
 </section>
 
 
-<!-- ========================================
+<!-- ======================================================
      GUYANA — DESTINATION OF THE YEAR
-========================================= -->
+======================================================= -->
 
 <section class="guyana">
 
-<div class="guyana-overlay"></div>
+  <div class="guyana-background">
 
-<div class="guyana-content">
+    <img
+      src="/images/travaza-guyana.png"
+      alt="Guyana"
+      loading="lazy"
+    />
 
-<div class="destination-year">
-DESTINATION OF THE YEAR
-</div>
+  </div>
 
-<p class="eyebrow light">
-TRAVAZA PRESENTS
-</p>
+  <div class="guyana-shade"></div>
 
-<h2>
-Guyana
-</h2>
 
-<p class="guyana-lead">
-Wild. Extraordinary. Unexpected.
-</p>
+  <div class="guyana-content">
 
-<p class="guyana-copy">
-Venture beyond the familiar into one of South America's most
-remarkable destinations. Ancient rainforest, extraordinary wildlife,
-powerful waterfalls and authentic cultural experiences make Guyana
-a journey unlike anywhere else.
-</p>
+    <div class="destination-year">
+      DESTINATION OF THE YEAR
+    </div>
 
-<a href="#plan" class="button light-button">
-Discover Guyana
-</a>
+    <p class="eyebrow light">
+      TRAVAZA PRESENTS
+    </p>
 
-</div>
+    <h2>
+      Guyana
+    </h2>
+
+    <p class="guyana-lead">
+      Wild. Extraordinary. Unexpected.
+    </p>
+
+    <p class="guyana-description">
+      Venture beyond the familiar into one of South America's most
+      remarkable destinations. Ancient rainforest, extraordinary wildlife,
+      powerful waterfalls and authentic cultural experiences make Guyana
+      a journey unlike anywhere else.
+    </p>
+
+    <a href="#plan" class="button light-button">
+      Discover Guyana
+    </a>
+
+  </div>
+
+
+  <div class="kaieteur-card">
+
+    <img
+      src="/images/kaieteur-falls.png"
+      alt="Kaieteur Falls Guyana"
+      loading="lazy"
+    />
+
+    <div class="kaieteur-label">
+      <span>GUYANA</span>
+      <strong>Kaieteur Falls</strong>
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- ========================================
-     DESTINATIONS
-========================================= -->
+<!-- ======================================================
+     ONE WORLD — DESTINATIONS
+======================================================= -->
 
 <section id="destinations" class="destinations">
 
-<div class="destination-heading">
+  <div class="destination-heading">
 
-<p class="eyebrow light">
-THE WORLD BY TRAVAZA
-</p>
+    <p class="eyebrow gold">
+      THE WORLD BY TRAVAZA
+    </p>
 
-<h2>
-One world.<br />
-<em>Endless possibilities.</em>
-</h2>
+    <h2>
+      One world.<br />
+      <em>Endless possibilities.</em>
+    </h2>
 
-<p>
-Explore some of our most popular destinations, or tell us where
-you want to go. Every Travaza journey can be created around you.
-</p>
+    <p>
+      From iconic capitals to remote landscapes, Travaza creates
+      custom experiences around the world.
+    </p>
 
-</div>
+  </div>
 
 
-<div class="destination-grid">
+  <div class="destination-grid">
 
-{
-destinations.map((destination) => (
+    {
+      destinations.map((destination) => (
 
-<a href="#plan" class="destination-tile">
+        <a href="#plan" class="destination-item">
 
-<span class="destination-tag">
-{destination.tag}
-</span>
+          <span>{destination}</span>
 
-<h3>
-{destination.name}
-</h3>
+          <small>EXPLORE ↗</small>
 
-<span class="destination-arrow">
-↗
-</span>
+        </a>
 
-</a>
+      ))
+    }
 
-))
-}
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- ========================================
+<!-- ======================================================
      LONDON + PARIS
-========================================= -->
+======================================================= -->
 
-<section class="europe-feature">
+<section class="europe">
 
-<div class="europe-copy">
+  <div class="europe-heading">
 
-<p class="eyebrow">
-TWO ICONS. YOUR WAY.
-</p>
+    <p class="eyebrow">
+      EUROPE BY TRAVAZA
+    </p>
 
-<h2>
-London<br />
-<em>& Paris.</em>
-</h2>
+    <h2>
+      London<br />
+      <em>to Paris.</em>
+    </h2>
 
-<p>
-Two of the world's great cities. One extraordinary journey.
-Experience iconic hotels, celebrated restaurants, private touring,
-shopping, theatre, culture and unforgettable moments designed
-around the way you want to travel.
-</p>
+    <p>
+      Two iconic cities. One unforgettable journey.
+      Let us connect exceptional hotels, private touring,
+      celebrated restaurants, shopping, theatre, culture
+      and seamless transportation into one experience.
+    </p>
 
-<a href="#plan" class="text-link">
-Create Your London & Paris Experience →
-</a>
+    <a href="#plan" class="text-link">
+      Design My European Escape →
+    </a>
 
-</div>
-
-
-<div class="europe-photos">
-
-<div class="london-photo">
-
-<img
-  src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1400&q=90"
-  alt="London"
-/>
-
-<span>London</span>
-
-</div>
+  </div>
 
 
-<div class="paris-photo">
+  <div class="europe-images">
 
-<img
-  src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1400&q=90"
-  alt="Paris"
-/>
+    <div class="city-photo london">
 
-<span>Paris</span>
+      <img
+        src="/images/london.png"
+        alt="London"
+        loading="lazy"
+      />
 
-</div>
+      <div class="city-label">
+        London
+      </div>
 
-</div>
+    </div>
+
+
+    <div class="city-photo paris">
+
+      <img
+        src="/images/paris.png"
+        alt="Paris"
+        loading="lazy"
+      />
+
+      <div class="city-label">
+        Paris
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- ========================================
+<!-- ======================================================
+     NORTH AMERICA
+======================================================= -->
+
+<section class="north-america">
+
+  <div class="na-grid">
+
+    <article class="na-card">
+
+      <img
+        src="/images/New-york.png"
+        alt="New York"
+        loading="lazy"
+      />
+
+      <div class="na-overlay"></div>
+
+      <div class="na-copy">
+        <span>USA</span>
+        <h3>New York</h3>
+      </div>
+
+    </article>
+
+
+    <article class="na-card">
+
+      <img
+        src="/images/miami.png"
+        alt="Miami"
+        loading="lazy"
+      />
+
+      <div class="na-overlay"></div>
+
+      <div class="na-copy">
+        <span>USA</span>
+        <h3>Miami</h3>
+      </div>
+
+    </article>
+
+
+    <article class="na-card">
+
+      <img
+        src="/images/travaza-toronto.png"
+        alt="Toronto"
+        loading="lazy"
+      />
+
+      <div class="na-overlay"></div>
+
+      <div class="na-copy">
+        <span>CANADA</span>
+        <h3>Toronto</h3>
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
      YACHT COLLECTION
-========================================= -->
+======================================================= -->
 
 <section id="yachts" class="yachts">
 
-<div class="yacht-images">
+  <div class="yacht-image">
 
-<img
-  class="yacht-main"
-  src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=1800&q=90"
-  alt="Luxury yacht experience"
-/>
+    <img
+      src="/images/travaza-luxury.png"
+      alt="Travaza Yacht Collection"
+      loading="lazy"
+    />
 
-<img
-  class="yacht-secondary"
-  src="https://images.unsplash.com/photo-1540946485063-a40da27545f8?auto=format&fit=crop&w=1800&q=90"
-  alt="Private yacht charter"
-/>
-
-</div>
+  </div>
 
 
-<div class="yacht-copy">
+  <div class="yacht-copy">
 
-<p class="eyebrow">
-THE TRAVAZA YACHT COLLECTION
-</p>
+    <p class="eyebrow">
+      THE TRAVAZA YACHT COLLECTION
+    </p>
 
-<h2>
-Your world.<br />
-<em>From the water.</em>
-</h2>
+    <h2>
+      Your world.<br />
+      <em>from the water.</em>
+    </h2>
 
-<p>
-Private yacht experiences designed for the way you want
-to travel—from intimate escapes and celebrations to
-corporate entertaining and unforgettable days on the water.
-</p>
+    <p>
+      Private yacht experiences created for the way you want to travel.
+      From intimate escapes and celebrations to corporate entertaining
+      and unforgettable days on the water.
+    </p>
 
-<p>
-Tell us the destination, the occasion and the people you
-want beside you. We’ll help create the rest.
-</p>
+    <p>
+      Tell us the destination, the occasion and the people you want
+      beside you. We’ll help create the rest.
+    </p>
 
-<a href="#plan" class="button dark-button">
-Explore Yacht Experiences
-</a>
+    <a href="#plan" class="button dark-button">
+      Explore Yacht Experiences
+    </a>
 
-</div>
+  </div>
 
 </section>
 
 
-<!-- ========================================
+<!-- ======================================================
      CORPORATE
-========================================= -->
+======================================================= -->
 
 <section id="corporate" class="corporate">
 
-<div class="corporate-copy">
+  <div class="corporate-photo">
 
-<p class="eyebrow light">
-TRAVAZA FOR BUSINESS
-</p>
+    <img
+      src="/images/travaza-corporate.png"
+      alt="Travaza corporate travel and events"
+      loading="lazy"
+    />
 
-<h2>
-Bring people together.<br />
-<em>We’ll handle everything else.</em>
-</h2>
+    <div class="corporate-photo-overlay"></div>
 
-<p>
-From ten executives to thousands of conference delegates,
-Travaza coordinates the experiences and logistics that
-keep people moving, connected and engaged.
-</p>
-
-<a href="#plan" class="button light-button">
-Plan a Corporate Experience
-</a>
-
-</div>
+  </div>
 
 
-<div class="corporate-services">
+  <div class="corporate-content">
 
-{
-corporateServices.map((service, index) => (
+    <p class="eyebrow gold">
+      TRAVAZA FOR BUSINESS
+    </p>
 
-<div class="service-row">
+    <h2>
+      Bring people together.<br />
+      <em>We’ll handle the rest.</em>
+    </h2>
 
-<span>
-{String(index + 1).padStart(2, "0")}
-</span>
+    <p class="corporate-intro">
+      From executive retreats to international conferences,
+      Travaza brings experiences, transportation and logistics
+      together under one global partner.
+    </p>
 
-<p>
-{service}
-</p>
 
-</div>
+    <div class="corporate-services">
 
-))
-}
+      {
+        corporateServices.map((service) => (
 
-</div>
+          <div class="service">
+            <span>{service}</span>
+            <small>↗</small>
+          </div>
+
+        ))
+      }
+
+    </div>
+
+
+    <a href="#plan" class="button gold-button">
+      Plan a Corporate Experience
+    </a>
+
+  </div>
 
 </section>
 
 
-<!-- ========================================
+<!-- ======================================================
+     EVENTS
+======================================================= -->
+
+<section class="events">
+
+  <div class="events-copy">
+
+    <p class="eyebrow">
+      EVENTS & CONFERENCES
+    </p>
+
+    <h2>
+      Every detail.<br />
+      <em>Every arrival.</em>
+    </h2>
+
+    <p>
+      Conferences, conventions, incentive groups, corporate
+      events and large-scale movements require more than transportation.
+      They require coordination.
+    </p>
+
+    <p>
+      Travaza can manage airport arrivals, meet and greets,
+      hotel transfers, conference shuttles, private events,
+      sightseeing experiences, step-on guides and group logistics.
+    </p>
+
+    <a href="#plan" class="text-link">
+      Discuss Your Event →
+    </a>
+
+  </div>
+
+
+  <div class="events-photo">
+
+    <img
+      src="/images/travaza-events.png"
+      alt="Corporate events and conference services"
+      loading="lazy"
+    />
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
      TRANSPORTATION
-========================================= -->
+======================================================= -->
 
-<section class="transport">
+<section class="transportation">
 
-<div class="transport-photo">
+  <div class="transport-bg">
 
-<img
-  src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1800&q=90"
-  alt="Premium group transportation"
-/>
+    <img
+      src="/images/travaza-niagara.png"
+      alt="Travaza transportation"
+      loading="lazy"
+    />
 
-</div>
+  </div>
+
+  <div class="transport-overlay"></div>
 
 
-<div class="transport-copy">
+  <div class="transport-content">
 
-<p class="eyebrow">
-TRAVAZA MOBILITY
-</p>
+    <p class="eyebrow light">
+      TRAVAZA MOBILITY
+    </p>
 
-<h2>
-From arrival<br />
-<em>to everywhere.</em>
-</h2>
+    <h2>
+      From arrival<br />
+      <em>to everywhere.</em>
+    </h2>
 
-<p>
-Seamless transportation is part of the experience.
-Travaza coordinates private vehicles, executive
-transportation, airport transfers, group shuttles and
-highway coaches for travellers and organizations.
-</p>
+    <p>
+      Seamless transportation is part of the experience.
+      From individual VIP arrivals to thousands of conference
+      delegates, Travaza coordinates the journey from beginning to end.
+    </p>
 
-<div class="mini-services">
 
-<span>Airport Transfers</span>
-<span>Meet & Greet</span>
-<span>Executive Transportation</span>
-<span>Conference Shuttles</span>
-<span>Motorcoach Transportation</span>
-<span>Step-On Guides</span>
+    <div class="transport-services">
 
-</div>
+      <span>Airport Transfers</span>
 
-<a href="#plan" class="text-link">
-Arrange Transportation →
-</a>
+      <span>Airport Meet & Greet</span>
 
-</div>
+      <span>Private Drivers</span>
+
+      <span>Executive Vehicles</span>
+
+      <span>Group Shuttles</span>
+
+      <span>Highway Coaches</span>
+
+      <span>Conference Transportation</span>
+
+      <span>Step-On Guides</span>
+
+    </div>
+
+
+    <a href="#plan" class="button light-button">
+      Arrange Transportation
+    </a>
+
+  </div>
 
 </section>
 
 
-<!-- ========================================
-     CUSTOM JOURNEYS
-========================================= -->
+<!-- ======================================================
+     CUSTOM EXPERIENCES
+======================================================= -->
 
 <section class="custom">
 
-<div class="custom-inner">
+  <div class="custom-content">
 
-<p class="eyebrow light">
-MADE FOR YOU
-</p>
+    <p class="eyebrow light">
+      MADE FOR YOU
+    </p>
 
-<h2>
-Don't choose an itinerary.<br />
-<em>Create one.</em>
-</h2>
+    <h2>
+      Don't choose an itinerary.<br />
+      <em>Create one.</em>
+    </h2>
 
-<p>
-A private villa in Greece. Golf in Scotland. The Northern Lights
-in Iceland. A family journey through Japan. A corporate retreat
-in Canada. A yacht in the Mediterranean.
-</p>
+    <p>
+      A private villa in Greece. Golf in Scotland. The Northern
+      Lights in Iceland. A family journey through Japan.
+      A corporate retreat in Canada. A yacht in the Mediterranean.
+    </p>
 
-<p>
-Tell us what extraordinary looks like to you.
-</p>
+    <p class="custom-question">
+      Tell us what extraordinary looks like to you.
+    </p>
 
-<a href="#plan" class="button light-button">
-Create My Experience
-</a>
+    <a href="#plan" class="button light-button">
+      Create My Experience
+    </a>
 
-</div>
+  </div>
 
 </section>
 
 
-<!-- ========================================
-     CONTACT
-========================================= -->
+<!-- ======================================================
+     PLAN YOUR JOURNEY
+======================================================= -->
 
 <section id="plan" class="plan">
 
-<div class="plan-heading">
+  <div class="plan-heading">
 
-<p class="eyebrow">
-START SOMEWHERE
-</p>
+    <p class="eyebrow">
+      START SOMEWHERE
+    </p>
 
-<h2>
-Where do you want<br />
-to go <em>next?</em>
-</h2>
+    <h2>
+      Where do you want<br />
+      to go <em>next?</em>
+    </h2>
 
-<p>
-Share your destination, occasion or simply an idea.
-Our team will help turn it into an experience.
-</p>
+    <p>
+      Share a destination, an occasion or simply an idea.
+      Our team will help turn it into an experience.
+    </p>
 
-</div>
-
-
-<form
-  name="travaza-experience-request"
-  method="POST"
-  data-netlify="true"
-  class="experience-form"
->
-
-<input
-  type="hidden"
-  name="form-name"
-  value="travaza-experience-request"
-/>
+  </div>
 
 
-<div class="form-row">
+  <form
+    name="travaza-experience-request"
+    method="POST"
+    data-netlify="true"
+    class="experience-form"
+  >
 
-<label>
-Name
-
-<input
-  type="text"
-  name="name"
-  required
-  placeholder="Your name"
-/>
-
-</label>
-
-
-<label>
-Email
-
-<input
-  type="email"
-  name="email"
-  required
-  placeholder="you@email.com"
-/>
-
-</label>
-
-</div>
+    <input
+      type="hidden"
+      name="form-name"
+      value="travaza-experience-request"
+    />
 
 
-<div class="form-row">
+    <div class="form-row">
 
-<label>
+      <label>
 
-I'm interested in
+        Name
 
-<select name="experience">
+        <input
+          type="text"
+          name="name"
+          required
+          placeholder="Your name"
+        />
 
-<option>Custom Travel Experience</option>
-<option>Golf Package</option>
-<option>Spa & Wellness</option>
-<option>Weekend Getaway</option>
-<option>Private Aviation</option>
-<option>Yacht Experience</option>
-<option>Corporate Retreat</option>
-<option>Conference Services</option>
-<option>Transportation</option>
-<option>Airport Meet & Greet</option>
-
-</select>
-
-</label>
+      </label>
 
 
-<label>
+      <label>
 
-Destination
+        Email
 
-<input
-  type="text"
-  name="destination"
-  placeholder="Where would you like to go?"
-/>
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="you@email.com"
+        />
 
-</label>
+      </label>
 
-</div>
-
-
-<label>
-
-Tell us what you're imagining
-
-<textarea
-  name="message"
-  rows="5"
-  placeholder="Dates, number of guests, occasion, destinations or anything else you'd like us to know..."
-></textarea>
-
-</label>
+    </div>
 
 
-<button type="submit">
-Begin My Journey
-</button>
+    <div class="form-row">
 
-</form>
+      <label>
+
+        I'm interested in
+
+        <select name="experience">
+
+          <option>Custom Travel Experience</option>
+          <option>Golf Package</option>
+          <option>Spa & Wellness</option>
+          <option>Weekend Getaway</option>
+          <option>Private Aviation</option>
+          <option>Yacht Experience</option>
+          <option>Corporate Retreat</option>
+          <option>Conference Services</option>
+          <option>Transportation & Shuttles</option>
+          <option>Airport Meet & Greet</option>
+          <option>Step-On Guide</option>
+
+        </select>
+
+      </label>
+
+
+      <label>
+
+        Destination
+
+        <input
+          type="text"
+          name="destination"
+          placeholder="Where would you like to go?"
+        />
+
+      </label>
+
+    </div>
+
+
+    <label>
+
+      Tell us what you're imagining
+
+      <textarea
+        name="message"
+        rows="5"
+        placeholder="Dates, number of guests, occasion, destinations or anything else you'd like us to know..."
+      ></textarea>
+
+    </label>
+
+
+    <button type="submit">
+      Begin My Journey
+    </button>
+
+  </form>
 
 </section>
 
 
-<!-- ========================================
+<!-- ======================================================
      FOOTER
-========================================= -->
+======================================================= -->
 
 <footer>
 
-<img
-  src="/images/travaza-logo.png"
-  alt="Travaza"
-  class="footer-logo"
-/>
+  <img
+    src="/images/travaza-gold.png"
+    alt="Travaza"
+    class="footer-logo"
+  />
 
-<p>
-Global Travel • Experiences • Events • Transportation
-</p>
+  <p class="footer-services">
+    GLOBAL TRAVEL · EXPERIENCES · EVENTS · TRANSPORTATION
+  </p>
 
-<p class="footer-tagline">
-The world, handled.
-</p>
+  <p class="footer-tagline">
+    The world, handled.
+  </p>
 
-<div class="footer-bottom">
 
-<span>
-© {new Date().getFullYear()} Travaza
-</span>
+  <div class="footer-bottom">
 
-<span>
-Travel should feel effortless.
-</span>
+    <span>
+      © {new Date().getFullYear()} Travaza
+    </span>
 
-</div>
+    <span>
+      Travel should feel effortless.
+    </span>
+
+  </div>
 
 </footer>
 
 
 <style>
+
+/* ======================================================
+   BASE
+======================================================= */
 
 :global(*) {
   box-sizing: border-box;
@@ -918,8 +1076,8 @@ Travel should feel effortless.
 
 :global(body) {
   margin: 0;
-  background: #f7f5f1;
-  color: #171717;
+  background: #f6f4ef;
+  color: #161616;
   font-family: "Manrope", sans-serif;
 }
 
@@ -929,19 +1087,8 @@ Travel should feel effortless.
 }
 
 img {
-  width: 100%;
   display: block;
-}
-
-.eyebrow {
-  margin: 0 0 18px;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: .24em;
-}
-
-.eyebrow.light {
-  color: rgba(255,255,255,.72);
+  width: 100%;
 }
 
 h1,
@@ -953,15 +1100,33 @@ h3 {
 
 h2 {
   margin: 0;
-  font-size: clamp(48px, 6vw, 82px);
+  font-size: clamp(48px, 6vw, 84px);
   line-height: .94;
+  letter-spacing: -.02em;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+}
+
+.eyebrow.light {
+  color: rgba(255,255,255,.72);
+}
+
+.eyebrow.gold,
+.gold {
+  color: #c5a66a;
 }
 
 .button {
   display: inline-block;
   padding: 15px 25px;
-  font-size: 11px;
-  letter-spacing: .13em;
+  font-size: 10px;
+  letter-spacing: .14em;
   text-transform: uppercase;
   transition: .25s ease;
 }
@@ -977,105 +1142,166 @@ h2 {
 }
 
 .dark-button {
-  border: 1px solid #111;
+  border: 1px solid #171717;
 }
 
 .dark-button:hover {
-  background: #111;
+  background: #171717;
   color: white;
 }
 
-
-/* HERO */
-
-.hero {
-  background: #111;
-  color: white;
+.gold-button {
+  border: 1px solid #c5a66a;
+  color: #c5a66a;
 }
 
-.nav {
-  position: absolute;
-  z-index: 20;
-  width: 100%;
-  padding: 25px 5vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.gold-button:hover {
+  background: #c5a66a;
+  color: #111;
 }
 
-.travaza-logo {
-  width: 180px;
-  max-height: 65px;
-  object-fit: contain;
-}
-
-.nav-links {
-  display: flex;
-  gap: 34px;
-  font-size: 12px;
-}
-
-.nav-button {
-  padding: 12px 18px;
-  border: 1px solid rgba(255,255,255,.55);
+.text-link {
+  display: inline-block;
+  margin-top: 22px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid currentColor;
   font-size: 10px;
   letter-spacing: .12em;
   text-transform: uppercase;
 }
 
+
+/* ======================================================
+   NAV
+======================================================= */
+
+.nav {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 92px;
+  padding: 15px 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(5,5,5,.94);
+  border-bottom: 1px solid rgba(197,166,106,.3);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.travaza-logo {
+  width: 190px;
+  height: auto;
+  max-height: 62px;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+  color: rgba(255,255,255,.82);
+  font-size: 11px;
+}
+
+.nav-links a {
+  transition: color .2s ease;
+}
+
+.nav-links a:hover {
+  color: #c5a66a;
+}
+
+.nav-button {
+  padding: 12px 18px;
+  border: 1px solid #c5a66a;
+  color: #c5a66a;
+  font-size: 9px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+
+/* ======================================================
+   HERO
+======================================================= */
+
+.hero {
+  background: #090909;
+  color: white;
+}
+
 .hero-grid {
-  min-height: 94vh;
   position: relative;
+  min-height: 96vh;
+  padding-top: 92px;
   display: grid;
-  grid-template-columns: 1.4fr .8fr;
+  grid-template-columns: 1.4fr .72fr;
   grid-template-rows: 1fr 1fr;
   gap: 3px;
   overflow: hidden;
 }
 
-.hero-image {
-  background-size: cover;
-  background-position: center;
+.hero-main {
+  grid-row: 1 / 3;
 }
 
-.hero-one {
-  grid-row: 1 / 3;
+.hero-main,
+.hero-small {
+  overflow: hidden;
+}
+
+.hero-main img,
+.hero-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-overlay {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(0,0,0,.68),
-    rgba(0,0,0,.12) 70%
-  );
+  inset: 92px 0 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.75) 0%,
+      rgba(0,0,0,.45) 35%,
+      rgba(0,0,0,.06) 72%
+    );
 }
 
 .hero-content {
   position: absolute;
   z-index: 5;
   left: 7vw;
-  bottom: 11vh;
-  max-width: 720px;
+  bottom: 10vh;
+  max-width: 750px;
 }
 
 .hero-content h1 {
   margin: 0;
-  font-size: clamp(75px,10vw,145px);
-  line-height: .75;
+  font-size: clamp(78px, 10vw, 145px);
+  line-height: .76;
+  letter-spacing: -.04em;
 }
 
 .hero-copy {
-  max-width: 490px;
-  margin: 36px 0;
+  max-width: 500px;
+  margin: 35px 0;
   font-size: 17px;
   line-height: 1.7;
-  color: rgba(255,255,255,.86);
+  color: rgba(255,255,255,.83);
 }
 
 
-/* INTRO */
+/* ======================================================
+   INTRO
+======================================================= */
 
 .intro {
   padding: 125px 7vw;
@@ -1083,53 +1309,63 @@ h2 {
 }
 
 .intro-copy {
-  max-width: 750px;
+  max-width: 770px;
   margin: 42px auto 0;
-  font-size: 17px;
+  color: #625e58;
+  font-size: 16px;
   line-height: 1.9;
-  color: #5f5b55;
 }
 
 .signature {
-  margin-top: 38px;
+  margin: 38px 0 0;
   font-family: "Cormorant Garamond", serif;
-  font-size: 28px;
+  font-size: 29px;
   font-style: italic;
 }
 
 
-/* COLLECTIONS */
+/* ======================================================
+   COLLECTION
+======================================================= */
 
 .collections {
-  padding: 100px 5vw 130px;
+  padding: 105px 5vw 125px;
   background: white;
 }
 
 .section-heading {
-  max-width: 1300px;
+  max-width: 1380px;
   margin: 0 auto 65px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  gap: 50px;
+}
+
+.section-heading > p {
+  max-width: 350px;
+  color: #746e65;
+  line-height: 1.8;
 }
 
 .collection-grid {
-  max-width: 1400px;
+  max-width: 1420px;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  gap: 16px;
+  gap: 15px;
 }
 
 .collection-card {
   position: relative;
-  min-height: 550px;
+  min-height: 520px;
   overflow: hidden;
   color: white;
 }
 
 .collection-card img {
   position: absolute;
+  inset: 0;
   height: 100%;
   object-fit: cover;
   transition: transform .8s ease;
@@ -1139,53 +1375,59 @@ h2 {
   transform: scale(1.04);
 }
 
-.card-shade {
+.card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    0deg,
-    rgba(0,0,0,.72),
-    rgba(0,0,0,.03) 65%
-  );
+  background:
+    linear-gradient(
+      0deg,
+      rgba(0,0,0,.78),
+      rgba(0,0,0,.03) 67%
+    );
 }
 
 .collection-content {
   position: absolute;
   z-index: 2;
-  left: 30px;
-  right: 30px;
-  bottom: 32px;
+  left: 28px;
+  right: 28px;
+  bottom: 30px;
 }
 
 .collection-content > p {
-  font-size: 9px;
+  margin: 0;
+  font-size: 8px;
   letter-spacing: .2em;
 }
 
 .collection-content h3 {
-  margin: 7px 0 12px;
-  font-size: 42px;
+  margin: 7px 0 10px;
+  font-size: 41px;
 }
 
 .collection-content span {
-  font-size: 13px;
+  display: block;
+  color: rgba(255,255,255,.76);
+  font-size: 12px;
   line-height: 1.7;
 }
 
 
-/* TRENDING */
+/* ======================================================
+   TRENDING
+======================================================= */
 
 .trending {
-  padding: 130px 5vw;
+  padding: 125px 6vw;
 }
 
 .center-heading {
+  margin-bottom: 70px;
   text-align: center;
-  margin-bottom: 75px;
 }
 
-.trending-grid {
-  max-width: 1320px;
+.trend-grid {
+  max-width: 1350px;
   margin: auto;
   display: grid;
   gap: 90px;
@@ -1193,379 +1435,562 @@ h2 {
 
 .trend-card {
   display: grid;
-  grid-template-columns: 1.35fr .65fr;
-  align-items: center;
+  grid-template-columns: 1.3fr .7fr;
   gap: 7vw;
+  align-items: center;
 }
 
-.trend-card:nth-child(even) .trend-photo {
+.trend-card:nth-child(even) .trend-image {
   order: 2;
 }
 
-.trend-photo {
-  height: 580px;
+.trend-image {
+  height: 550px;
+  overflow: hidden;
 }
 
-.trend-photo img {
+.trend-image img {
   height: 100%;
   object-fit: cover;
 }
 
-.trend-copy h3 {
-  margin: 8px 0;
-  font-size: 57px;
+.trend-content h3 {
+  margin: 5px 0;
+  font-size: 56px;
 }
 
 .location {
   display: block;
   margin-bottom: 25px;
-  font-size: 12px;
-  letter-spacing: .12em;
+  color: #917d60;
+  font-size: 10px;
+  letter-spacing: .15em;
   text-transform: uppercase;
-  color: #8c8173;
 }
 
-.trend-copy > p:not(.eyebrow) {
-  line-height: 1.8;
+.trend-description {
   color: #68625b;
-}
-
-.text-link,
-.trend-copy a {
-  display: inline-block;
-  margin-top: 20px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid;
-  font-size: 11px;
-  letter-spacing: .12em;
-  text-transform: uppercase;
+  line-height: 1.85;
 }
 
 
-/* GUYANA */
+/* ======================================================
+   GUYANA
+======================================================= */
 
 .guyana {
-  min-height: 82vh;
   position: relative;
-  padding: 100px 7vw;
+  min-height: 830px;
+  padding: 110px 7vw;
   display: flex;
   align-items: center;
+  overflow: hidden;
   color: white;
-  background:
-    url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=2000&q=90")
-    center / cover;
+  background: #07140d;
 }
 
-.guyana-overlay {
+.guyana-background {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(6,24,16,.82),
-    rgba(6,24,16,.25)
-  );
+}
+
+.guyana-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.guyana-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4,18,11,.9) 0%,
+      rgba(4,18,11,.7) 45%,
+      rgba(4,18,11,.2) 100%
+    );
 }
 
 .guyana-content {
   position: relative;
-  z-index: 2;
-  max-width: 680px;
+  z-index: 4;
+  max-width: 650px;
 }
 
 .destination-year {
   display: inline-block;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
   padding: 10px 15px;
-  border: 1px solid rgba(255,255,255,.6);
-  font-size: 10px;
+  border: 1px solid #c5a66a;
+  color: #d8bd83;
+  font-size: 9px;
   letter-spacing: .22em;
 }
 
-.guyana h2 {
-  font-size: clamp(90px,13vw,170px);
+.guyana-content h2 {
+  font-size: clamp(95px, 13vw, 175px);
+  line-height: .72;
 }
 
 .guyana-lead {
-  margin: 12px 0;
+  margin: 30px 0 10px;
   font-family: "Cormorant Garamond", serif;
   font-size: 34px;
   font-style: italic;
 }
 
-.guyana-copy {
-  max-width: 600px;
-  margin-bottom: 35px;
-  line-height: 1.8;
+.guyana-description {
+  max-width: 570px;
+  margin-bottom: 32px;
   color: rgba(255,255,255,.78);
+  line-height: 1.85;
+}
+
+.kaieteur-card {
+  position: absolute;
+  z-index: 5;
+  right: 6vw;
+  bottom: 55px;
+  width: 300px;
+  background: #111;
+  box-shadow: 0 20px 60px rgba(0,0,0,.3);
+}
+
+.kaieteur-card img {
+  height: 350px;
+  object-fit: cover;
+}
+
+.kaieteur-label {
+  padding: 18px;
+}
+
+.kaieteur-label span {
+  display: block;
+  margin-bottom: 5px;
+  color: #c5a66a;
+  font-size: 8px;
+  letter-spacing: .2em;
+}
+
+.kaieteur-label strong {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  font-weight: 400;
 }
 
 
-/* DESTINATIONS — COMPACT */
+/* ======================================================
+   DESTINATIONS
+======================================================= */
 
 .destinations {
-  padding: 115px 7vw 130px;
-  background: #171817;
+  padding: 110px 7vw 125px;
+  background: #151515;
   color: white;
 }
 
 .destination-heading {
-  max-width: 800px;
-  margin-bottom: 65px;
+  max-width: 750px;
+  margin-bottom: 55px;
 }
 
 .destination-heading > p:last-child {
-  max-width: 570px;
+  max-width: 540px;
   margin-top: 30px;
+  color: rgba(255,255,255,.55);
   line-height: 1.8;
-  color: rgba(255,255,255,.58);
 }
 
 .destination-grid {
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  border-top: 1px solid rgba(255,255,255,.16);
-  border-left: 1px solid rgba(255,255,255,.16);
+  border-top: 1px solid rgba(255,255,255,.14);
+  border-left: 1px solid rgba(255,255,255,.14);
 }
 
-.destination-tile {
-  min-height: 175px;
-  position: relative;
-  padding: 26px;
-  border-right: 1px solid rgba(255,255,255,.16);
-  border-bottom: 1px solid rgba(255,255,255,.16);
-  transition: .3s ease;
+.destination-item {
+  min-height: 105px;
+  padding: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-right: 1px solid rgba(255,255,255,.14);
+  border-bottom: 1px solid rgba(255,255,255,.14);
+  transition: .25s ease;
 }
 
-.destination-tile:hover {
-  background: white;
-  color: #171817;
+.destination-item > span {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 27px;
 }
 
-.destination-tag {
-  font-size: 8px;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  opacity: .55;
+.destination-item small {
+  color: #c5a66a;
+  font-size: 7px;
+  letter-spacing: .14em;
 }
 
-.destination-tile h3 {
-  position: absolute;
-  left: 26px;
-  bottom: 20px;
-  margin: 0;
-  font-size: 35px;
+.destination-item:hover {
+  background: #c5a66a;
+  color: #111;
 }
 
-.destination-arrow {
-  position: absolute;
-  right: 24px;
-  bottom: 26px;
+.destination-item:hover small {
+  color: #111;
 }
 
 
-/* LONDON + PARIS */
+/* ======================================================
+   EUROPE
+======================================================= */
 
-.europe-feature {
-  padding: 130px 7vw;
+.europe {
+  padding: 125px 7vw;
   display: grid;
-  grid-template-columns: .65fr 1.35fr;
+  grid-template-columns: .58fr 1.42fr;
   gap: 7vw;
   align-items: center;
-  background: #f7f5f1;
 }
 
-.europe-copy > p:not(.eyebrow) {
-  margin-top: 32px;
-  line-height: 1.9;
+.europe-heading > p:not(.eyebrow) {
+  margin-top: 30px;
   color: #68625b;
+  line-height: 1.9;
 }
 
-.europe-photos {
+.europe-images {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  gap: 12px;
 }
 
-.london-photo,
-.paris-photo {
+.city-photo {
   position: relative;
   overflow: hidden;
 }
 
-.london-photo {
-  margin-top: 80px;
-}
-
-.europe-photos img {
-  height: 600px;
+.city-photo img {
+  height: 590px;
   object-fit: cover;
   transition: transform .7s ease;
 }
 
-.europe-photos div:hover img {
+.city-photo:hover img {
   transform: scale(1.03);
 }
 
-.europe-photos span {
+.london {
+  margin-top: 65px;
+}
+
+.city-label {
   position: absolute;
-  left: 25px;
-  bottom: 22px;
+  left: 24px;
+  bottom: 20px;
   color: white;
   font-family: "Cormorant Garamond", serif;
-  font-size: 36px;
-  text-shadow: 0 2px 15px rgba(0,0,0,.5);
+  font-size: 38px;
+  text-shadow: 0 2px 15px rgba(0,0,0,.55);
 }
 
 
-/* YACHTS */
+/* ======================================================
+   NORTH AMERICA
+======================================================= */
+
+.north-america {
+  padding: 0;
+  background: #111;
+}
+
+.na-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.na-card {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.na-card img {
+  position: absolute;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .7s ease;
+}
+
+.na-card:hover img {
+  transform: scale(1.04);
+}
+
+.na-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      0deg,
+      rgba(0,0,0,.72),
+      rgba(0,0,0,.05) 60%
+    );
+}
+
+.na-copy {
+  position: absolute;
+  z-index: 2;
+  left: 30px;
+  bottom: 25px;
+  color: white;
+}
+
+.na-copy span {
+  font-size: 8px;
+  letter-spacing: .2em;
+}
+
+.na-copy h3 {
+  margin: 4px 0;
+  font-size: 43px;
+}
+
+
+/* ======================================================
+   YACHTS
+======================================================= */
 
 .yachts {
-  padding: 140px 7vw;
+  padding: 130px 7vw;
   display: grid;
-  grid-template-columns: 1.2fr .8fr;
-  align-items: center;
+  grid-template-columns: 1.15fr .85fr;
   gap: 8vw;
+  align-items: center;
   background: #efede8;
 }
 
-.yacht-images {
-  position: relative;
-  min-height: 700px;
+.yacht-image {
+  height: 650px;
 }
 
-.yacht-main {
-  width: 82%;
-  height: 630px;
+.yacht-image img {
+  height: 100%;
   object-fit: cover;
-}
-
-.yacht-secondary {
-  position: absolute;
-  width: 48%;
-  height: 310px;
-  right: 0;
-  bottom: 0;
-  object-fit: cover;
-  border: 10px solid #efede8;
-}
-
-.yacht-copy p:not(.eyebrow) {
-  line-height: 1.9;
-  color: #68625b;
 }
 
 .yacht-copy h2 {
   margin-bottom: 35px;
 }
 
+.yacht-copy p:not(.eyebrow) {
+  color: #68625b;
+  line-height: 1.9;
+}
 
-/* CORPORATE */
+.yacht-copy .button {
+  margin-top: 18px;
+}
+
+
+/* ======================================================
+   CORPORATE
+======================================================= */
 
 .corporate {
-  padding: 130px 7vw;
+  position: relative;
+  min-height: 800px;
   display: grid;
-  grid-template-columns: .9fr 1.1fr;
-  gap: 9vw;
-  background: #24231f;
+  grid-template-columns: .8fr 1.2fr;
+  background: #111;
   color: white;
 }
 
-.corporate-copy > p:not(.eyebrow) {
-  max-width: 520px;
-  margin: 35px 0;
-  line-height: 1.9;
-  color: rgba(255,255,255,.65);
+.corporate-photo {
+  position: relative;
+  min-height: 800px;
 }
 
-.service-row {
-  display: grid;
-  grid-template-columns: 55px 1fr;
-  align-items: center;
-  padding: 18px 0;
-  border-bottom: 1px solid rgba(255,255,255,.16);
-}
-
-.service-row span {
-  font-size: 10px;
-  color: #a99370;
-}
-
-.service-row p {
-  margin: 0;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 30px;
-}
-
-
-/* TRANSPORT */
-
-.transport {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 700px;
-  background: white;
-}
-
-.transport-photo img {
+.corporate-photo img {
+  position: absolute;
   height: 100%;
   object-fit: cover;
 }
 
-.transport-copy {
-  padding: 100px 8vw;
+.corporate-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.18);
+}
+
+.corporate-content {
+  padding: 100px 7vw;
   align-self: center;
 }
 
-.transport-copy > p:not(.eyebrow) {
-  margin: 35px 0;
-  line-height: 1.9;
-  color: #68625b;
+.corporate-intro {
+  max-width: 600px;
+  margin: 30px 0 35px;
+  color: rgba(255,255,255,.62);
+  line-height: 1.85;
 }
 
-.mini-services {
+.corporate-services {
+  margin-bottom: 35px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.service {
+  padding: 14px 4px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,.13);
+  font-size: 12px;
+}
+
+.service small {
+  color: #c5a66a;
+}
+
+
+/* ======================================================
+   EVENTS
+======================================================= */
+
+.events {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  background: white;
+}
+
+.events-copy {
+  padding: 110px 7vw;
+  align-self: center;
+}
+
+.events-copy p:not(.eyebrow) {
+  color: #68625b;
+  line-height: 1.9;
+}
+
+.events-photo {
+  min-height: 650px;
+}
+
+.events-photo img {
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* ======================================================
+   TRANSPORT
+======================================================= */
+
+.transportation {
+  position: relative;
+  min-height: 760px;
+  padding: 100px 7vw;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+}
+
+.transport-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.transport-bg img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.transport-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.86),
+      rgba(0,0,0,.34)
+    );
+}
+
+.transport-content {
+  position: relative;
+  z-index: 3;
+  max-width: 720px;
+}
+
+.transport-content > p:not(.eyebrow) {
+  max-width: 590px;
+  margin: 32px 0;
+  color: rgba(255,255,255,.77);
+  line-height: 1.85;
+}
+
+.transport-services {
+  margin-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.mini-services span {
+.transport-services span {
   padding: 9px 12px;
-  border: 1px solid #d8d3ca;
-  font-size: 10px;
+  border: 1px solid rgba(255,255,255,.35);
+  font-size: 9px;
 }
 
 
-/* CUSTOM */
+/* ======================================================
+   CUSTOM
+======================================================= */
 
 .custom {
-  min-height: 720px;
-  padding: 120px 7vw;
+  min-height: 680px;
+  padding: 100px 7vw;
   display: flex;
   align-items: center;
   text-align: center;
   color: white;
   background:
-    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.58)),
-    url("https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=2000&q=90")
-    center / cover;
+    linear-gradient(
+      rgba(0,0,0,.52),
+      rgba(0,0,0,.65)
+    ),
+    url("/images/travaza-luxury.png")
+    center / cover no-repeat;
 }
 
-.custom-inner {
+.custom-content {
   max-width: 900px;
   margin: auto;
 }
 
-.custom-inner > p:not(.eyebrow) {
-  max-width: 700px;
+.custom-content > p:not(.eyebrow) {
+  max-width: 720px;
   margin: 30px auto;
-  line-height: 1.8;
+  color: rgba(255,255,255,.8);
+  line-height: 1.85;
+}
+
+.custom-question {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  font-style: italic;
 }
 
 
-/* FORM */
+/* ======================================================
+   PLAN
+======================================================= */
 
 .plan {
-  padding: 130px 7vw;
+  padding: 125px 7vw;
   display: grid;
   grid-template-columns: .8fr 1.2fr;
   gap: 9vw;
@@ -1573,8 +1998,8 @@ h2 {
 
 .plan-heading > p:last-child {
   max-width: 470px;
-  line-height: 1.8;
   color: #68625b;
+  line-height: 1.85;
 }
 
 .experience-form {
@@ -1591,7 +2016,7 @@ h2 {
 label {
   display: grid;
   gap: 9px;
-  font-size: 10px;
+  font-size: 9px;
   letter-spacing: .13em;
   text-transform: uppercase;
 }
@@ -1604,70 +2029,83 @@ textarea {
   border: 0;
   border-bottom: 1px solid #aaa49a;
   border-radius: 0;
+  outline: none;
   background: transparent;
+  color: #171717;
   font: inherit;
+}
+
+textarea {
+  resize: vertical;
 }
 
 .experience-form button {
   width: fit-content;
+  margin-top: 10px;
   padding: 17px 30px;
   border: 1px solid #171717;
   background: #171717;
   color: white;
   cursor: pointer;
-  font-size: 10px;
+  font-size: 9px;
   letter-spacing: .16em;
   text-transform: uppercase;
 }
 
 
-/* FOOTER */
+/* ======================================================
+   FOOTER
+======================================================= */
 
 footer {
-  padding: 90px 7vw 35px;
+  padding: 80px 7vw 35px;
   text-align: center;
-  background: #101110;
+  background: #070707;
   color: white;
+  border-top: 1px solid rgba(197,166,106,.28);
 }
 
 .footer-logo {
-  width: 220px;
-  max-height: 85px;
-  object-fit: contain;
+  width: 240px;
+  height: auto;
+  max-height: 95px;
   margin: 0 auto 30px;
+  object-fit: contain;
 }
 
-footer > p {
-  color: rgba(255,255,255,.55);
+.footer-services {
+  color: #c5a66a;
+  font-size: 8px;
+  letter-spacing: .2em;
 }
 
 .footer-tagline {
+  margin-top: 25px;
   font-family: "Cormorant Garamond", serif;
-  font-size: 25px;
+  font-size: 27px;
   font-style: italic;
+  color: rgba(255,255,255,.72);
 }
 
 .footer-bottom {
-  margin-top: 70px;
-  padding-top: 25px;
-  border-top: 1px solid rgba(255,255,255,.12);
+  margin-top: 60px;
+  padding-top: 22px;
   display: flex;
   justify-content: space-between;
-  font-size: 10px;
+  border-top: 1px solid rgba(255,255,255,.11);
   color: rgba(255,255,255,.4);
+  font-size: 9px;
 }
 
 
-/* MOBILE */
+/* ======================================================
+   TABLET
+======================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
 
   .nav-links {
     display: none;
-  }
-
-  .travaza-logo {
-    width: 145px;
   }
 
   .hero-grid {
@@ -1675,152 +2113,239 @@ footer > p {
     display: block;
   }
 
-  .hero-one {
+  .hero-main {
     position: absolute;
-    inset: 0;
+    inset: 92px 0 0;
   }
 
-  .hero-two,
-  .hero-three {
+  .hero-small {
     display: none;
   }
 
-  .hero-content {
-    left: 7vw;
-    right: 7vw;
-  }
-
-  .hero-content h1 {
-    font-size: 75px;
-  }
-
   .collection-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2,1fr);
   }
 
   .trend-card,
+  .europe,
   .yachts,
-  .corporate,
-  .transport,
-  .plan,
-  .europe-feature {
+  .events,
+  .plan {
     grid-template-columns: 1fr;
   }
 
-  .trend-card:nth-child(even) .trend-photo {
+  .trend-card:nth-child(even) .trend-image {
     order: initial;
   }
 
   .destination-grid {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
   }
 
-  .destination-tile {
-    min-height: 145px;
+  .corporate {
+    grid-template-columns: 1fr;
   }
 
-  .europe-photos img {
-    height: 460px;
+  .corporate-photo {
+    min-height: 500px;
   }
 
-  .london-photo {
-    margin-top: 50px;
+  .na-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .kaieteur-card {
+    width: 230px;
   }
 
 }
 
 
-@media (max-width: 520px) {
+/* ======================================================
+   MOBILE
+======================================================= */
+
+@media (max-width: 600px) {
 
   .nav {
-    padding: 20px;
+    min-height: 78px;
+    padding: 12px 20px;
   }
 
   .travaza-logo {
-    width: 125px;
+    width: 135px;
+    max-height: 50px;
   }
 
   .nav-button {
-    font-size: 8px;
-    padding: 9px;
+    padding: 9px 10px;
+    font-size: 7px;
+  }
+
+  .hero-grid {
+    min-height: 88vh;
+    padding-top: 78px;
+  }
+
+  .hero-main {
+    inset: 78px 0 0;
+  }
+
+  .hero-overlay {
+    inset: 78px 0 0;
+  }
+
+  .hero-content {
+    left: 22px;
+    right: 22px;
+    bottom: 8vh;
+  }
+
+  .hero-content h1 {
+    font-size: 63px;
+  }
+
+  .hero-copy {
+    font-size: 14px;
   }
 
   h2 {
     font-size: 47px;
   }
 
-  .hero-content h1 {
-    font-size: 61px;
-  }
-
+  .intro,
   .collections,
   .trending,
   .destinations,
-  .guyana,
-  .europe-feature,
+  .europe,
   .yachts,
-  .corporate,
+  .corporate-content,
+  .events-copy,
+  .transportation,
+  .custom,
   .plan {
     padding-left: 22px;
     padding-right: 22px;
   }
 
-  .collection-card {
-    min-height: 450px;
+  .intro {
+    padding-top: 85px;
+    padding-bottom: 85px;
   }
 
-  .trend-photo {
-    height: 390px;
+  .section-heading {
+    display: block;
+  }
+
+  .section-heading > p {
+    margin-top: 25px;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collection-card {
+    min-height: 440px;
+  }
+
+  .trend-image {
+    height: 380px;
+  }
+
+  .trend-content h3 {
+    font-size: 45px;
   }
 
   .guyana {
-    min-height: 700px;
+    min-height: 760px;
+    padding: 80px 22px;
+    align-items: flex-start;
   }
 
-  .guyana h2 {
+  .guyana-content h2 {
     font-size: 82px;
+  }
+
+  .kaieteur-card {
+    width: 185px;
+    right: 20px;
+    bottom: 25px;
+  }
+
+  .kaieteur-card img {
+    height: 205px;
   }
 
   .destination-grid {
     grid-template-columns: repeat(2,1fr);
   }
 
-  .destination-tile {
-    min-height: 125px;
-    padding: 18px;
+  .destination-item {
+    min-height: 90px;
+    padding: 15px;
   }
 
-  .destination-tile h3 {
-    left: 18px;
-    bottom: 16px;
-    font-size: 27px;
+  .destination-item > span {
+    font-size: 22px;
   }
 
-  .destination-arrow {
-    right: 16px;
-    bottom: 18px;
+  .destination-item small {
+    display: none;
   }
 
-  .europe-photos {
-    gap: 7px;
+  .europe-images {
+    gap: 6px;
   }
 
-  .europe-photos img {
+  .city-photo img {
     height: 330px;
   }
 
-  .london-photo {
+  .london {
     margin-top: 35px;
   }
 
-  .europe-photos span {
-    left: 15px;
-    bottom: 14px;
+  .city-label {
+    left: 14px;
+    bottom: 13px;
     font-size: 27px;
+  }
+
+  .na-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .na-card {
+    min-height: 390px;
+  }
+
+  .yacht-image {
+    height: 420px;
+  }
+
+  .corporate-photo {
+    min-height: 390px;
+  }
+
+  .corporate-services {
+    grid-template-columns: 1fr;
+  }
+
+  .events-photo {
+    min-height: 420px;
+  }
+
+  .transportation {
+    min-height: 720px;
   }
 
   .form-row {
     grid-template-columns: 1fr;
+  }
+
+  .footer-logo {
+    width: 190px;
   }
 
   .footer-bottom {
