@@ -1,2007 +1,1378 @@
----
-const collections = [
-  {
-    title: "Golf Packages",
-    kicker: "PLAY SOMEWHERE EXTRAORDINARY",
-    description:
-      "Championship courses, luxury stays and curated golf escapes designed around the way you want to travel.",
-    image:
-      "https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=1600&q=85",
-  },
-  {
-    title: "Spa & Wellness",
-    kicker: "REST. RESET. RETURN.",
-    description:
-      "Luxury spa retreats, wellness weekends and restorative escapes in exceptional destinations around the world.",
-    image:
-      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1600&q=85",
-  },
-  {
-    title: "Weekend Getaways",
-    kicker: "ESCAPE FOR A WHILE",
-    description:
-      "Curated city stays, romantic weekends, culinary escapes and spontaneous luxury getaways.",
-    image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=85",
-  },
-  {
-    title: "Private Aviation",
-    kicker: "FLY YOUR WAY",
-    description:
-      "Private aviation and bespoke air travel coordinated around your schedule, destination and experience.",
-    image:
-      "https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=1600&q=85",
-  },
-  {
-    title: "Corporate Retreats",
-    kicker: "GO FURTHER TOGETHER",
-    description:
-      "Destination retreats, leadership experiences and team escapes created to bring people together.",
-    image:
-      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1600&q=85",
-  },
-  {
-    title: "Transportation",
-    kicker: "MOVE EFFORTLESSLY",
-    description:
-      "Executive vehicles, private drivers, airport transfers, group shuttles and highway coaches coordinated from beginning to end.",
-    image:
-      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1600&q=85",
-  },
-];
-
-const trending = [
-  {
-    title: "Aurora Borealis",
-    location: "Canada & Iceland",
-    kicker: "CHASE THE NORTHERN LIGHTS",
-    description:
-      "Remote landscapes, dark skies and extraordinary nights. Let us create a Northern Lights journey worth travelling for.",
-    image:
-      "https://images.unsplash.com/photo-1483347756197-71ef80e95f73?auto=format&fit=crop&w=1800&q=90",
-  },
-  {
-    title: "Fall Colours",
-    location: "Canada",
-    kicker: "CANADA IN COLOUR",
-    description:
-      "Experience Canada's spectacular autumn landscapes through private touring, countryside escapes and curated seasonal journeys.",
-    image:
-      "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?auto=format&fit=crop&w=1800&q=90",
-  },
-  {
-    title: "Québec City",
-    location: "Québec, Canada",
-    kicker: "OLD WORLD. CLOSE TO HOME.",
-    description:
-      "Historic streets, remarkable cuisine, beautiful hotels and unmistakable European character without leaving Canada.",
-    image:
-      "https://images.unsplash.com/photo-1519178614-68673b201f36?auto=format&fit=crop&w=1800&q=90",
-  },
-];
-
-const destinations = [
-  "Canada",
-  "USA",
-  "Thailand",
-  "Switzerland",
-  "Italy",
-  "Greece",
-  "London",
-  "Paris",
-  "Japan",
-  "Iceland",
-  "South Africa",
-  "Guyana",
-];
-
-const corporateServices = [
-  "Corporate Events",
-  "Conference Services",
-  "Corporate Retreats",
-  "Team Building Experiences",
-  "Transportation & Shuttles",
-  "Step-On Guides",
-  "Airport Meet & Greets",
-  "VIP Transportation",
-  "Private Touring",
-  "Group Logistics",
-];
----
-
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="en-CA">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Travaza | Toronto Tours, Niagara Falls &amp; Trips Beyond</title>
+  <meta name="description" content="Explore Toronto city tours, Niagara Falls tours from Toronto, attraction tickets and monthly trips with Travaza. Enquire about New York City and Guyana travel.">
+  <meta name="theme-color" content="#123b36">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Travaza | Toronto Tours & Trips Beyond">
+  <meta property="og:description" content="Big views. Memorable days. Find Toronto and Niagara Falls tours, attraction tickets and your next adventure.">
 
-<meta charset="UTF-8" />
+  <style>
+    :root {
+      --ink: #163832;
+      --muted: #536760;
+      --green: #123b36;
+      --cream: #f8f7f2;
+      --lime: #e3f4a5;
+      --line: #dce3dc;
+      --white: #fff;
+      --orange: #ffca9d;
+    }
 
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
-/>
+    * { box-sizing: border-box; }
 
-<meta
-  name="description"
-  content="Travaza creates extraordinary global travel experiences, luxury escapes, private aviation, yachts, corporate retreats, conferences and premium transportation."
-/>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
 
-<title>Travaza | The World, Handled.</title>
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font: 16px/1.65 system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+    }
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
+    a { color: inherit; }
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    button, input, select, textarea { font: inherit; }
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap"
-  rel="stylesheet"
-/>
+    button, a, input, select, textarea {
+      touch-action: manipulation;
+    }
 
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid #dc6c30;
+      outline-offset: 4px;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1, h2, h3 {
+      line-height: 1.12;
+      letter-spacing: -.035em;
+    }
+
+    h1 {
+      font-size: clamp(44px, 6.5vw, 82px);
+      max-width: 780px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: clamp(30px, 4vw, 46px);
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-size: 25px;
+      margin-bottom: 14px;
+    }
+
+    .wrap {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 28px;
+    }
+
+    .small { font-size: 14px; }
+    .muted { color: var(--muted); }
+
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 12px 22px;
+      border: 1px solid transparent;
+      border-radius: 100px;
+      text-decoration: none;
+      font-weight: 750;
+      cursor: pointer;
+      background: var(--green);
+      color: white;
+    }
+
+    .btn:hover { background: #25564c; }
+
+    .btn.light {
+      background: var(--lime);
+      color: var(--ink);
+    }
+
+    .btn.light:hover { background: #d4ec83; }
+
+    .btn.outline {
+      background: transparent;
+      border-color: var(--line);
+      color: var(--ink);
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 5px 12px;
+      border-radius: 50px;
+      background: #eaf0e8;
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    .section { padding: 76px 0; }
+
+    .section-head {
+      max-width: 750px;
+      margin-bottom: 30px;
+    }
+
+    .section-head p {
+      font-size: 18px;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+    }
+
+    .card-body { padding: 26px; }
+    .card p { color: var(--muted); }
+
+    .card ul {
+      padding-left: 20px;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .card .btn { width: 100%; }
+
+    .card-art {
+      height: 160px;
+      display: flex;
+      align-items: flex-end;
+      padding: 24px;
+      background: #d7e9ec;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-art span {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      z-index: 1;
+      background: white;
+      padding: 6px 12px;
+      border-radius: 50px;
+    }
+
+    .falls {
+      background: linear-gradient(155deg, #badedb, #e4f2ea);
+    }
+
+    .city {
+      background: linear-gradient(155deg, #f3d7bc, #faebd7);
+    }
+
+    .tickets {
+      background: linear-gradient(155deg, #dfd8ef, #f2eafa);
+    }
+
+    .card-art:after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      border: 28px solid #ffffff80;
+      border-radius: 50%;
+      right: -42px;
+      top: -85px;
+    }
+
+    .note {
+      padding: 18px 22px;
+      border-radius: 14px;
+      background: #edf2e6;
+    }
+
+    .booking-box {
+      background: white;
+      border: 1px solid var(--line);
+      padding: 26px;
+      border-radius: 22px;
+      margin: 24px 0;
+    }
+
+    .booking-box h3 { font-size: 23px; }
+    .bokunWidget { min-height: 120px; }
+
+    .booking-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .booking-links a { text-underline-offset: 4px; }
+
+    .trip-card { padding: 32px; }
+    .trip-card .pill { margin-bottom: 20px; }
+    .trip-card h3 { font-size: 34px; }
+    .trip-card .btn { width: auto; }
+
+    .destinations {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .destination {
+      padding: 13px 19px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      text-decoration: none;
+    }
+
+    .destination:hover { border-color: var(--green); }
+
+    .faq details {
+      border-bottom: 1px solid var(--line);
+      padding: 20px 0;
+    }
+
+    .faq summary {
+      cursor: pointer;
+      font-weight: 750;
+    }
+
+    .faq details p {
+      margin: 14px 0 0;
+      color: var(--muted);
+    }
+
+    .topbar {
+      background: var(--green);
+      color: #fff;
+      text-align: center;
+      padding: 8px 20px;
+      font-size: 12px;
+      letter-spacing: .05em;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: #f8f7f2f5;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 82px;
+    }
+
+    .logo {
+      text-decoration: none;
+      font-size: 30px;
+      font-weight: 850;
+      letter-spacing: -.06em;
+    }
+
+    .logo span { color: #bd682f; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 23px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 9px 14px;
+      color: var(--ink);
+    }
+
+    .hero {
+      padding: 82px 0 72px;
+      background: var(--green);
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .hero p {
+      color: #d9e7dc;
+      max-width: 610px;
+      font-size: 18px;
+    }
+
+    .hero .eyebrow {
+      color: var(--lime);
+      font-size: 12px;
+    }
+
+    .hero .btn.outline {
+      color: white;
+      border-color: #79988e;
+    }
+
+    .hero-art {
+      min-height: 345px;
+      border-radius: 180px 180px 22px 22px;
+      background: linear-gradient(
+        150deg, #b7d6b9, #e5f2ac 60%, #f7ca9d
+      );
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 25px;
+      overflow: hidden;
+    }
+
+    .hero-art svg {
+      position: absolute;
+      bottom: 58px;
+      width: 100%;
+      height: 240px;
+    }
+
+    .hero-art p {
+      position: relative;
+      margin: 0;
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .06em;
+    }
+
+    .quick-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .quick-links a {
+      color: #e6eee8;
+      font-size: 14px;
+      text-underline-offset: 5px;
+    }
+
+    .strip {
+      border-bottom: 1px solid var(--line);
+      background: white;
+    }
+
+    .strip .wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 18px;
+      padding-bottom: 18px;
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .tinted { background: #edf1e9; }
+
+    .contact {
+      background: var(--green);
+      color: white;
+    }
+
+    .contact .muted,
+    .contact p { color: #d4e3da; }
+
+    .contact h2 { max-width: 470px; }
+
+    .contact a {
+      color: var(--lime);
+      overflow-wrap: anywhere;
+    }
+
+    .contact-form {
+      background: white;
+      color: var(--ink);
+      border-radius: 22px;
+      padding: 28px;
+    }
+
+    .contact-form p { color: var(--muted); }
+
+    .contact-form label {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .field { margin-bottom: 17px; }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      padding: 11px 12px;
+      border: 1px solid #bdcbc0;
+      border-radius: 9px;
+      background: white;
+      color: var(--ink);
+    }
+
+    .contact-form textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .contact-form .btn { width: 100%; }
+
+    .footer {
+      background: #0c2925;
+      color: #e4ede7;
+      padding: 44px 0 22px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 32px;
+    }
+
+    .footer h3 {
+      font-size: 15px;
+      letter-spacing: 0;
+    }
+
+    .footer p {
+      font-size: 14px;
+      color: #bed1c6;
+      max-width: 400px;
+    }
+
+    .footer a {
+      display: block;
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 9px;
+    }
+
+    .footer .logo { font-size: 29px; }
+
+    .footer-bottom {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid #38554b;
+      font-size: 12px;
+      color: #bed1c6;
+    }
+
+    @media (max-width: 900px) {
+      .hero-layout { grid-template-columns: 1fr; }
+      .hero-art { display: none; }
+      .three { grid-template-columns: 1fr; }
+
+      .card {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+      }
+
+      .card-art {
+        height: 100%;
+        min-height: 180px;
+      }
+
+      .nav-links { gap: 14px; }
+      .strip .wrap { flex-wrap: wrap; }
+
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+
+      .footer-grid > div:first-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .wrap { padding: 0 20px; }
+      .section { padding: 50px 0; }
+      .hero { padding: 55px 0; }
+      .two { grid-template-columns: 1fr; }
+      .card { display: block; }
+
+      .card-art {
+        height: 125px;
+        min-height: 125px;
+      }
+
+      .menu-toggle { display: block; }
+
+      .nav {
+        min-height: 72px;
+        flex-wrap: wrap;
+      }
+
+      .nav-links {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 18px;
+      }
+
+      .header.enhanced .nav-links { display: none; }
+
+      .header.enhanced .nav-links.is-open {
+        display: flex;
+      }
+
+      .nav-links .btn {
+        min-height: 40px;
+        padding: 7px 15px;
+      }
+
+      .strip .wrap {
+        font-size: 12px;
+        gap: 10px 20px;
+      }
+
+      .booking-box { padding: 20px 14px; }
+      .trip-card { padding: 25px; }
+      .footer-grid { gap: 25px; }
+      .contact-form { padding: 22px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
 </head>
 
-
 <body>
+  <a
+    href="#main"
+    style="position:absolute;left:-10000px"
+    onfocus="this.style.left='16px'"
+    onblur="this.style.left='-10000px'"
+  >Skip to content</a>
 
-
-<!-- ======================================================
-     NAVIGATION
-======================================================= -->
-
-<nav class="nav">
-
-  <a href="/" class="brand">
-
-    <img
-      src="/images/travaza-gold.png"
-      alt="Travaza"
-      class="travaza-logo"
-    />
-
-  </a>
-
-  <div class="nav-links">
-
-    <a href="#experiences">Experiences</a>
-    <a href="#destinations">Destinations</a>
-    <a href="#yachts">Yachts</a>
-    <a href="#corporate">Corporate</a>
-
+  <div class="topbar">
+    TORONTO DAYS OUT • NIAGARA FALLS • TRIPS BEYOND
   </div>
 
-  <a href="#plan" class="nav-button">
-    Plan Your Journey
-  </a>
-
-</nav>
-
-
-<!-- ======================================================
-     HERO
-======================================================= -->
-
-<header class="hero">
-
-  <div class="hero-grid">
-
-    <div
-      class="hero-image hero-one"
-      style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=90')"
-    ></div>
-
-    <div
-      class="hero-image hero-two"
-      style="background-image:url('https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1600&q=90')"
-    ></div>
-
-    <div
-      class="hero-image hero-three"
-      style="background-image:url('https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1600&q=90')"
-    ></div>
-
-    <div class="hero-overlay"></div>
-
-    <div class="hero-content">
-
-      <p class="eyebrow light">
-        TRAVEL WITHOUT LIMITS
-      </p>
-
-      <h1>
-        The world,<br />
-        <em>handled.</em>
-      </h1>
-
-      <p class="hero-copy">
-        Extraordinary experiences, private journeys and seamless
-        travel around the world.
-      </p>
-
-      <a href="#experiences" class="button light-button">
-        Explore Travaza
+  <header class="header" id="site-header">
+    <nav class="wrap nav" aria-label="Main navigation">
+      <a class="logo" href="#" aria-label="Travaza home">
+        travaza<span>.</span>
       </a>
 
-    </div>
-
-  </div>
-
-</header>
-
-
-<!-- ======================================================
-     INTRO
-======================================================= -->
-
-<section class="intro">
-
-  <p class="eyebrow">
-    TRAVAZA GLOBAL
-  </p>
-
-  <h2>
-    Wherever you want to go,<br />
-    <em>we make it happen.</em>
-  </h2>
-
-  <p class="intro-copy">
-    Travaza is a global travel and experiences brand creating
-    extraordinary journeys for individuals, families, groups and
-    organizations. From a weekend escape to a multi-country itinerary,
-    private aviation to a corporate retreat, we bring every element
-    together into one seamless experience.
-  </p>
-
-  <p class="signature">
-    Travel should feel effortless.
-  </p>
-
-</section>
-
-
-<!-- ======================================================
-     EXPERIENCE COLLECTIONS
-======================================================= -->
-
-<section id="experiences" class="collections">
-
-  <div class="section-heading">
-
-    <div>
-
-      <p class="eyebrow">
-        THE TRAVAZA COLLECTION
-      </p>
-
-      <h2>
-        Travel designed<br />
-        <em>around you.</em>
-      </h2>
-
-    </div>
-
-    <p>
-      Start with an idea. We’ll build the experience around it.
-    </p>
-
-  </div>
-
-
-  <div class="collection-grid">
-
-    {
-      collections.map((item) => (
-
-        <article class="collection-card">
-
-          <img
-            src={item.image}
-            alt={item.title}
-            loading="lazy"
-          />
-
-          <div class="card-shade"></div>
-
-          <div class="collection-content">
-
-            <p>{item.kicker}</p>
-
-            <h3>{item.title}</h3>
-
-            <span>
-              {item.description}
-            </span>
-
-          </div>
-
-        </article>
-
-      ))
-    }
-
-  </div>
-
-</section>
-
-
-<!-- ======================================================
-     TRENDING
-======================================================= -->
-
-<section class="trending">
-
-  <div class="center-heading">
-
-    <p class="eyebrow">
-      TRENDING NOW
-    </p>
-
-    <h2>
-      Where the world is<br />
-      <em>calling.</em>
-    </h2>
-
-  </div>
-
-
-  <div class="trending-grid">
-
-    {
-      trending.map((item) => (
-
-        <article class="trend-card">
-
-          <div class="trend-photo">
-
-            <img
-              src={item.image}
-              alt={item.title}
-              loading="lazy"
-            />
-
-          </div>
-
-
-          <div class="trend-copy">
-
-            <p class="eyebrow">
-              {item.kicker}
-            </p>
-
-            <h3>
-              {item.title}
-            </h3>
-
-            <span class="location">
-              {item.location}
-            </span>
-
-            <p>
-              {item.description}
-            </p>
-
-            <a href="#plan">
-              Create This Experience →
-            </a>
-
-          </div>
-
-        </article>
-
-      ))
-    }
-
-  </div>
-
-</section>
-
-
-<!-- ======================================================
-     GUYANA — DESTINATION OF THE YEAR
-======================================================= -->
-
-<section class="guyana">
-
-  <div class="guyana-overlay"></div>
-
-  <div class="guyana-content">
-
-    <div class="destination-year">
-      DESTINATION OF THE YEAR
-    </div>
-
-    <p class="eyebrow light">
-      TRAVAZA PRESENTS
-    </p>
-
-    <h2>
-      Guyana
-    </h2>
-
-    <p class="guyana-lead">
-      Wild. Extraordinary. Unexpected.
-    </p>
-
-    <p class="guyana-copy">
-      Venture beyond the familiar into one of South America's most
-      remarkable destinations. Ancient rainforest, extraordinary wildlife,
-      powerful waterfalls and authentic cultural experiences make Guyana
-      a journey unlike anywhere else.
-    </p>
-
-    <a href="#plan" class="button light-button">
-      Discover Guyana
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- ======================================================
-     DESTINATIONS
-======================================================= -->
-
-<section id="destinations" class="destinations">
-
-  <div class="destination-heading">
-
-    <p class="eyebrow light">
-      THE WORLD BY TRAVAZA
-    </p>
-
-    <h2>
-      One world.<br />
-      <em>Endless possibilities.</em>
-    </h2>
-
-    <p>
-      Explore some of our most popular destinations, or tell us where
-      you want to go. Every Travaza journey can be created around you.
-    </p>
-
-  </div>
-
-
-  <div class="destination-grid">
-
-    {
-      destinations.map((destination) => (
-
-        <a href="#plan" class="destination-tile">
-
-          <span class="destination-tag">
-            CUSTOM EXPERIENCE
-          </span>
-
-          <h3>
-            {destination}
-          </h3>
-
-          <span class="destination-arrow">
-            ↗
-          </span>
-
-        </a>
-
-      ))
-    }
-
-  </div>
-
-</section>
-
-
-<!-- ======================================================
-     LONDON + PARIS
-======================================================= -->
-
-<section class="europe-feature">
-
-  <div class="europe-copy">
-
-    <p class="eyebrow">
-      TWO ICONS. YOUR WAY.
-    </p>
-
-    <h2>
-      London<br />
-      <em>& Paris.</em>
-    </h2>
-
-    <p>
-      Two of the world's great cities. One extraordinary journey.
-      Experience iconic hotels, celebrated restaurants, private touring,
-      shopping, theatre, culture and unforgettable moments designed
-      around the way you want to travel.
-    </p>
-
-    <a href="#plan" class="text-link">
-      Create Your London & Paris Experience →
-    </a>
-
-  </div>
-
-
-  <div class="europe-photos">
-
-    <div class="london-photo">
-
-      <img
-        src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1400&q=90"
-        alt="London"
-        loading="lazy"
-      />
-
-      <span>
-        London
-      </span>
-
-    </div>
-
-
-    <div class="paris-photo">
-
-      <img
-        src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1400&q=90"
-        alt="Paris"
-        loading="lazy"
-      />
-
-      <span>
-        Paris
-      </span>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ======================================================
-     YACHT COLLECTION
-======================================================= -->
-
-<section id="yachts" class="yachts">
-
-  <div class="yacht-images">
-
-    <img
-      class="yacht-main"
-      src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=1800&q=90"
-      alt="Luxury yacht experience"
-      loading="lazy"
-    />
-
-    <img
-      class="yacht-secondary"
-      src="https://images.unsplash.com/photo-1540946485063-a40da27545f8?auto=format&fit=crop&w=1800&q=90"
-      alt="Private yacht charter"
-      loading="lazy"
-    />
-
-  </div>
-
-
-  <div class="yacht-copy">
-
-    <p class="eyebrow">
-      THE TRAVAZA YACHT COLLECTION
-    </p>
-
-    <h2>
-      Your world.<br />
-      <em>from the water.</em>
-    </h2>
-
-    <p>
-      Private yacht experiences designed for the way you want
-      to travel—from intimate escapes and celebrations to
-      corporate entertaining and unforgettable days on the water.
-    </p>
-
-    <p>
-      Tell us the destination, the occasion and the people you
-      want beside you. We’ll help create the rest.
-    </p>
-
-    <a href="#plan" class="button dark-button">
-      Explore Yacht Experiences
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- ======================================================
-     CORPORATE
-======================================================= -->
-
-<section id="corporate" class="corporate">
-
-  <div class="corporate-copy">
-
-    <p class="eyebrow light">
-      TRAVAZA FOR BUSINESS
-    </p>
-
-    <h2>
-      Bring people together.<br />
-      <em>We’ll handle everything else.</em>
-    </h2>
-
-    <p>
-      From ten executives to thousands of conference delegates,
-      Travaza coordinates the experiences and logistics that
-      keep people moving, connected and engaged.
-    </p>
-
-    <a href="#plan" class="button light-button">
-      Plan a Corporate Experience
-    </a>
-
-  </div>
-
-
-  <div class="corporate-services">
-
-    {
-      corporateServices.map((service, index) => (
-
-        <div class="service-row">
-
-          <span>
-            {String(index + 1).padStart(2, "0")}
-          </span>
-
-          <p>
-            {service}
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        type="button"
+        aria-controls="nav-links"
+        aria-expanded="false"
+      >Menu</button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#tours">Toronto &amp; Niagara</a>
+        <a href="#monthly-trips">Monthly trips</a>
+        <a href="#tickets">Tickets</a>
+        <a href="#coming-soon">Coming soon</a>
+        <a class="btn" href="#book-tours">Book a tour ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-layout">
+        <div>
+          <p class="eyebrow">
+            Make room for a little adventure
           </p>
 
+          <h1>
+            Great days out.<br>
+            Trips worth talking about.
+          </h1>
+
+          <p>
+            Feel the rush of Niagara Falls. See Toronto from a fresh
+            perspective. Find your next tour, attraction ticket or escape
+            beyond the city with Travaza.
+          </p>
+
+          <div class="actions">
+            <a class="btn light" href="#book-tours">
+              Find your tour ↗
+            </a>
+            <a class="btn outline" href="#monthly-trips">
+              Explore monthly trips
+            </a>
+          </div>
+
+          <div class="quick-links">
+            <a href="#tours">Niagara Falls from Toronto</a>
+            <a href="#tickets">Attraction tickets</a>
+            <a href="#monthly-trips">New York City &amp; Guyana</a>
+          </div>
         </div>
 
-      ))
-    }
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 360 260" fill="none">
+            <circle cx="280" cy="65" r="34" fill="#fff7d6"/>
+            <path
+              d="M15 240h330"
+              stroke="#123b36"
+              stroke-width="3"
+            />
+            <path
+              d="M56 240V140h39v100M107 240V112h41v128M220 240V145h47v95M279 240V181h38v59"
+              fill="#456a58"
+            />
+            <path
+              d="M180 240V28M174 111h12M171 117h18M175 129h10"
+              stroke="#123b36"
+              stroke-width="5"
+            />
+            <path
+              d="M167 111h26l-6 18h-14z"
+              fill="#123b36"
+            />
+            <path
+              d="M65 153h7m11 0h7m-25 19h7m11 0h7m27-44h9m11 0h8m82 31h10m10 0h10"
+              stroke="#dceca9"
+              stroke-width="5"
+            />
+            <path
+              d="M3 230c28-28 58-6 80-20s38-5 54 10 36-12 53 0 42-18 59 0 40-10 56 3 26 0 50 7v30H3z"
+              fill="#1c483d"
+            />
+          </svg>
 
-  </div>
+          <p>START IN TORONTO. GO SOMEWHERE GREAT.</p>
+        </div>
+      </div>
+    </section>
 
-</section>
-
-
-<!-- ======================================================
-     TRANSPORTATION
-======================================================= -->
-
-<section class="transport">
-
-  <div class="transport-photo">
-
-    <img
-      src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1800&q=90"
-      alt="Premium group transportation"
-      loading="lazy"
-    />
-
-  </div>
-
-
-  <div class="transport-copy">
-
-    <p class="eyebrow">
-      TRAVAZA MOBILITY
-    </p>
-
-    <h2>
-      From arrival<br />
-      <em>to everywhere.</em>
-    </h2>
-
-    <p>
-      Seamless transportation is part of the experience.
-      Travaza coordinates private vehicles, executive transportation,
-      airport transfers, group shuttles and highway coaches for
-      individuals, groups and organizations.
-    </p>
-
-
-    <div class="mini-services">
-
-      <span>Airport Transfers</span>
-      <span>Meet & Greet</span>
-      <span>Executive Transportation</span>
-      <span>Conference Shuttles</span>
-      <span>Motorcoach Transportation</span>
-      <span>Step-On Guides</span>
-
+    <div class="strip">
+      <div class="wrap">
+        <span>Toronto &amp; Niagara Falls tours</span>
+        <span>Attraction tickets &amp; add-ons</span>
+        <span>Monthly &amp; cross-border trip enquiries</span>
+      </div>
     </div>
 
-    <a href="#plan" class="text-link">
-      Arrange Transportation →
-    </a>
+    <section class="section" id="tours">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Start with a great day</p>
 
-  </div>
+          <h2>
+            Toronto city sights.<br>
+            Niagara Falls moments.
+          </h2>
 
-</section>
+          <p>
+            Choose the experience that fits your day, then check the
+            available dates, ticket options and departure details
+            before booking.
+          </p>
+        </div>
 
+        <div class="grid three">
+          <article class="card">
+            <div class="card-art falls">
+              <span>Niagara Falls</span>
+            </div>
 
-<!-- ======================================================
-     CUSTOM EXPERIENCES
-======================================================= -->
+            <div class="card-body">
+              <h3>Niagara Falls tours from Toronto</h3>
 
-<section class="custom">
+              <p>
+                The roar. The mist. That first unforgettable view.
+                Explore Niagara Falls day trips and find the right mix
+                of sightseeing and attractions for you.
+              </p>
 
-  <div class="custom-inner">
+              <ul>
+                <li>Compare Niagara Falls tour options</li>
+                <li>Check boat and Behind the Falls choices</li>
+                <li>Review inclusions and departure locations</li>
+              </ul>
 
-    <p class="eyebrow light">
-      MADE FOR YOU
-    </p>
+              <a class="btn" href="#book-tours">
+                View tours &amp; book ↗
+              </a>
+            </div>
+          </article>
 
-    <h2>
-      Don't choose an itinerary.<br />
-      <em>Create one.</em>
-    </h2>
+          <article class="card">
+            <div class="card-art city">
+              <span>Toronto city tours</span>
+            </div>
 
-    <p>
-      A private villa in Greece. Golf in Scotland.
-      The Northern Lights in Iceland. A family journey through Japan.
-      A corporate retreat in Canada. A yacht in the Mediterranean.
-    </p>
+            <div class="card-body">
+              <h3>Meet your next favourite city</h3>
 
-    <p>
-      Tell us what extraordinary looks like to you.
-    </p>
+              <p>
+                Make Toronto part of the adventure. Discover city views,
+                local stories and places you will want to explore long
+                after the tour ends.
+              </p>
 
-    <a href="#plan" class="button light-button">
-      Create My Experience
-    </a>
+              <ul>
+                <li>Find Toronto sightseeing experiences</li>
+                <li>Compare schedules and tour details</li>
+                <li>Choose your date in the booking calendar</li>
+              </ul>
 
-  </div>
+              <a class="btn" href="#book-tours">
+                View tours &amp; book ↗
+              </a>
+            </div>
+          </article>
 
-</section>
+          <article class="card">
+            <div class="card-art tickets">
+              <span>Tickets &amp; extras</span>
+            </div>
 
+            <div class="card-body">
+              <h3>Make more of your day</h3>
 
-<!-- ======================================================
-     PLAN YOUR JOURNEY
-======================================================= -->
+              <p>
+                Already have your plans? Browse attraction tickets and
+                available extras to add another memorable moment
+                to your visit.
+              </p>
 
-<section id="plan" class="plan">
+              <ul>
+                <li>Browse available attraction tickets</li>
+                <li>Check dates, prices and ticket conditions</li>
+                <li>Book through our ticket provider</li>
+              </ul>
 
-  <div class="plan-heading">
+              <a class="btn" href="#tickets">
+                Find tickets ↗
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <p class="eyebrow">
-      START SOMEWHERE
-    </p>
+    <section class="section tinted" id="book-tours">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Choose your date. Plan your day.</p>
+          <h2>Find a tour you will love.</h2>
 
-    <h2>
-      Where do you want<br />
-      to go <em>next?</em>
-    </h2>
+          <p>
+            Explore the collections below for available tours and
+            current pricing. Each listing explains its itinerary,
+            inclusions and meeting instructions.
+          </p>
+        </div>
 
-    <p>
-      Share your destination, occasion or simply an idea.
-      Our team will help turn it into an experience.
-    </p>
+        <div class="booking-box">
+          <h3>Tour collection</h3>
 
-  </div>
+          <div class="booking-links">
+            <a
+              href="https://widgets.bokun.io/online-sales/4b623c44-bf7e-49e1-b0bd-9a7a19b839d4/product-list/114871"
+              target="_blank"
+              rel="noopener"
+            >Open this collection in a new tab ↗</a>
+          </div>
 
+          <div
+            class="bokunWidget"
+            data-src="https://widgets.bokun.io/online-sales/4b623c44-bf7e-49e1-b0bd-9a7a19b839d4/product-list/114871"
+          ></div>
+        </div>
 
-  <form
-    name="travaza-experience-request"
-    method="POST"
-    data-netlify="true"
-    class="experience-form"
-  >
+        <div class="booking-box">
+          <h3>More tours &amp; experiences</h3>
 
-    <input
-      type="hidden"
-      name="form-name"
-      value="travaza-experience-request"
-    />
+          <div class="booking-links">
+            <a
+              href="https://widgets.bokun.io/online-sales/cf2cc7c3-3405-4b6d-accd-3660142b047d/product-list/114872"
+              target="_blank"
+              rel="noopener"
+            >Open this collection in a new tab ↗</a>
+          </div>
 
+          <div
+            class="bokunWidget"
+            data-src="https://widgets.bokun.io/online-sales/cf2cc7c3-3405-4b6d-accd-3660142b047d/product-list/114872"
+          ></div>
+        </div>
 
-    <div class="form-row">
+        <div class="note">
+          <h3>Looking for VIP tours?</h3>
 
-      <label>
+          <p>
+            Explore the VIP tour selection and check the available dates
+            directly with the booking provider.
+          </p>
 
-        Name
+          <a
+            class="btn"
+            href="https://viptours.checkfront.com/reserve/?item_id=428,430,431,432,433,429,434,427,436,426,428,430,431,432,433,434,427,436,114,140,9,10,242,231,327,236,324,340,341,366,367,3,2,117,242,325,129,456,324&amp;category_id=59,3,4,63,65"
+            target="_blank"
+            rel="noopener"
+          >View VIP tours &amp; book ↗</a>
+        </div>
 
-        <input
-          type="text"
-          name="name"
-          required
-          placeholder="Your name"
-        />
+        <noscript>
+          <p>
+            Enable JavaScript to use the booking calendars, or use
+            the collection links above.
+          </p>
+        </noscript>
+      </div>
+    </section>
 
-      </label>
+    <section class="section" id="monthly-trips">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">
+            A little further. A lot to remember.
+          </p>
 
+          <h2>
+            Monthly trips &amp; adventures beyond Toronto.
+          </h2>
 
-      <label>
+          <p>
+            Interested in an upcoming getaway? Tell us where you want to
+            go and when. Enquire for planned departure dates, pricing
+            and trip details.
+          </p>
+        </div>
 
-        Email
+        <div class="grid two">
+          <article class="card trip-card">
+            <span class="pill">Cross-border trip enquiries</span>
+            <h3>New York City</h3>
 
-        <input
-          type="email"
-          name="email"
-          required
-          placeholder="you@email.com"
-        />
+            <p>
+              Bright lights. Iconic streets. A skyline you have seen a
+              thousand times, waiting for you to see it for yourself.
+              Start planning your New York City escape from Toronto.
+            </p>
 
-      </label>
+            <p class="small">
+              Departure dates, transportation, accommodation and
+              inclusions will be confirmed with the trip details.
+            </p>
 
+            <a
+              class="btn"
+              href="mailto:reservations@travaza.com?subject=Travaza%20New%20York%20City%20trip%20enquiry"
+            >Ask about New York City ↗</a>
+          </article>
+
+          <article class="card trip-card">
+            <span class="pill">International trip enquiries</span>
+            <h3>Guyana</h3>
+
+            <p>
+              Trade the familiar for a journey filled with culture,
+              flavour and a sense of discovery. Whether you are
+              reconnecting with your roots or exploring somewhere new,
+              start your Guyana plans with us.
+            </p>
+
+            <p class="small">
+              Travel dates, flights, accommodation and itinerary options
+              will be confirmed with the trip details.
+            </p>
+
+            <a
+              class="btn"
+              href="mailto:reservations@travaza.com?subject=Travaza%20Guyana%20trip%20enquiry"
+            >Ask about Guyana ↗</a>
+          </article>
+        </div>
+
+        <p class="muted small" style="margin-top:22px">
+          Looking for another monthly trip or a group getaway?
+          <a href="#contact">Tell us what you have in mind.</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section tinted" id="tickets">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Add another great moment</p>
+          <h2>Attraction tickets &amp; add-ons.</h2>
+
+          <p>
+            Find available tickets, select your date and review the
+            details before completing your reservation.
+          </p>
+        </div>
+
+        <div class="booking-box">
+          <h3>Browse available tickets</h3>
+
+          <div class="booking-links">
+            <a
+              href="https://viptours.checkfront.com/reserve/?category_id=12"
+              target="_blank"
+              rel="noopener"
+            >Open ticket booking in a new tab ↗</a>
+          </div>
+
+          <div id="CHECKFRONT_WIDGET_01">
+            <p id="CHECKFRONT_LOADER">
+              Loading ticket availability… If the calendar does not
+              load, use the booking link above.
+            </p>
+          </div>
+
+          <noscript>
+            <p>
+              Enable JavaScript to see the ticket calendar, or use the
+              ticket booking link above.
+            </p>
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="coming-soon">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Your wish list starts here</p>
+          <h2>More destinations. Coming soon.</h2>
+
+          <p>
+            From iconic cities to mountain escapes, there is more to
+            look forward to. Select a destination to email us your
+            interest. These trips are not yet available to book.
+          </p>
+        </div>
+
+        <div class="destinations">
+          <a
+            class="destination"
+            href="mailto:reservations@travaza.com?subject=Travaza%20London%20trip%20interest"
+          >London</a>
+
+          <a
+            class="destination"
+            href="mailto:reservations@travaza.com?subject=Travaza%20Paris%20trip%20interest"
+          >Paris</a>
+
+          <a
+            class="destination"
+            href="mailto:reservations@travaza.com?subject=Travaza%20Miami%20trip%20interest"
+          >Miami</a>
+
+          <a
+            class="destination"
+            href="mailto:reservations@travaza.com?subject=Travaza%20Las%20Vegas%20trip%20interest"
+          >Las Vegas</a>
+
+          <a
+            class="destination"
+            href="mailto:reservations@travaza.com?subject=Travaza%20Los%20Angeles%20trip%20interest"
+          >Los Angeles</a>
+
+          <a
+            class="destination"
+            href="mailto:reservations@travaza.com?subject=Travaza%20Quebec%20City%20trip%20interest"
+          >Quebec City</a>
+
+          <a
+            class="destination"
+            href="mailto:reservations@travaza.com?subject=Travaza%20Banff%20trip%20interest"
+          >Banff</a>
+
+          <a
+            class="destination"
+            href="mailto:reservations@travaza.com?subject=Travaza%20Jasper%20trip%20interest"
+          >Jasper</a>
+
+          <a
+            class="destination"
+            href="mailto:reservations@travaza.com?subject=Travaza%20Vancouver%20trip%20interest"
+          >Vancouver</a>
+
+          <a
+            class="destination"
+            href="mailto:reservations@travaza.com?subject=Travaza%20Whistler%20trip%20interest"
+          >Whistler</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tinted">
+      <div class="wrap faq">
+        <div class="section-head">
+          <h2>A few things before you book.</h2>
+        </div>
+
+        <details>
+          <summary>
+            Where do Toronto and Niagara Falls tours depart?
+          </summary>
+          <p>
+            Check your selected tour listing and confirmation for the
+            exact departure location and time. If your tour departs
+            from 55 York Street, Toronto, meet outside Tim Hortons and
+            follow the arrival instructions on your ticket.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            Are attraction tickets included in every tour?
+          </summary>
+          <p>
+            Inclusions vary by tour and ticket option. Review the listing
+            and your selected package before paying. Some attractions
+            can be added during checkout.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            How do I book a monthly trip, New York City or Guyana?
+          </summary>
+          <p>
+            Email us your preferred destination, travel dates and group
+            size. We will share the available trip details and next
+            steps. Only tours and tickets with an available booking
+            calendar can be reserved online here.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            How do I ask about a coming-soon destination?
+          </summary>
+          <p>
+            Select a destination above to open an email enquiry. Tell us
+            when you would like to travel and how many guests are
+            interested.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="wrap grid two">
+        <div>
+          <p class="eyebrow">
+            Let's plan something memorable
+          </p>
+
+          <h2>Your next trip starts with a hello.</h2>
+
+          <p>
+            Need help choosing a tour, planning a group trip or finding
+            your next getaway? Send us your dates, destination and
+            number of travellers.
+          </p>
+
+          <p>
+            <a
+              id="contact-email"
+              href="mailto:reservations@travaza.com"
+            >reservations@travaza.com</a>
+          </p>
+
+          <p class="small">
+            For an existing reservation, include your booking reference
+            and travel date so we can help.
+          </p>
+        </div>
+
+        <form
+          class="contact-form"
+          id="enquiry-form"
+          action="mailto:reservations@travaza.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <div class="field">
+            <label for="guest-name">Your name</label>
+            <input
+              id="guest-name"
+              name="name"
+              autocomplete="name"
+              required
+              maxlength="100"
+            >
+          </div>
+
+          <div class="field">
+            <label for="guest-email">Your email</label>
+            <input
+              id="guest-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              maxlength="254"
+            >
+          </div>
+
+          <div class="field">
+            <label for="trip-interest">
+              What are you interested in?
+            </label>
+
+            <select id="trip-interest" name="interest">
+              <option>Niagara Falls tour from Toronto</option>
+              <option>Toronto city tour</option>
+              <option>Attraction tickets</option>
+              <option>Monthly trips</option>
+              <option>New York City</option>
+              <option>Guyana</option>
+              <option>Coming-soon destination</option>
+              <option>Group or cross-border trip</option>
+              <option>Existing booking</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="trip-message">
+              Dates, group size and anything else we should know
+            </label>
+
+            <textarea
+              id="trip-message"
+              name="message"
+              required
+              maxlength="1200"
+            ></textarea>
+          </div>
+
+          <button class="btn" type="submit">
+            Prepare my email ↗
+          </button>
+
+          <p
+            class="small"
+            id="email-status"
+            role="status"
+            style="margin:12px 0 0"
+          >
+            This opens a draft in your email app. Review it and press
+            Send there. You can also email us directly.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="#">
+            travaza<span>.</span>
+          </a>
+
+          <p>
+            Toronto city tours. Niagara Falls day trips. Attraction
+            tickets and journeys beyond the everyday.
+          </p>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+          <a href="#book-tours">Toronto &amp; Niagara Falls tours</a>
+          <a href="#monthly-trips">Monthly trips</a>
+          <a href="#tickets">Attraction tickets</a>
+          <a href="#coming-soon">Coming-soon destinations</a>
+        </div>
+
+        <div>
+          <h3>Get in touch</h3>
+          <a href="mailto:reservations@travaza.com">Email our team</a>
+          <a href="#contact">Group &amp; trip enquiries</a>
+
+          <p>
+            Booking terms and cancellation conditions are shown by the
+            provider before checkout.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © <span id="current-year">2026</span> Travaza.
+        All rights reserved.
+      </div>
     </div>
-
-
-    <div class="form-row">
-
-      <label>
-
-        I'm interested in
-
-        <select name="experience">
-
-          <option>Custom Travel Experience</option>
-          <option>Golf Package</option>
-          <option>Spa & Wellness</option>
-          <option>Weekend Getaway</option>
-          <option>Private Aviation</option>
-          <option>Yacht Experience</option>
-          <option>Corporate Retreat</option>
-          <option>Conference Services</option>
-          <option>Transportation</option>
-          <option>Airport Meet & Greet</option>
-
-        </select>
-
-      </label>
-
-
-      <label>
-
-        Destination
-
-        <input
-          type="text"
-          name="destination"
-          placeholder="Where would you like to go?"
-        />
-
-      </label>
-
-    </div>
-
-
-    <label>
-
-      Tell us what you're imagining
-
-      <textarea
-        name="message"
-        rows="5"
-        placeholder="Dates, number of guests, occasion, destinations or anything else you'd like us to know..."
-      ></textarea>
-
-    </label>
-
-
-    <button type="submit">
-      Begin My Journey
-    </button>
-
-  </form>
-
-</section>
-
-
-<!-- ======================================================
-     FOOTER
-======================================================= -->
-
-<footer>
-
-  <img
-    src="/images/travaza-gold.png"
-    alt="Travaza"
-    class="footer-logo"
-  />
-
-  <p>
-    Global Travel • Experiences • Events • Transportation
-  </p>
-
-  <p class="footer-tagline">
-    The world, handled.
-  </p>
-
-
-  <div class="footer-bottom">
-
-    <span>
-      © {new Date().getFullYear()} Travaza
-    </span>
-
-    <span>
-      Travel should feel effortless.
-    </span>
-
-  </div>
-
-</footer>
-
-
-<style>
-
-/* ======================================================
-   GLOBAL
-======================================================= */
-
-:global(*) {
-  box-sizing: border-box;
-}
-
-:global(html) {
-  scroll-behavior: smooth;
-}
-
-:global(body) {
-  margin: 0;
-  background: #f7f5f1;
-  color: #171717;
-  font-family: "Manrope", sans-serif;
-}
-
-:global(a) {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  width: 100%;
-  display: block;
-}
-
-.eyebrow {
-  margin: 0 0 18px;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: .24em;
-  text-transform: uppercase;
-}
-
-.eyebrow.light {
-  color: rgba(255,255,255,.72);
-}
-
-h1,
-h2,
-h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 400;
-}
-
-h2 {
-  margin: 0;
-  font-size: clamp(48px,6vw,82px);
-  line-height: .94;
-}
-
-.button {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 11px;
-  letter-spacing: .13em;
-  text-transform: uppercase;
-  transition: .25s ease;
-}
-
-.light-button {
-  border: 1px solid rgba(255,255,255,.7);
-  color: white;
-}
-
-.light-button:hover {
-  background: white;
-  color: #111;
-}
-
-.dark-button {
-  border: 1px solid #111;
-}
-
-.dark-button:hover {
-  background: #111;
-  color: white;
-}
-
-
-/* ======================================================
-   NAVIGATION
-======================================================= */
-
-.nav {
-  position: absolute;
-  z-index: 20;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-
-  padding:
-    17px
-    5vw;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  background:
-    rgba(7,7,7,.94);
-
-  border-bottom:
-    1px solid
-    rgba(197,166,106,.28);
-}
-
-.travaza-logo {
-  width: 190px;
-  height: auto;
-  max-height: 65px;
-  object-fit: contain;
-}
-
-.nav-links {
-  display: flex;
-  gap: 34px;
-  color: rgba(255,255,255,.82);
-  font-size: 12px;
-}
-
-.nav-links a:hover {
-  color: #c7a86d;
-}
-
-.nav-button {
-  padding: 12px 18px;
-  border: 1px solid #c7a86d;
-  color: #c7a86d;
-  font-size: 10px;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-}
-
-
-/* ======================================================
-   HERO
-======================================================= */
-
-.hero {
-  background: #111;
-  color: white;
-}
-
-.hero-grid {
-  min-height: 94vh;
-  position: relative;
-  display: grid;
-  grid-template-columns: 1.4fr .8fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 3px;
-  overflow: hidden;
-}
-
-.hero-image {
-  background-size: cover;
-  background-position: center;
-}
-
-.hero-one {
-  grid-row: 1 / 3;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0,0,0,.69),
-      rgba(0,0,0,.13) 70%
-    );
-}
-
-.hero-content {
-  position: absolute;
-  z-index: 5;
-  left: 7vw;
-  bottom: 11vh;
-  max-width: 720px;
-}
-
-.hero-content h1 {
-  margin: 0;
-  font-size: clamp(75px,10vw,145px);
-  line-height: .75;
-  letter-spacing: -.04em;
-}
-
-.hero-copy {
-  max-width: 490px;
-  margin: 36px 0;
-  font-size: 17px;
-  line-height: 1.7;
-  color: rgba(255,255,255,.86);
-}
-
-
-/* ======================================================
-   INTRO
-======================================================= */
-
-.intro {
-  padding: 130px 7vw;
-  text-align: center;
-}
-
-.intro-copy {
-  max-width: 750px;
-  margin: 42px auto 0;
-  font-size: 17px;
-  line-height: 1.9;
-  color: #5f5b55;
-}
-
-.signature {
-  margin: 38px 0 0;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 28px;
-  font-style: italic;
-}
-
-
-/* ======================================================
-   COLLECTIONS
-======================================================= */
-
-.collections {
-  padding: 100px 5vw 130px;
-  background: white;
-}
-
-.section-heading {
-  max-width: 1300px;
-  margin: 0 auto 65px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 40px;
-}
-
-.section-heading > p {
-  max-width: 330px;
-  line-height: 1.8;
-  color: #77716a;
-}
-
-.collection-grid {
-  max-width: 1400px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 16px;
-}
-
-.collection-card {
-  position: relative;
-  min-height: 560px;
-  overflow: hidden;
-  color: white;
-}
-
-.collection-card img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform .8s ease;
-}
-
-.collection-card:hover img {
-  transform: scale(1.04);
-}
-
-.card-shade {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      0deg,
-      rgba(0,0,0,.72),
-      rgba(0,0,0,.03) 65%
-    );
-}
-
-.collection-content {
-  position: absolute;
-  z-index: 2;
-  left: 30px;
-  right: 30px;
-  bottom: 32px;
-}
-
-.collection-content > p {
-  font-size: 9px;
-  letter-spacing: .2em;
-}
-
-.collection-content h3 {
-  margin: 7px 0 12px;
-  font-size: 42px;
-}
-
-.collection-content span {
-  display: block;
-  font-size: 13px;
-  line-height: 1.7;
-  color: rgba(255,255,255,.78);
-}
-
-
-/* ======================================================
-   TRENDING
-======================================================= */
-
-.trending {
-  padding: 130px 5vw;
-}
-
-.center-heading {
-  text-align: center;
-  margin-bottom: 75px;
-}
-
-.trending-grid {
-  max-width: 1320px;
-  margin: auto;
-  display: grid;
-  gap: 100px;
-}
-
-.trend-card {
-  display: grid;
-  grid-template-columns: 1.35fr .65fr;
-  align-items: center;
-  gap: 7vw;
-}
-
-.trend-card:nth-child(even) .trend-photo {
-  order: 2;
-}
-
-.trend-photo {
-  height: 610px;
-  overflow: hidden;
-}
-
-.trend-photo img {
-  height: 100%;
-  object-fit: cover;
-}
-
-.trend-copy h3 {
-  margin: 8px 0;
-  font-size: 57px;
-}
-
-.trend-copy .location {
-  display: block;
-  margin-bottom: 25px;
-  font-size: 12px;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: #8c8173;
-}
-
-.trend-copy > p:not(.eyebrow) {
-  line-height: 1.8;
-  color: #68625b;
-}
-
-.trend-copy a,
-.text-link {
-  display: inline-block;
-  margin-top: 20px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #111;
-  font-size: 11px;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-}
-
-
-/* ======================================================
-   GUYANA
-======================================================= */
-
-.guyana {
-  min-height: 82vh;
-  position: relative;
-  padding: 100px 7vw;
-  display: flex;
-  align-items: center;
-  color: white;
-
-  background:
-    url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=2000&q=90")
-    center / cover no-repeat;
-}
-
-.guyana-overlay {
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(6,24,16,.82),
-      rgba(6,24,16,.25)
-    );
-}
-
-.guyana-content {
-  position: relative;
-  z-index: 2;
-  max-width: 680px;
-}
-
-.destination-year {
-  display: inline-block;
-  margin-bottom: 35px;
-  padding: 10px 15px;
-  border: 1px solid #c7a86d;
-  color: #d7bd8c;
-  font-size: 10px;
-  letter-spacing: .22em;
-}
-
-.guyana h2 {
-  font-size: clamp(90px,13vw,170px);
-}
-
-.guyana-lead {
-  margin: 12px 0;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 34px;
-  font-style: italic;
-}
-
-.guyana-copy {
-  max-width: 600px;
-  margin-bottom: 35px;
-  line-height: 1.8;
-  color: rgba(255,255,255,.78);
-}
-
-
-/* ======================================================
-   DESTINATIONS
-======================================================= */
-
-.destinations {
-  padding: 115px 7vw 130px;
-  background: #171817;
-  color: white;
-}
-
-.destination-heading {
-  max-width: 800px;
-  margin-bottom: 65px;
-}
-
-.destination-heading > p:last-child {
-  max-width: 570px;
-  margin-top: 30px;
-  line-height: 1.8;
-  color: rgba(255,255,255,.58);
-}
-
-.destination-grid {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  border-top: 1px solid rgba(255,255,255,.16);
-  border-left: 1px solid rgba(255,255,255,.16);
-}
-
-.destination-tile {
-  min-height: 175px;
-  position: relative;
-  padding: 26px;
-  border-right: 1px solid rgba(255,255,255,.16);
-  border-bottom: 1px solid rgba(255,255,255,.16);
-  transition: .3s ease;
-}
-
-.destination-tile:hover {
-  background: white;
-  color: #171817;
-}
-
-.destination-tag {
-  font-size: 8px;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  opacity: .55;
-}
-
-.destination-tile h3 {
-  position: absolute;
-  left: 26px;
-  bottom: 20px;
-  margin: 0;
-  font-size: 35px;
-}
-
-.destination-arrow {
-  position: absolute;
-  right: 24px;
-  bottom: 26px;
-}
-
-
-/* ======================================================
-   LONDON + PARIS
-======================================================= */
-
-.europe-feature {
-  padding: 130px 7vw;
-  display: grid;
-  grid-template-columns: .65fr 1.35fr;
-  gap: 7vw;
-  align-items: center;
-  background: #f7f5f1;
-}
-
-.europe-copy > p:not(.eyebrow) {
-  margin-top: 32px;
-  line-height: 1.9;
-  color: #68625b;
-}
-
-.europe-photos {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-
-.london-photo,
-.paris-photo {
-  position: relative;
-  overflow: hidden;
-}
-
-.london-photo {
-  margin-top: 80px;
-}
-
-.europe-photos img {
-  height: 600px;
-  object-fit: cover;
-  transition: transform .7s ease;
-}
-
-.europe-photos div:hover img {
-  transform: scale(1.03);
-}
-
-.europe-photos span {
-  position: absolute;
-  left: 25px;
-  bottom: 22px;
-  color: white;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 36px;
-  text-shadow: 0 2px 15px rgba(0,0,0,.5);
-}
-
-
-/* ======================================================
-   YACHTS
-======================================================= */
-
-.yachts {
-  padding: 140px 7vw;
-  display: grid;
-  grid-template-columns: 1.2fr .8fr;
-  align-items: center;
-  gap: 8vw;
-  background: #efede8;
-}
-
-.yacht-images {
-  position: relative;
-  min-height: 720px;
-}
-
-.yacht-main {
-  width: 82%;
-  height: 650px;
-  object-fit: cover;
-}
-
-.yacht-secondary {
-  position: absolute;
-  width: 48%;
-  height: 320px;
-  right: 0;
-  bottom: 0;
-  object-fit: cover;
-  border: 10px solid #efede8;
-}
-
-.yacht-copy p:not(.eyebrow) {
-  line-height: 1.9;
-  color: #68625b;
-}
-
-.yacht-copy h2 {
-  margin-bottom: 35px;
-}
-
-.yacht-copy .button {
-  margin-top: 20px;
-}
-
-
-/* ======================================================
-   CORPORATE
-======================================================= */
-
-.corporate {
-  padding: 130px 7vw;
-  display: grid;
-  grid-template-columns: .9fr 1.1fr;
-  gap: 9vw;
-  background: #24231f;
-  color: white;
-}
-
-.corporate-copy > p:not(.eyebrow) {
-  max-width: 520px;
-  margin: 35px 0;
-  line-height: 1.9;
-  color: rgba(255,255,255,.65);
-}
-
-.service-row {
-  display: grid;
-  grid-template-columns: 55px 1fr;
-  align-items: center;
-  padding: 18px 0;
-  border-bottom: 1px solid rgba(255,255,255,.16);
-}
-
-.service-row span {
-  font-size: 10px;
-  color: #a99370;
-}
-
-.service-row p {
-  margin: 0;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 30px;
-}
-
-
-/* ======================================================
-   TRANSPORTATION
-======================================================= */
-
-.transport {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 700px;
-  background: white;
-}
-
-.transport-photo img {
-  height: 100%;
-  object-fit: cover;
-}
-
-.transport-copy {
-  padding: 100px 8vw;
-  align-self: center;
-}
-
-.transport-copy > p:not(.eyebrow) {
-  margin: 35px 0;
-  line-height: 1.9;
-  color: #68625b;
-}
-
-.mini-services {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.mini-services span {
-  padding: 9px 12px;
-  border: 1px solid #d8d3ca;
-  font-size: 10px;
-}
-
-
-/* ======================================================
-   CUSTOM
-======================================================= */
-
-.custom {
-  min-height: 760px;
-  padding: 120px 7vw;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: white;
-
-  background:
-    linear-gradient(
-      rgba(0,0,0,.45),
-      rgba(0,0,0,.58)
-    ),
-    url("https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=2000&q=90")
-    center / cover no-repeat;
-}
-
-.custom-inner {
-  max-width: 900px;
-  margin: auto;
-}
-
-.custom-inner > p:not(.eyebrow) {
-  max-width: 700px;
-  margin: 30px auto;
-  line-height: 1.8;
-  color: rgba(255,255,255,.82);
-}
-
-
-/* ======================================================
-   PLAN
-======================================================= */
-
-.plan {
-  padding: 130px 7vw;
-  display: grid;
-  grid-template-columns: .8fr 1.2fr;
-  gap: 9vw;
-  background: #f7f5f1;
-}
-
-.plan-heading > p:last-child {
-  max-width: 470px;
-  line-height: 1.8;
-  color: #68625b;
-}
-
-.experience-form {
-  display: grid;
-  gap: 25px;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-label {
-  display: grid;
-  gap: 9px;
-  font-size: 10px;
-  letter-spacing: .13em;
-  text-transform: uppercase;
-}
-
-input,
-select,
-textarea {
-  width: 100%;
-  padding: 15px 2px;
-  border: 0;
-  border-bottom: 1px solid #aaa49a;
-  border-radius: 0;
-  outline: none;
-  background: transparent;
-  font: inherit;
-  color: #171717;
-}
-
-textarea {
-  resize: vertical;
-}
-
-.experience-form button {
-  width: fit-content;
-  margin-top: 15px;
-  padding: 17px 30px;
-  border: 1px solid #171717;
-  background: #171717;
-  color: white;
-  cursor: pointer;
-  font-size: 10px;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-}
-
-
-/* ======================================================
-   FOOTER
-======================================================= */
-
-footer {
-  padding: 90px 7vw 35px;
-  text-align: center;
-  background: #080808;
-  color: white;
-  border-top: 1px solid rgba(197,166,106,.28);
-}
-
-.footer-logo {
-  width: 230px;
-  height: auto;
-  max-height: 90px;
-  object-fit: contain;
-  margin: 0 auto 30px;
-}
-
-footer > p {
-  color: rgba(255,255,255,.55);
-}
-
-.footer-tagline {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 25px;
-  font-style: italic;
-  color: #c7a86d;
-}
-
-.footer-bottom {
-  margin-top: 70px;
-  padding-top: 25px;
-  border-top: 1px solid rgba(255,255,255,.12);
-  display: flex;
-  justify-content: space-between;
-  font-size: 10px;
-  color: rgba(255,255,255,.4);
-}
-
-
-/* ======================================================
-   TABLET
-======================================================= */
-
-@media (max-width: 900px) {
-
-  .nav-links {
-    display: none;
-  }
-
-  .travaza-logo {
-    width: 150px;
-  }
-
-  .nav-button {
-    padding: 10px;
-    font-size: 8px;
-  }
-
-  .hero-grid {
-    min-height: 90vh;
-    display: block;
-  }
-
-  .hero-one {
-    position: absolute;
-    inset: 0;
-  }
-
-  .hero-two,
-  .hero-three {
-    display: none;
-  }
-
-  .hero-content {
-    left: 7vw;
-    right: 7vw;
-    bottom: 9vh;
-  }
-
-  .hero-content h1 {
-    font-size: 76px;
-  }
-
-  .section-heading,
-  .trend-card,
-  .yachts,
-  .corporate,
-  .transport,
-  .plan,
-  .europe-feature {
-    grid-template-columns: 1fr;
-  }
-
-  .collection-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .collection-card {
-    min-height: 500px;
-  }
-
-  .trend-card {
-    gap: 35px;
-  }
-
-  .trend-card:nth-child(even) .trend-photo {
-    order: initial;
-  }
-
-  .trend-photo {
-    height: 480px;
-  }
-
-  .destination-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
-
-  .europe-photos img {
-    height: 460px;
-  }
-
-  .london-photo {
-    margin-top: 50px;
-  }
-
-  .yacht-images {
-    min-height: 520px;
-  }
-
-  .yacht-main {
-    height: 480px;
-  }
-
-  .yacht-secondary {
-    height: 220px;
-  }
-
-  .transport-photo {
-    height: 500px;
-  }
-
-  .transport-copy {
-    padding: 80px 7vw;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-bottom {
-    gap: 15px;
-    flex-direction: column;
-  }
-
-}
-
-
-/* ======================================================
-   MOBILE
-======================================================= */
-
-@media (max-width: 520px) {
-
-  .nav {
-    padding: 16px 20px;
-  }
-
-  .travaza-logo {
-    width: 125px;
-  }
-
-  .nav-button {
-    font-size: 7px;
-    padding: 8px 9px;
-  }
-
-  .hero-content h1 {
-    font-size: 62px;
-  }
-
-  h2 {
-    font-size: 47px;
-  }
-
-  .collections,
-  .trending,
-  .destinations,
-  .guyana,
-  .europe-feature,
-  .yachts,
-  .corporate,
-  .plan {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-
-  .collection-card {
-    min-height: 450px;
-  }
-
-  .trend-photo {
-    height: 390px;
-  }
-
-  .trend-copy h3 {
-    font-size: 44px;
-  }
-
-  .guyana {
-    min-height: 700px;
-  }
-
-  .guyana h2 {
-    font-size: 82px;
-  }
-
-  .destination-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
-
-  .destination-tile {
-    min-height: 125px;
-    padding: 18px;
-  }
-
-  .destination-tile h3 {
-    left: 18px;
-    bottom: 16px;
-    font-size: 27px;
-  }
-
-  .destination-arrow {
-    right: 16px;
-    bottom: 18px;
-  }
-
-  .europe-photos {
-    gap: 7px;
-  }
-
-  .europe-photos img {
-    height: 330px;
-  }
-
-  .london-photo {
-    margin-top: 35px;
-  }
-
-  .europe-photos span {
-    left: 15px;
-    bottom: 14px;
-    font-size: 27px;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-logo {
-    width: 190px;
-  }
-
-}
-
-</style>
-
+  </footer>
+
+  <!--
+    One Bókun loader serves both collections.
+    Each collection keeps its own booking channel in data-src.
+  -->
+  <script
+    src="https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=4b623c44-bf7e-49e1-b0bd-9a7a19b839d4"
+    async
+  ></script>
+
+  <script
+    src="https://viptours.checkfront.com/lib/interface--0.js"
+  ></script>
+
+  <script>
+    (function () {
+      var header = document.getElementById('site-header');
+      var toggle = document.getElementById('menu-toggle');
+      var links = document.getElementById('nav-links');
+
+      header.classList.add('enhanced');
+
+      toggle.addEventListener('click', function () {
+        var open =
+          toggle.getAttribute('aria-expanded') !== 'true';
+
+        toggle.setAttribute('aria-expanded', String(open));
+        links.classList.toggle('is-open', open);
+      });
+
+      links.addEventListener('click', function (event) {
+        if (event.target.closest('a')) {
+          links.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      document.getElementById('current-year').textContent =
+        String(new Date().getFullYear());
+
+      document.getElementById('enquiry-form')
+        .addEventListener('submit', function (event) {
+          event.preventDefault();
+
+          var name =
+            document.getElementById('guest-name').value.trim();
+
+          var email =
+            document.getElementById('guest-email').value.trim();
+
+          var interest =
+            document.getElementById('trip-interest').value;
+
+          var message =
+            document.getElementById('trip-message').value.trim();
+
+          var body =
+            'Hello Travaza,\n\n' +
+            'Name: ' + name + '\n' +
+            'Email: ' + email + '\n' +
+            'Interest: ' + interest + '\n\n' +
+            message;
+
+          var recipient =
+            document.getElementById('contact-email')
+              .textContent.trim();
+
+          window.location.href =
+            'mailto:' + recipient +
+            '?subject=' +
+            encodeURIComponent('Travaza enquiry: ' + interest) +
+            '&body=' +
+            encodeURIComponent(body);
+
+          document.getElementById('email-status').textContent =
+            'Your email app should open with a draft. ' +
+            'Press Send there to submit your enquiry. ' +
+            'If it does not open, email us directly using ' +
+            'the address beside this form.';
+        });
+
+      try {
+        if (
+          window.DROPLET &&
+          typeof window.DROPLET.Widget === 'function'
+        ) {
+          new window.DROPLET.Widget({
+            host: 'viptours.checkfront.com',
+            target: 'CHECKFRONT_WIDGET_01',
+            category_id: '12',
+            options: 'tabs',
+            provider: 'droplet'
+          }).render();
+        }
+      } catch (error) {
+        document.getElementById('CHECKFRONT_WIDGET_01')
+          .textContent =
+            'Please use the ticket booking link above ' +
+            'to check availability.';
+      }
+    }());
+  </script>
 </body>
-
 </html>
